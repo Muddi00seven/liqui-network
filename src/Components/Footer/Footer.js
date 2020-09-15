@@ -25,7 +25,7 @@ const Footer = () => {
 
         <a href="https://discord.com/invite/GmZpTP3" style={{textDecoration: 'none'}} target="_blank">   <div class="centered2"><i  size="9x"  class="fab fa-discord"/> Discord</div> </a>
            <a href="https://twitter.com/liquinetwork" style={{textDecoration: 'none'}} target="_blank"> <div class="centered3"><i size="9x"  class="fab fa-twitter" /> Twitter </div></a>
-           <a  style={{textDecoration: 'none'}} target="_blank"> <div class="centered4"><i size="9x"  class="fab fa-medium" /> Medium </div></a>
+           <a href="https://medium.com/@liquinetwork" style={{textDecoration: 'none'}} target="_blank"> <div class="centered4"><i size="9x"  class="fab fa-medium" /> Medium </div></a>
 
 </div>
 {/* <h1>dsasd</h1> <br/><h1>dsasd</h1> <br/>

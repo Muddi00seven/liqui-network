@@ -10,34 +10,32 @@ background-color: aqua;}
   }
 
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(156, 152, 152, 0.2); */
     padding: 10px;
     background-color: #f1f1f1;
     height: 220px;
-    border: 1px solid black;
+    border: 2px solid rgb(85, 84, 84);
     border-radius: 30px;
       }
       
   .card3 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
     background-color: #f1f1f1;
     height: 220px;
-    border: 1px solid black;
+    border: 2px solid rgb(85, 84, 84);
     border-radius: 30px;
-    margin-left: -20px;
-    margin-right: 20px;
+    margin-left: 20px;
+    margin-right: -20px;
       }
       
   .card4 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
     background-color: #f1f1f1;
     height: 220px;
-    border: 1px solid black;
+    border: 2px solid rgb(85, 84, 84);
     border-radius: 30px;
-    margin-left: -36px;
-    margin-right: 34px;
+    margin-left: 36px;
+    margin-right: -34px;
       }
 
 /* Float four columns side by side */

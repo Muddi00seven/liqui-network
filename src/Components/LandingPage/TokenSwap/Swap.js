@@ -9,7 +9,9 @@ import Paper from '@material-ui/core/Paper';
 import { Link } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import './swap.css';
-
+import ValueChart from './Charts/ValueChart';
+import PriceChart from './Charts/PriceChart'
+import TryChart from "./Charts/TryChart"
 const useStyles = makeStyles({
   // root: {
   //   minWidth: 275,
@@ -38,6 +40,7 @@ const useStyles = makeStyles({
   title: {
     fontSize: 16,
     marginTop: '-5px',
+    fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
     color : 'grey',
     fontWeight: 'bold',
   },
@@ -46,7 +49,8 @@ const useStyles = makeStyles({
   },
   value: {
     color: '#3c3d40',
-    fontWeight: 'bold',
+    fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
+    // fontWeight: 'bold',
 
   },
   heading: {
@@ -89,13 +93,16 @@ export default function Swap() {
   <div class="column">
     <div class="card">
     <CardContent>
-        <Typography className={classes.title}  gutterBottom>
+        <Typography className={classes.title} >
         Total Value Staked
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2">
-          $50,564,456,23
+        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+          $50,564,456
         </Typography>
-    
+        <div>
+        <TryChart/>
+
+        </div>
       </CardContent>
     </div>
   </div>
@@ -103,13 +110,17 @@ export default function Swap() {
   <div class="column">
     <div class="card">
     <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+        <Typography className={classes.title} color="textSecondary" >
             LQN Price
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2">
-          $50,75
+        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+          $50.75
         </Typography>
-    
+      <div>
+        {/* <PriceChart/> */}
+        <TryChart/>
+
+      </div>
       </CardContent>
     </div>
   </div>
@@ -121,20 +132,20 @@ export default function Swap() {
           Max. Total Supply
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          48,090,68 LQN
+          48,090 LQN
         </Typography>
 
         <Typography className={classes.title} >
           Circulating Supply
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          15,000,45 LQN
+          15,000 LQN
         </Typography>
         <Typography className={classes.title} >
           Burned 🔥
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          5,510,32 LQN
+          5,510 LQN
         </Typography>
     
       </CardContent>
@@ -145,27 +156,30 @@ export default function Swap() {
     <div class="card4" >
     <CardContent> 
       <Typography className={classes.title}  variant="h5" >
-          Your Total Stake
+          Your Total Staked Value
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          $323,564,17 LQN
+          $323,564.17
         </Typography>
 
         <Typography className={classes.title} >
-        EST 24Th Rewards
+        Estimated 24h Rewards
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          1,23 LQN ($3,564)
+          1.23 LQN ($3,564)
         </Typography>
         <Typography className={classes.title} >
           Your Total Rewards
      </Typography>
         <Typography className={classes.value} variant="h6" component="h3"  gutterBottom>
-          12,73 LQN ($63,564)
+          12.73 LQN ($63,564)
         </Typography>
       </CardContent>
     </div>
   </div>
+  <div>
+    </div>
+
 </Grid>
     </>
   );
