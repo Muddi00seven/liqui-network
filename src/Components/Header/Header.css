@@ -1,0 +1,13 @@
+.header{
+    background-color: #405c9c;
+}
+
+.navButton{
+    color: rgba(47, 204, 196, 0.726);
+    font-size: large;
+    text-decoration: none;
+}
+
+.app-button{
+    text-align: right;
+}

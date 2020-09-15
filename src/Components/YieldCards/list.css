@@ -1,0 +1,86 @@
+/* .token-container{
+  margin-right: 15px;
+  margin-left: 150px;
+}
+
+.card{
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10%;
+  margin-left: 10px;
+}
+
+.btnContainer{
+justify-content: space-between;
+
+
+} */
+
+
+* {
+  box-sizing: border-box;
+}
+/* Style the counter cards */
+.cardItem {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  border-radius: 20px;
+height: 270px;
+/* margin-left: %; */
+}
+
+/* Float four columns side by side */
+.columnItem {
+  float: left;
+  width: 20%;
+  /* height: 400px; */
+  padding: 0 10px;
+  margin-left: 15px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1286px) {
+  .columnItem {
+    width: 24%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardItem{
+    /* height: 320px; */
+    padding: 5px;
+  }
+  .columnItem {
+    width: 25%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+
+}
+@media screen and (max-width: 600px) {
+  .columnItem {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  
+  }
+  
+}
+

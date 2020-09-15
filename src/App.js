@@ -1,25 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { GlobalProvider } from './context/GlobalState';
+import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
+import Navigation from './Components/Header/Navigation';
+import Landing from './Components/LandingPage/Landing';
+import PoolCards from './Components/Pool/PoolCard';
+// import Card from './Components/YieldCards/Card'
+// import Nav from './Components/Header/navbar';
+import Footer from './Components/Footer/Footer'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+<>
+<div>
+<Router >
+  
+  <Navigation/>
+    {/* <Nav/> */}
+ <Routes>
+       
+   <Route path='/' element={<Landing/>} />
+   <Route path='/Pool' element={<PoolCards/>} />
+
+  {/*   <Route path='/Card' element={<Card/>} />
+   <Route path='/About' element={<About/>} /> */}
+
+          </Routes>
+        <Footer/>
+      </Router >
+</div>
+</>
+</GlobalProvider>
   );
 }
 

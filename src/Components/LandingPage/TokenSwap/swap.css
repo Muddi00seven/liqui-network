@@ -1,0 +1,99 @@
+/* .farmButton{
+background-color: aqua;}
+
+
+.buyButton{
+
+} */
+* {
+    box-sizing: border-box;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f1f1f1;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 30px;
+      }
+      
+  .card3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f1f1f1;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-left: -20px;
+    margin-right: 20px;
+      }
+      
+  .card4 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f1f1f1;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-left: -36px;
+    margin-right: 34px;
+      }
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    opacity: 0.8;
+  
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+ /* Responsive columns */
+@media screen and (max-width: 1286px) {
+  .column {
+    width: 24%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card{
+    /* height: 320px; */
+    padding: 5px;
+  }
+  .columnItem {
+    width: 25%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+
+}
+@media screen and (max-width: 600px) {
+  .card{
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+
+  
+  }
+  
+}
+  /* Style the counter cards */
