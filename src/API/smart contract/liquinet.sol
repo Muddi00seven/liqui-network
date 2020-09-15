@@ -983,9 +983,13 @@ uint public havingDays=30;
         totalAllocPoint = totalAllocPoint.sub(poolInfo[_pid].allocPoint).add(_allocPoint);
         poolInfo[_pid].allocPoint = _allocPoint;
     }
+// return pool info
+function  viewPoolbyId(uint_pId) view public returns(address lpToken,uint allocPoint,uint lastRewardBlock,uint accLqnPerShare ){
+    require (_pId<poolInfo.length,"Id is not in range");
+    PoolInfo memory pool= poolInfo[_pId];
 
-
-
+    return(address(pool.lpToken),pool.allocPoint, pool.lastRewardBlock,pool.accLqnPerShare,pool.uri);
+}
     // Return reward multiplier over the given _from to _to block.
     function getMultiplier(uint256 _from, uint256 _to) public view returns (uint256) {
         if (_to <= bonusEndBlock) {
@@ -1041,7 +1045,7 @@ uint public havingDays=30;
             .mul(lqnPerBlock)
             .mul(pool.allocPoint)
             .div(totalAllocPoint);
-        liquiCoin.mint(devaddr, lqnReward.div(20)); // 5%
+       // liquiCoin.mint(devaddr, lqnReward.div(20)); // 5%
         liquiCoin.mint(address(this), lqnReward);
         pool.accLqnPerShare = pool.accLqnPerShare.add(lqnReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
