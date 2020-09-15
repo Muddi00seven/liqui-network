@@ -2,7 +2,7 @@ import React, {Component } from 'react'
 import './css/landingPage.css';
 import Timer from './Timer/Timer'
         // LIBRARIES
-import Typical from 'react-typical';
+// import Typical from 'react-typical';
 // import Apps from './Timer/TimerClock'
 import Swap from './TokenSwap/Swap'
 // import Card from '../YieldCards/Card'
