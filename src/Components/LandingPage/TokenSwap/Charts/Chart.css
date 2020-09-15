@@ -1,0 +1,12 @@
+.line-chart{
+    margin-top: -40px;
+    margin-left: -40px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .line-chart{
+        margin-top: -35x;
+        margin-left: -60px;
+    }
+  }

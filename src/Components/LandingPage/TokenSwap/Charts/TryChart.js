@@ -1,7 +1,7 @@
 import React from 'react'
 import LineChart from 'react-linechart';
 import '../../../../../node_modules/react-linechart/dist/styles.css';
-
+import './Chart.css'
 
 const TryChart = () => {
     const data = [
@@ -12,10 +12,10 @@ const TryChart = () => {
     ];
     return (
         <div>
-             <div style={{marginTop: '-40px', marginLeft: '-40px'}}>
+             <div className="line-chart">
                 {/* <div className="App"> */}
                     <LineChart 
-                        width={280}
+                        width={270}
                         height={180}
                         data={data}
                         hideYLabel = {true}

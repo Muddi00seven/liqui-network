@@ -11,7 +11,9 @@ import Grid from '@material-ui/core/Grid';
 import './swap.css';
 import ValueChart from './Charts/ValueChart';
 import PriceChart from './Charts/PriceChart'
-import TryChart from "./Charts/TryChart"
+import TryChart from "./Charts/TryChart";
+import CountUp from 'react-countup';
+
 const useStyles = makeStyles({
   // root: {
   //   minWidth: 275,
@@ -97,7 +99,13 @@ export default function Swap() {
         Total Value Staked
         </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          $50,564,456
+          $
+          <CountUp 
+              start={0}
+              end={50564456}
+              duration={1.5}
+              separator=','
+              />  
         </Typography>
         <div>
         <TryChart/>
@@ -114,7 +122,13 @@ export default function Swap() {
             LQN Price
         </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          $50.75
+          $
+          <CountUp 
+              start={0}
+              end={50.75}
+              duration={1.5}
+              decimals={2}
+              />  
         </Typography>
       <div>
         {/* <PriceChart/> */}
@@ -132,21 +146,38 @@ export default function Swap() {
           Max. Total Supply
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          48,090 LQN
+
+          <CountUp 
+              start={0}
+              end={48090}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>
         </Typography>
 
         <Typography className={classes.title} >
           Circulating Supply
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          15,000 LQN
-        </Typography>
+        <CountUp 
+              start={0}
+              end={15000}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>        </Typography>
         <Typography className={classes.title} >
           Burned 🔥
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          5,510 LQN
-        </Typography>
+        <CountUp 
+              start={0}
+              end={5510}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>        </Typography>
     
       </CardContent>
     </div>
@@ -159,20 +190,57 @@ export default function Swap() {
           Your Total Staked Value
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          $323,564.17
+          $<CountUp 
+              start={0}
+              end={323564.17}
+              duration={1.5}
+              separator=','
+              decimals={2}
+
+              />  
+              <span> LQN </span>
         </Typography>
 
         <Typography className={classes.title} >
         Estimated 24h Rewards
      </Typography>
         <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          1.23 LQN ($3,564)
+        <CountUp 
+              start={0}
+              end={1.23}
+              duration={1.5}
+              separator=','
+              decimals={2}
+
+              />  
+              <span> LQN </span>  ($<CountUp 
+              start={0}
+              end={3564}
+              duration={1.5}
+              separator=','
+
+              />)
+              <span>  </span>
         </Typography>
         <Typography className={classes.title} >
           Your Total Rewards
      </Typography>
         <Typography className={classes.value} variant="h6" component="h3"  gutterBottom>
-          12.73 LQN ($63,564)
+        <CountUp 
+              start={0}
+              end={12.73}
+              duration={1.5}
+              separator=','
+              decimals={2}
+
+              />  
+              <span> LQN </span>  ($<CountUp 
+              start={0}
+              end={63564}
+              duration={1.5}
+              separator=','
+
+              />)
         </Typography>
       </CardContent>
     </div>
