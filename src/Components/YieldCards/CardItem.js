@@ -102,7 +102,7 @@ const useStyles = makeStyles(  ({
         fontWeight: 'bolder',
         fontFamily: ' Arial, Helvetica, sans-serif, Times New Roman',
 
-        color: '#545253'
+        color: 'rgb(85, 84, 84)'
     
       },
 
