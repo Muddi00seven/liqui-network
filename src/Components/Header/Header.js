@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-
-    backgroundColor: '#efefef'
+    backgroundColor: '#efefef',
+    boxShadow : 'none',
   },
 
   navButton : {
@@ -179,7 +179,7 @@ fontWeight: '500',
 },
 
 '@media (max-width: 1462px)' : {
-  marginLeft:'-14px',
+  marginLeft:'-1px',
 },
 
 '@media (max-width: 1400px)' : {

@@ -91,7 +91,7 @@ export const CardList = () => {
 
 <br/><br/><br/>
 
- <Grid container spacing={0} justify="space-between" >
+ <Grid container spacing={0} justify="center" >
               {lcs.map((lc)=>(
                 <CardItem key={lc.id} key={lc.id} contractAddress={lc.contractAddress}
                  name={lc.name} url={lc.uri}  />
