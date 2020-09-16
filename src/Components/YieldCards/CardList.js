@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { Link } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
+import {useStore} from '../../context/GlobalState'
 // import TabSection from './Selectors/forHome';
 // import {useStore } from '../../context/GlobalState';
 
@@ -85,16 +86,19 @@ export const CardList = () => {
   
   ]
  
-  
+  const [{pools}] = useStore();
+  let list = pools;
+   
     return (
       <>       
 
 <br/><br/><br/>
 
  <Grid container spacing={0} justify="center" >
-              {lcs.map((lc)=>(
-                <CardItem key={lc.id} key={lc.id} contractAddress={lc.contractAddress}
-                 name={lc.name} url={lc.uri}  />
+              {list.map((list)=>(
+                <CardItem id={list.poolId} token={list.lpToken} points={list.allocPoint}
+                 lastReward={list.lastRewardBlock} accShare={list.accBaconPerShare} 
+                 uri={list.uri} />
             ))}
             <br/>
         </Grid> 
