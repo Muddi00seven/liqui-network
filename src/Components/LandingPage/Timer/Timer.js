@@ -67,9 +67,12 @@ const Timer = () => {
              <div className='timer'>
             <div className='heading-div'>
                 <p className="heading">Next Reward Halving</p>
+                <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
-                    from  <b className="b1"> 1,000 </b> to <b className="b2"> 500 </b> LQN in 5,456 Blocks
+                    from  <b className="b1"> 1,000 </b> to <b className="b2"> 500 </b> LQN 
+                    in 5,456 Blocks
                 </p>
+                </div>
             </div>
             <div className='display-timer'>
                 <div className='timer-flex'>

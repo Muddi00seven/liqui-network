@@ -182,3 +182,50 @@
     width: 100px;
   }
   
+
+
+  @media screen and (max-width: 600px) {
+  
+    .centered1 {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif, Times New Roman;
+      font-size: 15px;
+       top: 14%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+    .centered2 {
+      font-family: Arial, Helvetica, sans-serif, Times New Roman;
+     position: absolute;
+     font-size: 14px;
+     font-weight: bold;
+       top: 14%;
+     left: 38%;
+     transform: translate(-50%, -50%);
+     color: white;
+    }
+  .centered3 {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif, Times New Roman;
+       top: 14%;
+       font-size: 14px;
+       left: 60%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+   } 
+  
+   .centered4 {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+     top: 14%;
+     font-size: 14px;
+     left: 81%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+  } 
+  
+  }

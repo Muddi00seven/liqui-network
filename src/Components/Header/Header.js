@@ -179,7 +179,7 @@ fontWeight: '500',
 },
 
 '@media (max-width: 1462px)' : {
-  marginLeft:'-14px',
+  marginLeft:'-1px',
 },
 
 '@media (max-width: 1400px)' : {

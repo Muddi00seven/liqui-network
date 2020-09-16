@@ -61,8 +61,8 @@ const useStyles = makeStyles(  ({
   },
 
   stakeBtn : {
-    backgroundColor: '#27ade6',
-    transition: 'color 0.5s linear',
+    backgroundColor: 'rgb(131, 128, 128)',
+    transition: 'background 0.5s linear',
     width: '100px',
     fontFamily: ' Arial, Helvetica, sans-serif, Times New Roman',
     color: 'white',
@@ -81,13 +81,12 @@ const useStyles = makeStyles(  ({
       marginLeft:'0px',
     },
     '@media (max-width: 500px)' : {
-      marginRight:'0px',
+      marginRight:'5px',
+      marginTop: '10px'
     },
     
     '&:hover': {
-      backgroundColor: 'white',
-      color: 'black',
-      
+      backgroundColor: '#27ade6',      
       
     },
   },
@@ -107,8 +106,8 @@ const useStyles = makeStyles(  ({
       },
 
   tradeBtn: {
-    backgroundColor: '#27ade6',
-    transition: 'color 0.5s linear',
+    backgroundColor: 'rgb(131, 128, 128)',
+    transition: 'background 0.5s linear',
     width: '100px',
     color: 'white',
     fontFamily: ' Arial, Helvetica, sans-serif, Times New Roman',
@@ -127,11 +126,13 @@ const useStyles = makeStyles(  ({
       marginLeft:'0px',
     },
     '@media (max-width: 500px)' : {
-      marginLeft:'0px',
+      marginLeft:'5px',
+      marginTop: '12px',
+
     },
     '&:hover': {
-      backgroundColor: 'white',
-      color: 'black'
+      backgroundColor: '#27ade6',
+            // color: 'black'
     },
   }
 

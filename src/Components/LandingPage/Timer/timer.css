@@ -101,3 +101,36 @@
         margin-left: 5px;
         margin-right: 5px;
        }
+
+
+
+      
+
+
+       @media screen and (max-width: 600px) {
+        .text-container {
+          display: inline-flexbox;
+        
+        
+        }
+
+        .b2{
+            color:rgb(49, 47, 47);
+            font-size: 19px ; 
+            font-weight: bold; 
+            font-family: 'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif ;
+            margin-left: 5px;
+            margin-right: 5px;
+           }
+           .b1{
+            color:rgb(49, 47, 47);
+             font-size: 18px ; 
+             font-weight: bold; 
+             margin-left: 5px;
+             margin-right: 5px;
+            }
+            .heading-div p{
+                display: block;
+            }
+      }
+      

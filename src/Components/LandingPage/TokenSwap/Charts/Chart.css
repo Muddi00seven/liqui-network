@@ -4,6 +4,13 @@
 }
 
 
+@media screen and (max-width: 1460px) {
+    .line-chart{
+        margin-top: -35x;
+        margin-left: -48px;
+    }
+  }
+
 @media screen and (max-width: 1400px) {
     .line-chart{
         margin-top: -35x;
