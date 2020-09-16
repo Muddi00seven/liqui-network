@@ -141,7 +141,7 @@ const useStyles = makeStyles(  ({
 
 
 
-export const CardItem = ({id , contractAddress , name ,status ,isActive ,legit ,downVotes  ,remarks , upVotes ,url})=>{
+export const CardItem = ({id, token , points, lastReward, uri , accShare})=>{
   const classes = useStyles();
 
    const[ review,setReview]= useState('');
@@ -157,15 +157,15 @@ export const CardItem = ({id , contractAddress , name ,status ,isActive ,legit ,
 <div class="columnItem">
     <div class="cardItem">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" />
-            <Typography className={classes.addressHeading}>UNISWAP LQN </Typography>  <Typography className={classes.contractAddress}>APY  4545%</Typography>
+    <Typography className={classes.addressHeading}>{id} </Typography>  <Typography className={classes.contractAddress}>{lastReward}</Typography>
             <div className="btnContainer"> 
           <Link to="/Pool" style={{textDecoration: 'none'}}> 
           <Button variant="contained" className={classes.stakeBtn } color="secondary">
-          STAKE
+          Stake
           </Button>  
           </Link>
           <Button variant="contained" className={classes.tradeBtn} color="secondary"  >
-          TRADE
+          Trade
         </Button>  
         </div>
         </div>
