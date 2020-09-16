@@ -13,29 +13,37 @@ background-color: aqua;}
     /* box-shadow: 0 4px 8px 0 rgba(156, 152, 152, 0.2); */
     padding: 10px;
     background-color: #f1f1f1;
-    height: 220px;
-    border: 2px solid rgb(85, 84, 84);
+    height: 210px;
+    border: 1px solid rgb(85, 84, 84);
     border-radius: 30px;
+    overflow:hidden;
+    z-index:0;
+
+
       }
       
   .card3 {
     padding: 10px;
     background-color: #f1f1f1;
-    height: 220px;
-    border: 2px solid rgb(85, 84, 84);
+    height: 210px;
+    border: 1px solid rgb(85, 84, 84);
     border-radius: 30px;
-    margin-left: 20px;
-    margin-right: -20px;
+    overflow:hidden;
+
+    /* margin-left: 20px;
+    margin-right: -20px; */
       }
       
   .card4 {
     padding: 10px;
     background-color: #f1f1f1;
-    height: 220px;
-    border: 2px solid rgb(85, 84, 84);
+    height: 210px;
+    border: 1px solid rgb(85, 84, 84);
     border-radius: 30px;
-    margin-left: 36px;
-    margin-right: -34px;
+    /* margin-left: 36px;
+    margin-right: -34px; */
+    overflow:hidden;
+
       }
 
 /* Float four columns side by side */
@@ -44,7 +52,8 @@ background-color: aqua;}
     width: 20%;
     padding: 0 10px;
     opacity: 0.8;
-  
+    margin-left: 20px;
+
   }
   
   /* Remove extra left and right margins, due to padding */
@@ -59,17 +68,16 @@ background-color: aqua;}
   
   /* Responsive columns */
  /* Responsive columns */
-@media screen and (max-width: 1286px) {
+/* @media screen and (max-width: 1286px) {
   .column {
     width: 24%;
     display: block;
     margin-bottom: 20px;
   }
-}
+} */
 
 @media screen and (max-width: 1024px) {
   .card{
-    /* height: 320px; */
     padding: 5px;
   }
   .columnItem {
@@ -95,3 +103,107 @@ background-color: aqua;}
   
 }
   /* Style the counter cards */
+
+
+  
+.bubbles{
+	position:absolute;
+	width:100%;
+	height: 20%;
+	z-index:0;
+	overflow:hidden;
+	top:0;
+	left:0;
+  }
+  .bubble{
+	position: absolute;
+	/* bottom:-100px; */
+	width:40px;
+	height: 40px;
+	background:#27ade6;
+	border-radius:50%;
+	opacity:0.5;
+	animation: rise 10s infinite ease-in;
+  }
+  .bubble:nth-child(1){
+	width:40px;
+	height:40px;
+	left:10%;
+	animation-duration:8s;
+  }
+  .bubble:nth-child(2){
+	width:20px;
+	height:20px;
+	left:20%;
+	animation-duration:5s;
+	animation-delay:1s;
+  }
+  .bubble:nth-child(3){
+	width:50px;
+	height:50px;
+	left:35%;
+	animation-duration:7s;
+	animation-delay:2s;
+  }
+  .bubble:nth-child(4){
+	width:80px;
+	height:80px;
+	left:50%;
+	animation-duration:11s;
+	animation-delay:0s;
+  }
+  .bubble:nth-child(5){
+	width:35px;
+	height:35px;
+	left:55%;
+	animation-duration:6s;
+	animation-delay:1s;
+  }
+  .bubble:nth-child(6){
+	width:45px;
+	height:45px;
+	left:65%;
+	animation-duration:8s;
+	animation-delay:3s;
+  }
+  .bubble:nth-child(7){
+	width:90px;
+	height:90px;
+	left:70%;
+	animation-duration:12s;
+	animation-delay:2s;
+  }
+  .bubble:nth-child(8){
+	width:25px;
+	height:25px;
+	left:80%;
+	animation-duration:6s;
+	animation-delay:2s;
+  }
+  .bubble:nth-child(9){
+	width:15px;
+	height:15px;
+	left:70%;
+	animation-duration:5s;
+	animation-delay:1s;
+  }
+  .bubble:nth-child(10){
+	width:90px;
+	height:90px;
+	left:25%;
+	animation-duration:10s;
+	animation-delay:4s;
+  }
+  @keyframes rise{
+	0%{
+	  bottom:-100px;
+	  transform:translateX(0);
+	}
+	50%{
+	  transform:translate(100px);
+	}
+	100%{
+	  bottom:1080px;
+	  transform:translateX(-200px);
+	}
+  }

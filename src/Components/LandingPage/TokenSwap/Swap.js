@@ -44,15 +44,18 @@ const useStyles = makeStyles({
     marginTop: '-5px',
     fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
     color : 'grey',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
   },
   value: {
     color: '#3c3d40',
+    fontSize: 16,
     fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
-    // fontWeight: 'bold',
+    fontWeight: 'bold',
+    marginBottom: '7px'
+
 
   },
   heading: {
@@ -91,14 +94,14 @@ export default function Swap() {
   return (
       <>
     
-    <Grid container spacing={0} justify="space-between" >
+    <Grid container spacing={0} justify="center" >
   <div class="column">
     <div class="card">
     <CardContent>
         <Typography className={classes.title} >
         Total Value Staked
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+        <Typography className={classes.value}  gutterBottom>
           $
           <CountUp 
               start={0}
@@ -121,7 +124,7 @@ export default function Swap() {
         <Typography className={classes.title} color="textSecondary" >
             LQN Price
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+        <Typography className={classes.value}  gutterBottom>
           $
           <CountUp 
               start={0}
@@ -145,7 +148,7 @@ export default function Swap() {
       <Typography className={classes.title} >
           Max. Total Supply
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+        <Typography className={classes.value}  gutterBottom>
 
           <CountUp 
               start={0}
@@ -159,7 +162,7 @@ export default function Swap() {
         <Typography className={classes.title} >
           Circulating Supply
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+        <Typography className={classes.value}  gutterBottom>
         <CountUp 
               start={0}
               end={15000}
@@ -170,7 +173,7 @@ export default function Swap() {
         <Typography className={classes.title} >
           Burned 🔥
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
+        <Typography className={classes.value}  gutterBottom>
         <CountUp 
               start={0}
               end={5510}
@@ -189,7 +192,7 @@ export default function Swap() {
       <Typography className={classes.title}  variant="h5" >
           Your Total Staked Value
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
+        <Typography className={classes.value}    gutterBottom>
           $<CountUp 
               start={0}
               end={323564.17}
@@ -198,22 +201,22 @@ export default function Swap() {
               decimals={2}
 
               />  
-              <span> LQN </span>
+              <span>  </span>
         </Typography>
 
         <Typography className={classes.title} >
         Estimated 24h Rewards
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
+        <Typography className={classes.value}    gutterBottom>
         <CountUp 
               start={0}
               end={1.23}
               duration={1.5}
               separator=','
-              decimals={2}
+              decimals={4}
 
               />  
-              <span> LQN </span>  ($<CountUp 
+             <span> LQN </span>  ($<CountUp 
               start={0}
               end={3564}
               duration={1.5}
@@ -231,10 +234,10 @@ export default function Swap() {
               end={12.73}
               duration={1.5}
               separator=','
-              decimals={2}
+              decimals={4}
 
-              />  
-              <span> LQN </span>  ($<CountUp 
+              />  <span> LQN </span>
+              ($<CountUp 
               start={0}
               end={63564}
               duration={1.5}
@@ -247,8 +250,20 @@ export default function Swap() {
   </div>
   <div>
     </div>
-
+    
 </Grid>
+{/* <div class="bubbles">
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  
+    </div> */}
     </>
   );
 }
