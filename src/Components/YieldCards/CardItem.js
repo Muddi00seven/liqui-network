@@ -157,7 +157,7 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare})=>{
 <div class="columnItem">
     <div class="cardItem">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" />
-    <Typography className={classes.addressHeading}>{id} </Typography>  <Typography className={classes.contractAddress}>{lastReward}</Typography>
+    <Typography className={classes.addressHeading}>{accShare} </Typography>  <Typography className={classes.contractAddress}>{accShare}</Typography>
             <div className="btnContainer"> 
           <Link to="/Pool" style={{textDecoration: 'none'}}> 
           <Button variant="contained" className={classes.stakeBtn } color="secondary">
