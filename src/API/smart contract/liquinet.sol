@@ -852,7 +852,7 @@ contract LiquiCoin is ERC20("LQN", "LQN"), Ownable {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef). or cannot be called atall if ownership in denounced
     function mint(address _to, uint256 _amount) public onlyOwner {
         uint postMintingSupply= totalSupply()+ _amount;
-        mintable=mintable.sub(_amount, "amount exceeds mintable limit")
+        mintable=mintable.sub(_amount, "amount exceeds mintable limit");
         
         _mint(_to, _amount);
     }
@@ -984,7 +984,7 @@ uint public havingDays=30;
         poolInfo[_pid].allocPoint = _allocPoint;
     }
 // return pool info
-function  viewPoolbyId(uint_pId) view public returns(address lpToken,uint allocPoint,uint lastRewardBlock,uint accLqnPerShare ){
+function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint allocPoint,uint lastRewardBlock,uint accLqnPerShare,string memory uri ){
     require (_pId<poolInfo.length,"Id is not in range");
     PoolInfo memory pool= poolInfo[_pId];
 
