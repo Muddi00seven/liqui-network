@@ -88,6 +88,7 @@ export const CardList = () => {
  
   const [{pools}] = useStore();
   let list = pools;
+  console.log("pools in  cardlist",pools)
    
     return (
       <>       
