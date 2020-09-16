@@ -1,8 +1,10 @@
+
 .Swap{
  padding-top: 50px;  
  margin-top: 1px;
  padding-bottom: 50px;
  padding-left: 20px;
+ 
  padding-right: 20px;
  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   animation: gradient 10s ease infinite;
@@ -11,7 +13,7 @@
 
 }
 
-  /* @keyframes gradient {
+   @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -21,7 +23,7 @@
 	100% {
 		background-position: 0% 50%;
 	}
-}   */
+}  
 
 
 .cardList{
@@ -31,3 +33,6 @@
 
    
 }
+
+
+

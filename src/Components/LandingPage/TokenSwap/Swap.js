@@ -9,6 +9,10 @@ import Paper from '@material-ui/core/Paper';
 import { Link } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import './swap.css';
+import ValueChart from './Charts/ValueChart';
+import PriceChart from './Charts/PriceChart'
+import TryChart from "./Charts/TryChart";
+import CountUp from 'react-countup';
 
 const useStyles = makeStyles({
   // root: {
@@ -38,15 +42,20 @@ const useStyles = makeStyles({
   title: {
     fontSize: 16,
     marginTop: '-5px',
+    fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
     color : 'grey',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
   },
   value: {
     color: '#3c3d40',
+    fontSize: 16,
+    fontFamily: "'Helvetica Neu', Helvetica, 'Segoe UI', Arial , sans-serif",
     fontWeight: 'bold',
+    marginBottom: '7px'
+
 
   },
   heading: {
@@ -85,17 +94,26 @@ export default function Swap() {
   return (
       <>
     
-    <Grid container spacing={0} justify="space-between" >
+    <Grid container spacing={0} justify="center" >
   <div class="column">
     <div class="card">
     <CardContent>
-        <Typography className={classes.title}  gutterBottom>
+        <Typography className={classes.title} >
         Total Value Staked
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2">
-          $50,564,456,23
+        <Typography className={classes.value}  gutterBottom>
+          $
+          <CountUp 
+              start={0}
+              end={50564456}
+              duration={1.5}
+              separator=','
+              />  
         </Typography>
-    
+        <div>
+        <TryChart/>
+
+        </div>
       </CardContent>
     </div>
   </div>
@@ -103,13 +121,23 @@ export default function Swap() {
   <div class="column">
     <div class="card">
     <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+        <Typography className={classes.title} color="textSecondary" >
             LQN Price
         </Typography>
-        <Typography className={classes.value} variant="h6" component="h2">
-          $50,75
+        <Typography className={classes.value}  gutterBottom>
+          $
+          <CountUp 
+              start={0}
+              end={50.75}
+              duration={1.5}
+              decimals={2}
+              />  
         </Typography>
-    
+      <div>
+        {/* <PriceChart/> */}
+        <TryChart/>
+
+      </div>
       </CardContent>
     </div>
   </div>
@@ -120,22 +148,39 @@ export default function Swap() {
       <Typography className={classes.title} >
           Max. Total Supply
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          48,090,68 LQN
+        <Typography className={classes.value}  gutterBottom>
+
+          <CountUp 
+              start={0}
+              end={48090}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>
         </Typography>
 
         <Typography className={classes.title} >
           Circulating Supply
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          15,000,45 LQN
-        </Typography>
+        <Typography className={classes.value}  gutterBottom>
+        <CountUp 
+              start={0}
+              end={15000}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>        </Typography>
         <Typography className={classes.title} >
           Burned 🔥
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2" gutterBottom>
-          5,510,32 LQN
-        </Typography>
+        <Typography className={classes.value}  gutterBottom>
+        <CountUp 
+              start={0}
+              end={5510}
+              duration={1.5}
+              separator=','
+              />  
+              <span> LQN </span>        </Typography>
     
       </CardContent>
     </div>
@@ -145,28 +190,80 @@ export default function Swap() {
     <div class="card4" >
     <CardContent> 
       <Typography className={classes.title}  variant="h5" >
-          Your Total Stake
+          Your Total Staked Value
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          $323,564,17 LQN
+        <Typography className={classes.value}    gutterBottom>
+          $<CountUp 
+              start={0}
+              end={323564.17}
+              duration={1.5}
+              separator=','
+              decimals={2}
+
+              />  
+              <span>  </span>
         </Typography>
 
         <Typography className={classes.title} >
-        EST 24Th Rewards
+        Estimated 24h Rewards
      </Typography>
-        <Typography className={classes.value} variant="h6" component="h2"   gutterBottom>
-          1,23 LQN ($3,564)
+        <Typography className={classes.value}    gutterBottom>
+        <CountUp 
+              start={0}
+              end={1.23}
+              duration={1.5}
+              separator=','
+              decimals={4}
+
+              />  
+             <span> LQN </span>  ($<CountUp 
+              start={0}
+              end={3564}
+              duration={1.5}
+              separator=','
+
+              />)
+              <span>  </span>
         </Typography>
         <Typography className={classes.title} >
           Your Total Rewards
      </Typography>
         <Typography className={classes.value} variant="h6" component="h3"  gutterBottom>
-          12,73 LQN ($63,564)
+        <CountUp 
+              start={0}
+              end={12.73}
+              duration={1.5}
+              separator=','
+              decimals={4}
+
+              />  <span> LQN </span>
+              ($<CountUp 
+              start={0}
+              end={63564}
+              duration={1.5}
+              separator=','
+
+              />)
         </Typography>
       </CardContent>
     </div>
   </div>
+  <div>
+    </div>
+    
 </Grid>
+{/* <div class="bubbles">
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  
+    </div> */}
     </>
   );
 }

@@ -50,12 +50,13 @@ const Landing = () => {
         <Swap/>
         </div> */}
 
-        <div className="Swap">
+        <div className="Swap ">
+ 
         <Swap/>
         </div>
         
             <Timer/>
-         <div className="cardList"> 
+         <div className="cardList "> 
                 <CardList />
         </div>
 
