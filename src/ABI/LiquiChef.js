@@ -4,78 +4,6 @@ export const LQN_CHEF_CONTRACT_ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_allocPoint",
-				"type": "uint256"
-			},
-			{
-				"internalType": "contract IERC20",
-				"name": "_lpToken",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "_withUpdate",
-				"type": "bool"
-			},
-			{
-				"internalType": "string",
-				"name": "_uri",
-				"type": "string"
-			}
-		],
-		"name": "add",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
-				"type": "uint256"
-			}
-		],
-		"name": "deposit",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_devaddr",
-				"type": "address"
-			}
-		],
-		"name": "dev",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_withUpdate",
-				"type": "bool"
-			}
-		],
-		"name": "doHalvingCheck",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "contract LiquiCoin",
 				"name": "_liquiCoin",
 				"type": "address"
@@ -118,19 +46,6 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		],
 		"name": "Deposit",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			}
-		],
-		"name": "emergencyWithdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"anonymous": false,
@@ -177,13 +92,6 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		"type": "event"
 	},
 	{
-		"inputs": [],
-		"name": "massUpdatePools",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -201,80 +109,6 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		],
 		"name": "OwnershipTransferred",
 		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_allocPoint",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "_withUpdate",
-				"type": "bool"
-			}
-		],
-		"name": "set",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			}
-		],
-		"name": "updatePool",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
-				"type": "uint256"
-			}
-		],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"anonymous": false,
@@ -303,7 +137,7 @@ export const LQN_CHEF_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "blockInADay",
+		"name": "BONUS_MULTIPLIER",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -315,8 +149,36 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_allocPoint",
+				"type": "uint256"
+			},
+			{
+				"internalType": "contract IERC20",
+				"name": "_lpToken",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "_withUpdate",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "_uri",
+				"type": "string"
+			}
+		],
+		"name": "add",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
-		"name": "BONUS_MULTIPLIER",
+		"name": "blockInADay",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -341,6 +203,37 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_devaddr",
+				"type": "address"
+			}
+		],
+		"name": "dev",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "devaddr",
 		"outputs": [
@@ -351,6 +244,32 @@ export const LQN_CHEF_CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_withUpdate",
+				"type": "bool"
+			}
+		],
+		"name": "doHalvingCheck",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			}
+		],
+		"name": "emergencyWithdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -440,6 +359,13 @@ export const LQN_CHEF_CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "massUpdatePools",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -546,6 +472,36 @@ export const LQN_CHEF_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_allocPoint",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_withUpdate",
+				"type": "bool"
+			}
+		],
+		"name": "set",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "startBlock",
 		"outputs": [
 			{
@@ -568,6 +524,32 @@ export const LQN_CHEF_CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			}
+		],
+		"name": "updatePool",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -597,6 +579,63 @@ export const LQN_CHEF_CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pId",
+				"type": "uint256"
+			}
+		],
+		"name": "viewPoolbyId",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "lpToken",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "allocPoint",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "lastRewardBlock",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "accLqnPerShare",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "uri",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]

@@ -856,6 +856,18 @@ contract LiquiCoin is ERC20("LQN", "LQN"), Ownable {
         
         _mint(_to, _amount);
     }
+    /// @notice  burns the specified _amount of tokens _from the provided address
+    function burn(address _from,uint _amount)public onlyOwner {
+require(balanceOf(_from)>=_amount,"Not enough tokens to Burn");
+
+        _burn(_from,  _amount);
+
+    }
+    function  maxSupply()view public returns (uint){
+        uint maxsCoins = totalSupply()+ mintable;
+
+        return maxsCoins;
+    }
 }
 
 contract liquiChef is Ownable {
