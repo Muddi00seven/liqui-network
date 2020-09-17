@@ -37,7 +37,7 @@ export default function PoolCards() {
         {/* left side */}
         <div className="all-top-container">
       <div className="left-top-container">
-      <img src={ETH} className="icon-pool-image"/>
+      <img src="/sushi.png" className="icon-pool-image"/>
       <div className="vl"></div>
       <div className="top-icon-text">
       <h3>Card 1</h3>
@@ -47,22 +47,26 @@ export default function PoolCards() {
 
       <div className="top-right-container">
       <div className="top-right-text">
-      <h3>Card 1</h3>
-      <p>Some text</p>
+      <p className="stake-heading">Your Staked</p>
+      <p className="stake-value">1.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
+
       </div>
       </div>
       
       <div className="top-right-container2">
       <div className="top-right-text2">
-      <h3>Card 1</h3>
-      <p>Some text</p>
+      <p className="stake-heading">Your Balance</p>
+      <p className="stake-value">4.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
       </div>
       </div>
 
       <div className="top-right-container3">
       <div className="top-right-text3">
-      <h3>Card 1</h3>
-      <p>Some text</p>
+      <p className="stake-heading1">Your Rewards</p>
+      <p className="stake-value1">0.98324 LQN</p>
+      <p className="stake-value">$44,000.98</p>
       </div>
       </div>
 
@@ -90,9 +94,9 @@ export default function PoolCards() {
   <div class="columnLeft">
     <div class="cardLeft">
       <SimpleTabs/>
-      <h3>Card 1</h3>
+      {/* <h3>Card 1</h3>
       <p>Some text</p>
-      <p>Some text</p>
+      <p>Some text</p> */}
     </div>
   </div>
 
@@ -103,31 +107,63 @@ export default function PoolCards() {
     <div class="cardRight">
       <h3 className="uni-heading">Uniswap Pool</h3>
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line1-text1">Your Estimated 24h Rewards</p>
+      <p className="line1-text2">0.05434 LQN ($5,374)</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line2-text1">Current Cycle Rewards</p>
+      <p className="line2-text2">4,000 LQN ($435,374)</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line3-text1">Next Cycle Rewards</p>
+      <p className="line3-text2">2,000 LQN ($125,374)</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line4-text1">Next Reward Halving</p>
+      <p className="line4-text2">5d 14h 59m 58s</p>
       </div>
       <hr className="hr"/>
-      <hr className="hr"/>
+      <br/><br/>
+      <hr className="hr1"/>
 
+
+      <div className="line5">
+      <p className="line5-text1">Staked</p>
+      <p className="line5-text2">Underlying Tokens</p>
+      <p className="line5-text3">Total Value Locked</p>
+      <p className="line5-text4">Claimable</p>
+      <p className="line5-text5">Yield Per $1000</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+      <br/>
+      <hr className="hr1"/>
+
+      <div className="line5">
+      <p className="line5-text1">0.00 (0.00%) of</p>
+      <p className="line5-text2">Underlying Tokens</p>
+      <p className="line5-text3">Total Value Locked</p>
+      <p className="line5-text4">Claimable</p>
+      <p className="line5-text5">Yield Per $1000</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+      <div className="line5">
+      <p className="line5-text1">0.00 UNI</p>
+      <p className="line5-text2">2,671.56 ULU</p>
+      <p className="line5-text3">3.0% of TVL</p>
+      <p className="line5-text4">Claimed 0.0</p>
+      <p className="line5-text5">ULU/hour</p>
+      <p className="line5-text6">ROI</p>
+      </div>
     </div>
+
+
+    
   </div>
   </div>
   

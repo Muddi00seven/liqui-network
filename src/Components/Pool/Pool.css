@@ -38,6 +38,31 @@
         height: 80px;
         margin-left: 15px;
     }
+    .stake-heading{
+        font-size: 13px;
+        color: rgb(107, 107, 107);
+        margin-bottom: -8px;
+    }
+    .stake-heading1{
+        font-size: 13px;
+        color: rgb(107, 107, 107);
+        margin-bottom: -13px;
+    }
+
+    .stake-value{
+        font-size: 13px;
+        margin-bottom: -6px;
+        color: rgb(71, 71, 71);
+        
+    }
+    .stake-value1{
+        font-size: 16px;
+        margin-bottom: -7px;
+        /* margin-top: -1px; */
+        color: rgb(65, 63, 63);
+
+    }
+
 .claimButton{
     width: 90px;
     height: 35px;
@@ -45,11 +70,16 @@
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
     border-style: none;
 
     }
 
+
     .all-top-container{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
 display: flex;
     }
     .icon-pool-image{
@@ -81,7 +111,7 @@ display: flex;
     }
 
     .top-right-container{
-    margin-left: 54%;
+    margin-left: 47%;
 }
 .top-right-container2{
     margin-left: 2%;
@@ -106,7 +136,7 @@ display: flex;
   /* bottom  */
 
   .bottomLeft{
-      margin-top: 20px;
+      margin-top: 15px;
 
   }
 
@@ -139,7 +169,7 @@ display: flex;
             padding: 16px;
             text-align: center;
             background-color:white;
-            height: 350px;
+            height: 400px;
 
           }
 
@@ -150,27 +180,130 @@ display: flex;
             padding: 16px;
             /* text-align: center; */
             background-color:white;
-            height: 350px;
+            height: 400px;
           }
 
           .uni-heading{
             margin-left: 17px;
             margin-right: 17px;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
           }
     .hr{
-        color: red;
+        color: rgb(83, 79, 79);
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -12px;
-
+        opacity: 0.2;
     }
 
+    .hr1{
+        color: rgb(83, 79, 79);
+        margin-left: 5px;
+        margin-right: 35px;
+        margin-top: -12px;
+        opacity: 0.2;
+    }
     .line1 {
             display: flex;
             margin-left: 25px;
-            margin-right: 25px;
+            margin-right: 10px;
             margin-top: -8px;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
     }
+
+    .line5 {
+        display: flex;
+        margin-left: 35px;
+        margin-right: 25px;
+        margin-top: -8px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+}
+    
+    .line1-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    }
+
+    .line1-text2{
+        margin-left: 48%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    }
+
+
+    .line2-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    }
+
+    .line2-text2{
+        margin-left: 54%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+
+    }
+  
+    .line3-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    }
+
+    .line3-text2{
+        margin-left: 57%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    }
+
+ 
+
+  
+    .line4-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    }
+    .line4-text2{
+        margin-left: 61%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    }
+
+.line5-text1{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+}
+
+.line5-text2{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+
+.line5-text3{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+
+.line5-text4{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+.line5-text5{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+}
+
+
+
+.line5-text6{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
 
 /* BOOTM RIGHT */
 
