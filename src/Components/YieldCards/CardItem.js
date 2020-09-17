@@ -156,8 +156,17 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare})=>{
 
 <div class="columnItem">
     <div class="cardItem">
+<<<<<<< Updated upstream
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" />
     <Typography className={classes.addressHeading}>{accShare} </Typography>  <Typography className={classes.contractAddress}>{accShare}</Typography>
+=======
+    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" /> */}
+    {/* <img src=`/static/media/ETH-USD.6594b16f.png` width="100px" height="100px" /> */}
+    <img src={`/static/media/${uri}.6594b16f.png`} width="100px" height="100px" />
+    {/* <img src={ETHUSD} width="100px" height="100px" /> */}
+
+    <Typography className={classes.addressHeading}>{uri} </Typography>  <Typography className={classes.contractAddress}>APY {points} %</Typography>
+>>>>>>> Stashed changes
             <div className="btnContainer"> 
           <Link to="/Pool" style={{textDecoration: 'none'}}> 
           <Button variant="contained" className={classes.stakeBtn } color="secondary">
