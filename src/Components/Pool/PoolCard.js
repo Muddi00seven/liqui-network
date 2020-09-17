@@ -58,10 +58,17 @@ export default function PoolCards() {
       <p>Some text</p>
       </div>
       </div>
+
       <div className="top-right-container3">
       <div className="top-right-text3">
       <h3>Card 1</h3>
       <p>Some text</p>
+      </div>
+      </div>
+
+      <div className="top-right-container4">
+      <div className="top-right-text4">
+      <button className="claimButton">Claim</button>
       </div>
       </div>
 

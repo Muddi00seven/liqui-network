@@ -38,6 +38,16 @@
         height: 80px;
         margin-left: 15px;
     }
+.claimButton{
+    width: 90px;
+    height: 35px;
+    background-color: #dc4532;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+
+    }
 
     .all-top-container{
 display: flex;
@@ -65,17 +75,22 @@ display: flex;
     }
     .top-right-text3{
         margin-top: -15px;
-
+    }
+    .top-right-text4{
+        margin-top: 15px;
     }
 
     .top-right-container{
-    margin-left: 53%;
+    margin-left: 54%;
 }
 .top-right-container2{
     margin-left: 2%;
 }
 .top-right-container3{
     margin-left: 2%;
+}
+.top-right-container4{
+    margin-left: 5%;
 }
 
   /* Responsive columns */
