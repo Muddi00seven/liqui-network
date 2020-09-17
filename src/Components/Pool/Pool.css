@@ -40,17 +40,26 @@
     }
     .stake-heading{
         font-size: 13px;
-
+        color: rgb(107, 107, 107);
+        margin-bottom: -8px;
     }
+    .stake-heading1{
+        font-size: 13px;
+        color: rgb(107, 107, 107);
+        margin-bottom: -13px;
+    }
+
     .stake-value{
         font-size: 13px;
         margin-bottom: -6px;
+        color: rgb(71, 71, 71);
         
     }
     .stake-value1{
-        font-size: 17px;
+        font-size: 16px;
         margin-bottom: -7px;
-        margin-top: -5px;
+        /* margin-top: -1px; */
+        color: rgb(65, 63, 63);
 
     }
 
@@ -160,7 +169,7 @@ display: flex;
             padding: 16px;
             text-align: center;
             background-color:white;
-            height: 350px;
+            height: 400px;
 
           }
 
@@ -171,7 +180,7 @@ display: flex;
             padding: 16px;
             /* text-align: center; */
             background-color:white;
-            height: 350px;
+            height: 400px;
           }
 
           .uni-heading{
@@ -198,7 +207,7 @@ display: flex;
     .line1 {
             display: flex;
             margin-left: 25px;
-            margin-right: 25px;
+            margin-right: 10px;
             margin-top: -8px;
             font-family: Arial, Helvetica, sans-serif, Times New Roman;
     }
@@ -218,7 +227,7 @@ display: flex;
     }
 
     .line1-text2{
-        margin-left: 60%;
+        margin-left: 48%;
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
     }
@@ -230,7 +239,7 @@ display: flex;
     }
 
     .line2-text2{
-        margin-left: 60%;
+        margin-left: 54%;
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 
@@ -242,11 +251,8 @@ display: flex;
     }
 
     .line3-text2{
-        margin-left: 60%;
+        margin-left: 57%;
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
-
-
-        
     }
 
  
@@ -257,7 +263,7 @@ display: flex;
 
     }
     .line4-text2{
-        margin-left: 60%;
+        margin-left: 61%;
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
     }
 
