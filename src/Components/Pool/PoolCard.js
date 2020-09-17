@@ -47,22 +47,26 @@ export default function PoolCards() {
 
       <div className="top-right-container">
       <div className="top-right-text">
-      <p>Your Staked</p>
-      <p>Some text</p>
+      <p className="stake-heading">Your Staked</p>
+      <p className="stake-value">1.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
+
       </div>
       </div>
       
       <div className="top-right-container2">
       <div className="top-right-text2">
-      <p>Your Balance</p>
-      <p>Some text</p>
+      <p className="stake-heading">Your Balance</p>
+      <p className="stake-value">4.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
       </div>
       </div>
 
       <div className="top-right-container3">
       <div className="top-right-text3">
-      <p>Your Rewards</p>
-      <p>Some text</p>
+      <p className="stake-heading">Your Rewards</p>
+      <p className="stake-value1">0.98324 LQN</p>
+      <p className="stake-value">$44,000.98</p>
       </div>
       </div>
 

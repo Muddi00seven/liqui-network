@@ -38,6 +38,22 @@
         height: 80px;
         margin-left: 15px;
     }
+    .stake-heading{
+        font-size: 13px;
+
+    }
+    .stake-value{
+        font-size: 13px;
+        margin-bottom: -6px;
+        
+    }
+    .stake-value1{
+        font-size: 17px;
+        margin-bottom: -7px;
+        margin-top: -5px;
+
+    }
+
 .claimButton{
     width: 90px;
     height: 35px;
@@ -50,6 +66,7 @@
     border-style: none;
 
     }
+
 
     .all-top-container{
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
@@ -85,7 +102,7 @@ display: flex;
     }
 
     .top-right-container{
-    margin-left: 54%;
+    margin-left: 47%;
 }
 .top-right-container2{
     margin-left: 2%;
