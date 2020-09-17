@@ -101,7 +101,7 @@ export default function PoolCards() {
   {/* BOTTOM RIGHT */}
   <div class="columnRight">
     <div class="cardRight">
-      <h3>Uniswap Pool</h3>
+      <h3 className="uni-heading">Uniswap Pool</h3>
       <div className="line1">
       <p>Some text</p>
       <p>Some text</p>

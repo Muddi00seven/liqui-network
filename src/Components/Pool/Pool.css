@@ -119,6 +119,7 @@ display: flex;
       .columnRight {
         float: left;
         width: 64%;
+
         padding: 0 10px;
       }
       
@@ -150,16 +151,25 @@ display: flex;
             /* text-align: center; */
             background-color:white;
             height: 350px;
-
           }
 
-
+          .uni-heading{
+            margin-left: 17px;
+            margin-right: 17px;
+          }
     .hr{
         color: red;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -12px;
+
     }
 
     .line1 {
             display: flex;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-top: -8px;
     }
 
 /* BOOTM RIGHT */
