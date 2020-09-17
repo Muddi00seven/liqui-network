@@ -1,5 +1,5 @@
 
-import { setPools } from "../store/actions";
+import { setPools,setHalfTime } from "../store/actions";
 
 
 
@@ -48,3 +48,18 @@ let poolInfo={
 return poolInfo;
 }
 
+
+export const  getnextHalving = async(web3,liquiChefContract,accounts,dispatch)=>{
+
+  console.log("last halved block",liquiChefContract);
+  const response =  await liquiChefContract.methods.lastHalveBlock().call({from: accounts[0]});
+
+console.log("last halved block",response);
+const block= await web3.eth.getBlock(response);
+let timestamp= block.timestamp;
+console.log("last halved block time",typeof(timestamp));
+let time= new Date(parseInt(timestamp));
+console.log("Time",time);
+dispatch(setHalfTime(time));
+return response;
+}

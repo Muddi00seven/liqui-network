@@ -15,12 +15,13 @@ export const setPools = (pools)=> {
     };
 }
    
-        export const setDestinationAgentLC = (transaction)=> {
-            return {
-                type: 'SET_DestinationAgent_LC',
-                payload: transaction
-            };
+export const setHalfTime = (time)=> {
+    return {
+        type: 'SET_TIME',
+        payload: time
+    };
 }
+
 export const setupWeb3 = (web3) => {
     return {
         type: 'SETUP_WEB3',

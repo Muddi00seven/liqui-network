@@ -13,7 +13,7 @@ const Navigation = () => {
     console.log("InNavigation",liquiChefContract);
     if(web3 && accounts[0]&&liquiChefContract&&liquiCoinContract){
     console.log("InNavigation");
-     loadChef(liquiChefContract,accounts,dispatch);
+     loadChef(web3,liquiChefContract,accounts,dispatch);
    }
 },[web3,accounts,liquiChefContract,liquiCoinContract,dispatch])
   const openDrawer = () => {

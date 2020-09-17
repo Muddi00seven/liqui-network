@@ -2,7 +2,8 @@ import { setupWeb3, setupContract,setupToken, addEthereumAccounts, setResult, we
 import Web3 from "web3";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS  } from '../ABI/LiquiChef';
  import { LQN_COIN_CONTRACT_ABI,LQN_COIN_CONTRACT_ADDRESS  } from "../ABI/liquiCoin";
- import {getPools   } from '../API/viewTransactions';
+ import {getPools,getnextHalving   } from '../API/viewTransactions';
+
 
 
 export const loadBlockchain = async(dispatch) =>{
@@ -41,16 +42,20 @@ export const loadBlockchain = async(dispatch) =>{
         }
     }
 }
-export const loadChef = async(liquiChefCountract,accounts,dispatch) =>{
+export const loadChef = async(web3,liquiChefCountract,accounts,dispatch) =>{
 
     console.log("IN LOADING liquibChef",liquiChefCountract);
     
+   
         const pools = await   getPools(liquiChefCountract,accounts,dispatch);
     console.log("pools",pools);
+ 
+    if(liquiChefCountract){
+    const block = await   getnextHalving(web3,liquiChefCountract,accounts,dispatch);
+    console.log("halving",block);
   //.  dispatch(setBuyOrders(buyList));
-   
     
-     
+    } 
     }
 
 export const setNumber= async(contract, accounts,number)=>{
@@ -72,11 +77,3 @@ export const viewBoth = async(contract, accounts, dispatch)=>{
 
 
 
-export const loadContract = async(lcContract,tokenContract, accounts,  dispatch)=>{
-console.log("INLoad contract",lcContract,tokenContract, accounts);
-   
-// const lcs  = await getBuyerLcs(lcContract, accounts[0],dispatch);
-// let agent ='0x145eFf1dD342643dd88B2D7b330C8aA5BA8632C2'; //accounts[0];
-// const response  = await getOriginAgentLcs(lcContract, agent,dispatch);      
-    //const buyersLC_list=  viewbuyersLcs(lcContraact, accounts,  dispatch);
-    }
