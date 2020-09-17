@@ -37,7 +37,7 @@ export default function PoolCards() {
         {/* left side */}
         <div className="all-top-container">
       <div className="left-top-container">
-      <img src={ETH} className="icon-pool-image"/>
+      <img src="/sushi.png" className="icon-pool-image"/>
       <div className="vl"></div>
       <div className="top-icon-text">
       <h3>Card 1</h3>
@@ -47,21 +47,21 @@ export default function PoolCards() {
 
       <div className="top-right-container">
       <div className="top-right-text">
-      <h3>Card 1</h3>
+      <p>Your Staked</p>
       <p>Some text</p>
       </div>
       </div>
       
       <div className="top-right-container2">
       <div className="top-right-text2">
-      <h3>Card 1</h3>
+      <p>Your Balance</p>
       <p>Some text</p>
       </div>
       </div>
 
       <div className="top-right-container3">
       <div className="top-right-text3">
-      <h3>Card 1</h3>
+      <p>Your Rewards</p>
       <p>Some text</p>
       </div>
       </div>
@@ -126,6 +126,18 @@ export default function PoolCards() {
       </div>
       <hr className="hr"/>
       <br/><br/>
+      <hr className="hr1"/>
+
+
+      <div className="line5">
+      <p className="line5-text1">Staked</p>
+      <p className="line5-text2">Underlying Tokens</p>
+      <p className="line5-text3">Total Value Locked</p>
+      <p className="line5-text4">Claimable</p>
+      <p className="line5-text5">Yield Per $1000</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+      <br/>
       <hr className="hr1"/>
 
     </div>

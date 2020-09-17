@@ -184,10 +184,19 @@ display: flex;
             margin-right: 25px;
             margin-top: -8px;
             font-family: Arial, Helvetica, sans-serif, Times New Roman;
-
     }
+
+    .line5 {
+        display: flex;
+        margin-left: 35px;
+        margin-right: 25px;
+        margin-top: -8px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+}
     
     .line1-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
     }
 
@@ -199,6 +208,7 @@ display: flex;
 
 
     .line2-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
     }
 
@@ -210,6 +220,7 @@ display: flex;
     }
   
     .line3-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
     }
 
@@ -220,17 +231,56 @@ display: flex;
 
         
     }
+
  
 
   
     .line4-text1{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
     }
     .line4-text2{
         margin-left: 60%;
         font-family: Arial, Helvetica, sans-serif, Times New Roman;
-
-        
     }
+
+.line5-text1{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+}
+
+.line5-text2{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+
+.line5-text3{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+
+.line5-text4{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
+.line5-text5{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+}
+
+
+
+.line5-text6{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    margin-left: 4%;
+
+}
+
 /* BOOTM RIGHT */
 
