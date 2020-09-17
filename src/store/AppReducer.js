@@ -7,6 +7,11 @@ export default (state, action) => {
         }
       
 
+        case 'SET_Pools':
+          return {
+            ...state,
+            pools: action.payload
+          }
         case 'SET_RESULT':
           return {
             ...state,

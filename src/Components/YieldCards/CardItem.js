@@ -1,17 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState , useContext} from 'react';
 // import {useStore } from '../../context/GlobalState';
 
 // import { requestRevote } from '../../store/asyncActions';
 import { makeStyles } from "@material-ui/core/styles";
 import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import {Link} from 'react-router-dom';
-
+import ETHUSD from './ETH-USDC.png';
 import './list.css'
 // ICONS
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
 
+const addToTrade = () => {
+console.log('trade button')
+}
+
+const addToStake = () => {
+  console.log('stake button')
+
+}
 
 const useStyles = makeStyles(  ({
   root: {
@@ -141,7 +149,7 @@ const useStyles = makeStyles(  ({
 
 
 
-export const CardItem = ({id, token , points, lastReward, uri , accShare})=>{
+export const CardItem = ({id, token , points, lastReward, uri , accShare, name})=>{
   const classes = useStyles();
 
    const[ review,setReview]= useState('');
@@ -156,30 +164,32 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare})=>{
 
 <div class="columnItem">
     <div class="cardItem">
-<<<<<<< Updated upstream
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" />
-    <Typography className={classes.addressHeading}>{accShare} </Typography>  <Typography className={classes.contractAddress}>{accShare}</Typography>
-=======
+
+    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" /> */}
+    {/* <Typography className={classes.addressHeading}>{accShare} </Typography>  <Typography className={classes.contractAddress}>{accShare}</Typography> */}
+
     {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" /> */}
     {/* <img src=`/static/media/ETH-USD.6594b16f.png` width="100px" height="100px" /> */}
     <img src={`/static/media/${uri}.6594b16f.png`} width="100px" height="100px" />
     {/* <img src={ETHUSD} width="100px" height="100px" /> */}
 
     <Typography className={classes.addressHeading}>{uri} </Typography>  <Typography className={classes.contractAddress}>APY {points} %</Typography>
->>>>>>> Stashed changes
+
+    {/* <Typography className={classes.addressHeading}>{name} </Typography>  <Typography className={classes.contractAddress}>{name}</Typography> */}
+
             <div className="btnContainer"> 
           <Link to="/Pool" style={{textDecoration: 'none'}}> 
-          <Button variant="contained" className={classes.stakeBtn } color="secondary">
+          <Button onClick={addToStake} variant="contained" className={classes.stakeBtn } color="secondary">
           Stake
           </Button>  
           </Link>
-          <Button variant="contained" className={classes.tradeBtn} color="secondary"  >
+          <Button onClick={addToTrade} variant="contained" className={classes.tradeBtn} color="secondary"  >
           Trade
         </Button>  
         </div>
         </div>
   </div>
-
+  {/* /static/media/ETH-USDC.6594b16f.png */}
 
 {/* </Grid> */}
 
