@@ -87,7 +87,24 @@ export default function SimpleTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        STAKE
+        <div>
+        <div>
+          <div>
+            <p>Input</p>
+            <p>Balance: 0.0000 UNI </p>
+          </div>
+          <div>
+            <p>0</p>
+            <p>UNI</p>
+          </div>
+        </div>
+
+        <div>
+          <button>Stake</button>
+          <button>Add Liquidity</button>
+        </div>
+
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         UNSTAKE
