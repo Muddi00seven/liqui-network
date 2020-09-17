@@ -1,11 +1,176 @@
-/* .mainContainer{
-    text-align: center;
-    justify-content: flex-end;
-    margin-top: 17px;
-    background-color: ;
-} */
+.pool-section-main{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 40px;
+}
 
 
-/* .swap{
-    background-color: red;
-} */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Float four columns side by side */
+  .columnTop {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .rowTop {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .rowTop:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+    /* Style the counter cards */
+    .cardTop {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+    }
+
+    .vl{
+        border-left: 2px solid rgb(119, 119, 119);
+        height: 80px;
+        margin-left: 15px;
+    }
+.claimButton{
+    width: 90px;
+    height: 35px;
+    background-color: #dc4532;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+
+    }
+
+    .all-top-container{
+display: flex;
+    }
+    .icon-pool-image{
+        width: 70px;
+        height: 60px
+    }
+
+    .left-top-container{
+        display: flex;
+    }
+
+    .top-icon-text{
+        margin-left: 15px;
+        margin-top: -15px;
+    }
+    .top-right-text{
+        margin-top: -15px;
+
+    }
+    .top-right-text2{
+        margin-top: -15px;
+
+    }
+    .top-right-text3{
+        margin-top: -15px;
+    }
+    .top-right-text4{
+        margin-top: 15px;
+    }
+
+    .top-right-container{
+    margin-left: 54%;
+}
+.top-right-container2{
+    margin-left: 2%;
+}
+.top-right-container3{
+    margin-left: 2%;
+}
+.top-right-container4{
+    margin-left: 5%;
+}
+
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .columnTop {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  /* bottom  */
+
+  .bottomLeft{
+      margin-top: 20px;
+
+  }
+
+    /* Float four columns side by side */
+    .columnLeft {
+        float: left;
+        width: 36%;
+        padding: 0 10px;
+      }
+      .columnRight {
+        float: left;
+        width: 64%;
+
+        padding: 0 10px;
+      }
+      
+      /* Remove extra left and right margins, due to padding */
+      .rowLeft {margin: 0 -5px;}
+      
+      /* Clear floats after the columns */
+      .rowLeft:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+        /* Style the counter cards */
+        .cardLeft {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color:white;
+            height: 350px;
+
+          }
+
+
+
+          .cardRight {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            /* text-align: center; */
+            background-color:white;
+            height: 350px;
+          }
+
+          .uni-heading{
+            margin-left: 17px;
+            margin-right: 17px;
+          }
+    .hr{
+        color: red;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -12px;
+
+    }
+
+    .line1 {
+            display: flex;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-top: -8px;
+    }
+
+/* BOOTM RIGHT */
+
