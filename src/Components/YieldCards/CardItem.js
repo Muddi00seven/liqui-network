@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState , useContext} from 'react';
 // import {useStore } from '../../context/GlobalState';
 
 // import { requestRevote } from '../../store/asyncActions';
@@ -12,6 +12,14 @@ import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
 
+const addToTrade = () => {
+console.log('trade button')
+}
+
+const addToStake = () => {
+  console.log('stake button')
+
+}
 
 const useStyles = makeStyles(  ({
   root: {
@@ -164,11 +172,11 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare, name})
     <Typography className={classes.addressHeading}>{name} </Typography>  <Typography className={classes.contractAddress}>{name}</Typography>
             <div className="btnContainer"> 
           <Link to="/Pool" style={{textDecoration: 'none'}}> 
-          <Button variant="contained" className={classes.stakeBtn } color="secondary">
+          <Button onClick={addToStake} variant="contained" className={classes.stakeBtn } color="secondary">
           Stake
           </Button>  
           </Link>
-          <Button variant="contained" className={classes.tradeBtn} color="secondary"  >
+          <Button onClick={addToTrade} variant="contained" className={classes.tradeBtn} color="secondary"  >
           Trade
         </Button>  
         </div>
