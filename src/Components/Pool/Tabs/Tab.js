@@ -81,16 +81,16 @@ export default function SimpleTabs() {
           centered
 
         >
-          <LinkTab label="Page One" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
+          <LinkTab className="tabs" label="STAKE" href="/drafts" {...a11yProps(0)} />
+          <LinkTab className="tabs" label="UNSTAKE" href="/trash" {...a11yProps(1)} />
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Page One
+        STAKE
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        UNSTAKE
       </TabPanel>
       {/* <TabPanel value={value} index={2}>
         Page Three

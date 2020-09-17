@@ -125,7 +125,8 @@ export default function PoolCards() {
       <p className="line4-text2">Some text</p>
       </div>
       <hr className="hr"/>
-      <hr className="hr"/>
+      <br/><br/>
+      <hr className="hr1"/>
 
     </div>
   </div>

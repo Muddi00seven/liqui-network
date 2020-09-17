@@ -110,7 +110,7 @@ display: flex;
   /* bottom  */
 
   .bottomLeft{
-      margin-top: 20px;
+      margin-top: 15px;
 
   }
 
@@ -160,6 +160,8 @@ display: flex;
           .uni-heading{
             margin-left: 17px;
             margin-right: 17px;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
           }
     .hr{
         color: rgb(83, 79, 79);
@@ -167,9 +169,15 @@ display: flex;
         margin-right: 20px;
         margin-top: -12px;
         opacity: 0.2;
-
     }
 
+    .hr1{
+        color: rgb(83, 79, 79);
+        margin-left: 5px;
+        margin-right: 35px;
+        margin-top: -12px;
+        opacity: 0.2;
+    }
     .line1 {
             display: flex;
             margin-left: 25px;
