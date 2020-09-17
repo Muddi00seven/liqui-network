@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import './Tab.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -14,8 +14,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      id={`nav-tabpanel-${index}`}
+      aria-labelledby={`nav-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -35,9 +35,21 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    id: `nav-tab-${index}`,
+    'aria-controls': `nav-tabpanel-${index}`,
   };
+}
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -57,22 +69,32 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+      <AppBar position="static" >
+        <Tabs
+        className="tab-header"
+          variant="fullWidth"
+          value={value}
+          textColor="primary"
+          onChange={handleChange}
+          // aria-label="nav tabs example"
+          indicatorColor="primary"
+          centered
+
+        >
+          <LinkTab label="Page One" href="/drafts" {...a11yProps(0)} />
+          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
+          {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One
+        Page One
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        Page Two
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      {/* <TabPanel value={value} index={2}>
+        Page Three
+      </TabPanel> */}
     </div>
   );
 }

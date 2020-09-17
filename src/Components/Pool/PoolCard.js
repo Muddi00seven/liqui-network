@@ -6,7 +6,7 @@ import Swap from '../LandingPage/TokenSwap/Swap';
 // import Timer from '../LandingPage/Timer/Timer'
 import TimerPool from '../LandingPage/Timer/TimerPool'
 import ETH from '../YieldCards/ETH-USDC.png'
- import SimpleTabs from './Tab';
+ import SimpleTabs from './Tabs/Tab';
 
 
 
@@ -16,7 +16,7 @@ import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
 
 import './Pool.css'
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({  
 
 }));
 
