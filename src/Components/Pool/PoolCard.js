@@ -6,7 +6,7 @@ import Swap from '../LandingPage/TokenSwap/Swap';
 // import Timer from '../LandingPage/Timer/Timer'
 import TimerPool from '../LandingPage/Timer/TimerPool'
 import ETH from '../YieldCards/ETH-USDC.png'
- 
+ import SimpleTabs from './Tab';
 
 
 
@@ -89,16 +89,44 @@ export default function PoolCards() {
     <div class="rowLeft">
   <div class="columnLeft">
     <div class="cardLeft">
+      <SimpleTabs/>
       <h3>Card 1</h3>
       <p>Some text</p>
       <p>Some text</p>
     </div>
   </div>
+
+
+
+  {/* BOTTOM RIGHT */}
   <div class="columnRight">
     <div class="cardRight">
-      <h3>Card 1</h3>
+      <h3>Uniswap Pool</h3>
+      <div className="line1">
       <p>Some text</p>
       <p>Some text</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p>Some text</p>
+      <p>Some text</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p>Some text</p>
+      <p>Some text</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p>Some text</p>
+      <p>Some text</p>
+      </div>
+      <hr className="hr"/>
+      <hr className="hr"/>
+
     </div>
   </div>
   </div>

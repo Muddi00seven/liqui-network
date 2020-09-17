@@ -138,7 +138,7 @@ display: flex;
             padding: 16px;
             text-align: center;
             background-color:white;
-            height: 300px;
+            height: 350px;
 
           }
 
@@ -147,13 +147,20 @@ display: flex;
           .cardRight {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             padding: 16px;
-            text-align: center;
+            /* text-align: center; */
             background-color:white;
-            height: 300px;
+            height: 350px;
 
           }
 
 
+    .hr{
+        color: red;
+    }
+
+    .line1 {
+            display: flex;
+    }
 
 /* BOOTM RIGHT */
 
