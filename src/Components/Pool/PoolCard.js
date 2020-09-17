@@ -90,9 +90,9 @@ export default function PoolCards() {
   <div class="columnLeft">
     <div class="cardLeft">
       <SimpleTabs/>
-      <h3>Card 1</h3>
+      {/* <h3>Card 1</h3>
       <p>Some text</p>
-      <p>Some text</p>
+      <p>Some text</p> */}
     </div>
   </div>
 
@@ -103,26 +103,26 @@ export default function PoolCards() {
     <div class="cardRight">
       <h3 className="uni-heading">Uniswap Pool</h3>
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line1-text1">Some text</p>
+      <p className="line1-text2">Some text</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line2-text1">Some text</p>
+      <p className="line2-text2">Some text</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line3-text1">Some text</p>
+      <p className="line3-text2">Some text</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
-      <p>Some text</p>
-      <p>Some text</p>
+      <p className="line4-text1">Some text</p>
+      <p className="line4-text2">Some text</p>
       </div>
       <hr className="hr"/>
       <hr className="hr"/>
