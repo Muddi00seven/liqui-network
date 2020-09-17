@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import Swap from '../LandingPage/TokenSwap/Swap';
-import Timer from '../LandingPage/Timer/Timer'
+// import Timer from '../LandingPage/Timer/Timer'
+import TimerPool from '../LandingPage/Timer/TimerPool'
+
 
 
 // ICONS
@@ -24,7 +26,7 @@ export default function PoolCards() {
         <div className="Swap">
         <Swap/>
         </div>
-      <Timer/>
+      <TimerPool/>
     <div className="pool-section-main">
       {/* TOP CARD SECTION */}
     <div class="rowTop">
