@@ -45,11 +45,15 @@
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
     border-style: none;
 
     }
 
     .all-top-container{
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
 display: flex;
     }
     .icon-pool-image{
@@ -158,10 +162,11 @@ display: flex;
             margin-right: 17px;
           }
     .hr{
-        color: red;
+        color: rgb(83, 79, 79);
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -12px;
+        opacity: 0.2;
 
     }
 
@@ -170,6 +175,8 @@ display: flex;
             margin-left: 25px;
             margin-right: 25px;
             margin-top: -8px;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
     }
     
     .line1-text1{
@@ -177,7 +184,9 @@ display: flex;
     }
 
     .line1-text2{
-        margin-left: 80%;
+        margin-left: 60%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
     }
 
 
@@ -186,7 +195,9 @@ display: flex;
     }
 
     .line2-text2{
-        margin-left: 80%;
+        margin-left: 60%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
 
     }
   
@@ -195,7 +206,9 @@ display: flex;
     }
 
     .line3-text2{
-        margin-left: 80%;
+        margin-left: 60%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
 
         
     }
@@ -206,7 +219,8 @@ display: flex;
 
     }
     .line4-text2{
-        margin-left: 80%;
+        margin-left: 60%;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
         
     }
