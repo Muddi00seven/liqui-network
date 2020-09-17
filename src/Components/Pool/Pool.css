@@ -25,14 +25,59 @@
     display: table;
     clear: both;
   }
-  
     /* Style the counter cards */
     .cardTop {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 16px;
-        text-align: center;
+        /* text-align: center; */
         background-color:white;
     }
+
+    .vl{
+        border-left: 2px solid rgb(119, 119, 119);
+        height: 80px;
+        margin-left: 15px;
+    }
+
+    .all-top-container{
+display: flex;
+    }
+    .icon-pool-image{
+        width: 70px;
+        height: 60px
+    }
+
+    .left-top-container{
+        display: flex;
+    }
+
+    .top-icon-text{
+        margin-left: 15px;
+        margin-top: -15px;
+    }
+    .top-right-text{
+        margin-top: -15px;
+
+    }
+    .top-right-text2{
+        margin-top: -15px;
+
+    }
+    .top-right-text3{
+        margin-top: -15px;
+
+    }
+
+    .top-right-container{
+    margin-left: 53%;
+}
+.top-right-container2{
+    margin-left: 2%;
+}
+.top-right-container3{
+    margin-left: 2%;
+}
+
   /* Responsive columns */
   @media screen and (max-width: 600px) {
     .columnTop {

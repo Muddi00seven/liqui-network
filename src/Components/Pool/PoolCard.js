@@ -5,6 +5,8 @@ import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,
 import Swap from '../LandingPage/TokenSwap/Swap';
 // import Timer from '../LandingPage/Timer/Timer'
 import TimerPool from '../LandingPage/Timer/TimerPool'
+import ETH from '../YieldCards/ETH-USDC.png'
+ 
 
 
 
@@ -32,9 +34,40 @@ export default function PoolCards() {
     <div class="rowTop">
   <div class="columnTop">
     <div class="cardTop">
+        {/* left side */}
+        <div className="all-top-container">
+      <div className="left-top-container">
+      <img src={ETH} className="icon-pool-image"/>
+      <div className="vl"></div>
+      <div className="top-icon-text">
       <h3>Card 1</h3>
       <p>Some text</p>
+      </div>
+      </div>
+
+      <div className="top-right-container">
+      <div className="top-right-text">
+      <h3>Card 1</h3>
       <p>Some text</p>
+      </div>
+      </div>
+      
+      <div className="top-right-container2">
+      <div className="top-right-text2">
+      <h3>Card 1</h3>
+      <p>Some text</p>
+      </div>
+      </div>
+      <div className="top-right-container3">
+      <div className="top-right-text3">
+      <h3>Card 1</h3>
+      <p>Some text</p>
+      </div>
+      </div>
+
+      </div>
+    {/* Right Side */}
+    
     </div>
   </div>
     {/* <br/><br/><br/><br/> */}
