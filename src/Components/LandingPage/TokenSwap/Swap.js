@@ -146,7 +146,7 @@ export default function Swap() {
     <div class="card3">
     <CardContent>
       <Typography className={classes.title} >
-          Max. Total Supply
+          Remaining LQN Minting
      </Typography>
         <Typography className={classes.value}  gutterBottom>
 
