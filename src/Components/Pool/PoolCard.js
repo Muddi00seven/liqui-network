@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function PoolCards({value, i}) {
+export default function PoolCards() {
  
 
   const classes = useStyles();
@@ -43,8 +43,8 @@ export default function PoolCards({value, i}) {
       <img src="/sushi.png" className="icon-pool-image"/>
       <div className="vl"></div>
       <div className="top-icon-text">
-      <h3>{value.token}</h3>
-      <p>{value.uri}</p>
+      {/* <h3>{value.token}</h3>
+      <p>{value.uri}</p> */}
       </div>
       </div>
 
@@ -131,7 +131,7 @@ export default function PoolCards({value, i}) {
       <p className="line4-text1">Next Reward Halving</p>
       <p className="line4-text2">5d 14h 59m 58s</p>
       </div>
-      <hr className="hr"/>
+      {/* <hr className="hr"/>
       <br/><br/>
       <hr className="hr1"/>
 
@@ -145,15 +145,16 @@ export default function PoolCards({value, i}) {
       <p className="line5-text6">ROI</p>
       </div>
       <br/>
-      <hr className="hr1"/>
+      <hr className="hr1"/> */}
 
+{/* 
       <div className="line5">
       <p className="line5-text1">0.00 (0.00%) of</p>
-      <p className="line5-text2">Underlying Tokens</p>
-      <p className="line5-text3">Total Value Locked</p>
-      <p className="line5-text4">Claimable</p>
-      <p className="line5-text5">Yield Per $1000</p>
-      <p className="line5-text6">ROI</p>
+      <p className="line5-text2">44,493.86 USDT</p>
+      <p className="line5-text3">$96,431.25 <span>(24.71)</span></p>
+      <p className="line5-text4">0.00</p>
+      <p className="line5-text5">0.129626</p>
+      <p className="line5-text6">Hourly </p>
       </div>
       <div className="line5">
       <p className="line5-text1">0.00 UNI</p>
@@ -162,7 +163,7 @@ export default function PoolCards({value, i}) {
       <p className="line5-text4">Claimed 0.0</p>
       <p className="line5-text5">ULU/hour</p>
       <p className="line5-text6">ROI</p>
-      </div>
+      </div> */}
     </div>
 
 

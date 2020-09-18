@@ -124,13 +124,13 @@ display: flex;
 }
 
   /* Responsive columns */
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     .columnTop {
       width: 100%;
       display: block;
       margin-bottom: 20px;
     }
-  }
+  } */
   
 
   /* bottom  */
@@ -169,7 +169,7 @@ display: flex;
             padding: 16px;
             text-align: center;
             background-color:white;
-            height: 400px;
+            height: 300px;
 
           }
 
@@ -180,7 +180,7 @@ display: flex;
             padding: 16px;
             /* text-align: center; */
             background-color:white;
-            height: 400px;
+            height: 300px;
           }
 
           .uni-heading{
@@ -307,3 +307,159 @@ display: flex;
 
 /* BOOTM RIGHT */
 
+
+
+@media screen and (max-width: 600px) {
+    .pool-section-main{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+
+    .columnTop {
+        float: left;
+        width: 100%;
+        padding: 0 10px;
+      }
+      
+      .cardTop {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 250px;
+    }
+
+    .top-right-container{
+        margin-top: 30%;
+        margin-left: 0%;
+    }
+    .top-right-container2{
+        margin-top: 30%;
+        margin-left: 2%;
+    }
+    .top-right-container3{
+        margin-top: 30%;
+        margin-left: 2%;
+    }
+    .top-right-container4{
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+
+    .top-right-text2{
+        margin-top: -15px;
+
+    }
+    
+      .columnLeft {
+        float: left;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 5%;
+
+      }
+      .cardLeft {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color:white;
+        height: 340px;
+
+      }
+
+      .columnRight {
+          margin-top: 5%;
+        float: left;
+        width: 100%;
+
+        padding: 0 10px;
+      }
+      
+      .cardRight {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 380px;
+      }
+
+  }
+  
+
+  @media screen and (max-width: 400px) {
+
+    .pool-section-main{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+
+    .columnTop {
+        float: left;
+        width: 100%;
+        padding: 0 10px;
+      }
+      
+      .cardTop {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 250px;
+    }
+
+    .top-right-container{
+        margin-top: 35%;
+        margin-left: -20%;
+    }
+    .top-right-container2{
+        margin-top: 35%;
+        margin-left: 2%;
+    }
+    .top-right-container3{
+        margin-top: 35%;
+        margin-left: 2%;
+    }
+    .top-right-container4{
+        margin-top: 35%;
+        margin-left: 5%;
+    }
+
+    .top-right-text2{
+        margin-top: -15px;
+
+    }
+    
+      .columnLeft {
+        float: left;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 5%;
+
+      }
+      .cardLeft {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color:white;
+        height: 350px;
+
+      }
+
+      .columnRight {
+          margin-top: 5%;
+        float: left;
+        width: 100%;
+
+        padding: 0 10px;
+      }
+      
+      .cardRight {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 420px;
+      }
+  }

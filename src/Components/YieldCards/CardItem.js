@@ -6,7 +6,7 @@ import Logo from '../Header/logo.png'
 import { makeStyles } from "@material-ui/core/styles";
 import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import {Link} from 'react-router-dom';
-import ETHUSD from './ETH-USDC.png';
+// import ETHUSD from './ETH-USDC.png';
 import './list.css'
 // ICONS
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
@@ -85,6 +85,12 @@ const useStyles = makeStyles(  ({
     textTransaform: 'capitalize',
     // marginBottom: '12px',
     // float: 'left',
+    '@media (max-width: 1488px)' : {
+      width: '90px',
+      fontSize: '14px',
+
+    },
+
     '@media (max-width: 1454px)' : {
       marginRight:'3px',
     },
@@ -115,7 +121,14 @@ const useStyles = makeStyles(  ({
         fontWeight: 'bolder',
         fontFamily: ' Arial, Helvetica, sans-serif, Times New Roman',
 
-        color: 'rgb(85, 84, 84)'
+        color: 'rgb(85, 84, 84)',
+
+        '@media (max-width: 1488px)' : {
+          // width: '90px',
+          fontSize: '19px',
+          marginBottom: '11px',
+
+        },
     
       },
 
@@ -136,6 +149,15 @@ const useStyles = makeStyles(  ({
 
     // marginBottom: '12px',
     // float: 'right',
+    '@media (max-width: 1488px)' : {
+      width: '90px',
+      fontSize: '14px',
+    },
+
+    '@media (max-width: 1470px)' : {
+      width: '90px',
+      fontSize: '14px',
+    },
     '@media (max-width: 1454px)' : {
       marginLeft:'3px',
     },
@@ -192,7 +214,9 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare, name,p
     {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png" width="75px" height="100px" /> */}
     {/* <img src=`/static/media/ETH-USD.6594b16f.png` width="100px" height="100px" /> */}
     <div className="icon-container">
-    <img src={`/static/media/${uri}.6594b16f.png`} className="icon-image" />
+    {/* <img src={`/static/media/${uri}.6594b16f.png`} className="icon-image" /> */}
+        <img src={`${uri}.png`} className="icon-image" />
+
     <img src={Logo} className="logo-img" />
     </div>
     {/* <img src={ETHUSD} width="100px" height="100px" /> */}

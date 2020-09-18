@@ -15,11 +15,11 @@
 .tab-value-container{
     display: flex;
     border-style: solid;
-    padding: 15px;
+    padding: 12px;
     border-width: 1px;
     border-color: rgb(199, 192, 192);
     border-radius: 8px;
-    margin-top: 50px;
+    margin-top: 3%;
 
 
 }
@@ -94,5 +94,5 @@ color: rgb(75, 73, 73);
 
     .tab-button-container{
         text-align: justify;
-        margin-top: 20%;
+        margin-top: 6%;
     }

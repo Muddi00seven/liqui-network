@@ -12,6 +12,9 @@ const Timer = () => {
 
 
     let interval = useRef();
+    const [{lastBlock , currentReward , halvePeriod}] = useStore()
+    let lqnBlock = currentReward/2;
+    
 
     const startTimer = () => {
         const countdownDate = new Date('Sep 18, 2020 00:00:00').getTime();
@@ -71,8 +74,8 @@ const Timer = () => {
                 <p className="heading">Next Reward Halving</p>
                 <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
-                    from  <b className="b1"> 1,000 </b> to <b className="b2"> 500 </b> LQN 
-                    in 5,456 Blocks
+                    from  <b className="b1"> {currentReward} </b> to <b className="b2"> {lqnBlock} </b> LQN 
+                    in {lastBlock} Blocks
                 </p>
                 </div>
             </div>
