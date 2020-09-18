@@ -1,6 +1,6 @@
 import React, {useEffect , useState , useRef} from 'react'
 import './timer.css';
-
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const TimerPool = () => {
     const[timerDays, setTimerDays] = useState('00');
@@ -64,7 +64,11 @@ const TimerPool = () => {
 
                 </h1>
         </div> */}
+           {/* <div className="backArrow">
+           <ArrowBackIosIcon/>
+             </div> */}
              <div className='timer'>
+
             <div className='heading-div'>
                 <p className="heading">Next Reward Halving</p>
                 <div className="text-container">
@@ -100,6 +104,11 @@ const TimerPool = () => {
 
             </div>
         </div>
+               <div className="backArrow">
+                   <span>
+           <ArrowBackIosIcon fontSize="large"/>
+           </span>
+             </div>
         </>
     )
 }

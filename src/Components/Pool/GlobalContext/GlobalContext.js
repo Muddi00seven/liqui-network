@@ -5,9 +5,8 @@ import GlobalReducer from './GlobalReducer';
 // import { ShoesData } from '../Shoes/ShoesData/ShoesData';
 
 const initialState = {
-    activeSellOrders:[],
-    activeBuyOrders:[],
-        cart:[]
+    pools:[],
+    cart:[]
 } 
     
 export const GlobalContext2 = createContext(initialState);
@@ -43,7 +42,7 @@ export const GlobalProvider2 = ({ children }) =>{
  
     return(
         <GlobalContext2.Provider value={{
-            activeSellOrders:state.activeSellOrders,
+            pools:state.pools,
             cart:state.cart,
             watchList,
             addItem,

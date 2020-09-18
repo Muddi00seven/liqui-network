@@ -53,6 +53,29 @@ height: 260px;
 }
 
 /* Responsive columns */
+
+/* @media screen and (max-width: 149px) {
+  .columnItem {
+    width: 24%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1286px) {
   .columnItem {
     width: 24%;

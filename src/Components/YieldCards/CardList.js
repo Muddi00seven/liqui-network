@@ -96,10 +96,10 @@ export const CardList = () => {
 <br/><br/><br/>
 
  <Grid container spacing={0} justify="center" >
-              {list.map((list , lcs)=>(
+              {list.map((list)=>(
                 <CardItem id={list.poolId} token={list.lpToken} points={list.allocPoint}
                  lastReward={list.lastRewardBlock} accShare={list.accBaconPerShare} 
-                 uri={list.uri} name={lcs.name} />
+                 uri={list.uri} product={list} />
             ))}
             <br/>
         </Grid> 
