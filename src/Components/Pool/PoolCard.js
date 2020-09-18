@@ -3,7 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import Swap from '../LandingPage/TokenSwap/Swap';
-import Timer from '../LandingPage/Timer/Timer'
+// import Timer from '../LandingPage/Timer/Timer'
+import TimerPool from '../LandingPage/Timer/TimerPool'
+import ETH from '../YieldCards/ETH-USDC.png'
+ import SimpleTabs from './Tabs/Tab';
+
 
 
 // ICONS
@@ -12,153 +16,7 @@ import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
 
 import './Pool.css'
-const useStyles = makeStyles((theme) => ({
-  root: {
-    // flexGrow: 1,
-    // textAlign: 'center',
-    marginTop: '70px',
-
-  
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  mainContainer: {
-
-    // marginLeft: '100px'
-  },
-  card : {
-    borderStyle : 'solid',
-    
-    borderRadius : '20px',
-    // borderWidth: '5px',
-    borderColor : 'grey',
-    marginLeft: '5px',
-    marginRight:'5px',
-    width: '500px'
-  },
-
-  card1: {
-    backgroundColor: '#def0fa',
-    borderBottom: '1px solid #838687',
-
-
-  },
-  card2: {
-backgroundColor: '#def0fa',
-
-  },
-  card4 : {
-    borderStyle : 'solid',
-    
-    borderRadius : '20px',
-    // borderWidth: '5px',
-    borderColor : 'grey',
-    marginLeft: '5px',
-    marginRight:'5px',
-    width: '780px',
-
-    '@media (max-width: 500px)' : {
-        // display: 'flex',
-        // justifyContent: 'flex-start',
-        
-        width: '200px',
-
-    },
-  },
-
-  card5: {
-    backgroundColor: '#def0fa',
-    borderTop: '1px solid #838687',
-
-  },
-
-
-
-  action: {
-    textAlign: 'center',
-    marginTop: '10px',
-    width: "100%",
-  },
-  hr: {
-    marginTop: '10px',
-  },
-  address: {
-    borderStyle : 'dashed',
-    borderColor: 'red',
- 
-    borderRadius : '10px',
-
-  },
-  addressHeading:{
-fontSize: '20px',
-marginBottom: '10px',
-color: 'black'
-  },
-
-  contractAddress : {
-    fontSize: '14px'
-  },
-  remarksHeading:{
-    color: '#ba1e1e'
-  },
-  remarks:{
-    fontWeight: 'bold'
-    
-  },
-  stakeBtn : {
-    backgroundColor: '#0099ff',
-    transition: 'color 0.5s linear',
-    width: '150px',
-    color: 'white',
-    borderStyle: 'none',
-    borderRadius: '5px',
-    marginTop: '10px',
-    // marginLeft:'20px',
-    '&:hover': {
-      backgroundColor: 'white',
-      color: 'black'
-    },
-  },
-
-  tradeBtn: {
-    backgroundColor: '#0099ff',
-    transition: 'color 0.5s linear',
-    width: '100px',
-    color: 'white',
-    borderStyle: 'none',
-    borderRadius: '20px',
-    marginTop: '10px',
-    '&:hover': {
-      backgroundColor: 'white',
-      color: 'black'
-    },
-  },
-
-  sixDiv: {
-    //   justifyContent: 'center',
-      
- '@media (max-width: 2229px)' : {
-    justifyContent: 'center',},
-
-    '@media (max-width: 500px)' : {
-        justifyContent: 'space-between',}
-
-
-  },
-  
-
-
-  Swap: {
-    backgroundColor: '#27ade6',
-    paddingTop: '50px',
-    paddingBottom: '50px',
-    paddingLeft: '20px',
-    paddingRight: '20px'
-
-}
+const useStyles = makeStyles((theme) => ({  
 
 }));
 
@@ -170,93 +28,153 @@ export default function PoolCards() {
         <div className="Swap">
         <Swap/>
         </div>
-      <Timer/>
-    <div className={classes.root}>
-      <Grid container justify="center">
-        {/* CLAIM */}
-        <Grid item xs={6}>
-        <Card className={classes.card1}>
-          <CardActionArea >
-          </CardActionArea>
-          <CardActions>
-            <div className={classes.action}>
-            <Typography className={classes.addressHeading}>LQN CLAIM </Typography>  <Typography className={classes.contractAddress}>4545</Typography>
-           <div className="review-container">
-        </div>
-          <div align="center"> 
-          <Button variant="contained" className={classes.stakeBtn} color="secondary">
-          CLAIM
-          </Button>  
-             </div>
-         </div>
-          </CardActions>
-        </Card>    
-        </Grid>
-        </Grid>
+      <TimerPool/>
+    <div className="pool-section-main">
+      {/* TOP CARD SECTION */}
+    <div class="rowTop">
+  <div class="columnTop">
+    <div class="cardTop">
+        {/* left side */}
+        <div className="all-top-container">
+      <div className="left-top-container">
+      <img src="/sushi.png" className="icon-pool-image"/>
+      <div className="vl"></div>
+      <div className="top-icon-text">
+      <h3>Card 1</h3>
+      <p>Some text</p>
+      </div>
+      </div>
 
-        {/* YOUR WALLET */}
-        <Grid container justify="center">
-        <Grid item xs={3}>
-        <Card className={classes.card2} style={{borderRight: '1px solid #838687'}}>
-          <CardActionArea >
-          </CardActionArea>
-          <CardActions>
-            <div className={classes.action}>
-            <Typography className={classes.addressHeading}>YOUR WALLET </Typography>  <Typography className={classes.contractAddress}>4545</Typography>
-           <div className="review-container">
-        </div>
-          <div align="center"> 
-          <Button variant="contained" className={classes.stakeBtn} color="secondary">
-            APPROVE
-          </Button>  
-             </div>
-         </div>
-          </CardActions>
-        </Card>    
-        </Grid>
-        {/* STAKE TOKEN */}
-        <Grid item xs={3}>
-        <Card className={classes.card2}>
-          <CardActionArea >
-          </CardActionArea>
-          <CardActions>
-            <div className={classes.action}>
-            <Typography className={classes.addressHeading}>STAKED TOKEN </Typography>  <Typography className={classes.contractAddress}>4545</Typography>
-           <div className="review-container">
-        </div>
-          <div align="center"> 
-          <Button variant="contained" className={classes.stakeBtn} color="secondary">
-          UNSTAKE
-          </Button>  
-             </div>
-         </div>
-          </CardActions>
-        </Card>    
-        </Grid>
-        </Grid>
-        
-        {/* GET GLP TOKEN */}
-        <Grid container className={classes.sixDiv}>
+      <div className="top-right-container">
+      <div className="top-right-text">
+      <p className="stake-heading">Your Staked</p>
+      <p className="stake-value">1.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
 
-        <Grid item xs={6} >
-        <Card className={classes.card5}>
-          <CardActions>
-            <div className={classes.action}>
-           <div className="review-container">
-        </div>
-          <div align="center"> 
-          <Button variant="contained" className={classes.stakeBtn}>
-          GET LQN TOKEN
-          </Button>  
-             </div>
-         </div>
-          </CardActions>
-        </Card>    
-        </Grid>
-        </Grid>
+      </div>
+      </div>
+      
+      <div className="top-right-container2">
+      <div className="top-right-text2">
+      <p className="stake-heading">Your Balance</p>
+      <p className="stake-value">4.9832 LQN</p>
+      <p className="stake-value">400.98 ETH</p>
+      </div>
+      </div>
 
-        
+      <div className="top-right-container3">
+      <div className="top-right-text3">
+      <p className="stake-heading1">Your Rewards</p>
+      <p className="stake-value1">0.98324 LQN</p>
+      <p className="stake-value">$44,000.98</p>
+      </div>
+      </div>
+
+      <div className="top-right-container4">
+      <div className="top-right-text4">
+      <button className="claimButton">Claim</button>
+      </div>
+      </div>
+
+      </div>
+    {/* Right Side */}
+    
     </div>
+  </div>
+    {/* <br/><br/><br/><br/> */}
+ 
+
+
+
+</div>
+    {/* BOTTOM LEFT */}
+<div > 
+<div className="bottomLeft">
+    <div class="rowLeft">
+  <div class="columnLeft">
+    <div class="cardLeft">
+      <SimpleTabs/>
+      {/* <h3>Card 1</h3>
+      <p>Some text</p>
+      <p>Some text</p> */}
+    </div>
+  </div>
+
+
+
+  {/* BOTTOM RIGHT */}
+  <div class="columnRight">
+    <div class="cardRight">
+      <h3 className="uni-heading">Uniswap Pool</h3>
+      <div className="line1">
+      <p className="line1-text1">Your Estimated 24h Rewards</p>
+      <p className="line1-text2">0.05434 LQN ($5,374)</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p className="line2-text1">Current Cycle Rewards</p>
+      <p className="line2-text2">4,000 LQN ($435,374)</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p className="line3-text1">Next Cycle Rewards</p>
+      <p className="line3-text2">2,000 LQN ($125,374)</p>
+      </div>
+      <hr className="hr"/>
+
+      <div className="line1">
+      <p className="line4-text1">Next Reward Halving</p>
+      <p className="line4-text2">5d 14h 59m 58s</p>
+      </div>
+      <hr className="hr"/>
+      <br/><br/>
+      <hr className="hr1"/>
+
+
+      <div className="line5">
+      <p className="line5-text1">Staked</p>
+      <p className="line5-text2">Underlying Tokens</p>
+      <p className="line5-text3">Total Value Locked</p>
+      <p className="line5-text4">Claimable</p>
+      <p className="line5-text5">Yield Per $1000</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+      <br/>
+      <hr className="hr1"/>
+
+      <div className="line5">
+      <p className="line5-text1">0.00 (0.00%) of</p>
+      <p className="line5-text2">Underlying Tokens</p>
+      <p className="line5-text3">Total Value Locked</p>
+      <p className="line5-text4">Claimable</p>
+      <p className="line5-text5">Yield Per $1000</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+      <div className="line5">
+      <p className="line5-text1">0.00 UNI</p>
+      <p className="line5-text2">2,671.56 ULU</p>
+      <p className="line5-text3">3.0% of TVL</p>
+      <p className="line5-text4">Claimed 0.0</p>
+      <p className="line5-text5">ULU/hour</p>
+      <p className="line5-text6">ROI</p>
+      </div>
+    </div>
+
+
+    
+  </div>
+  </div>
+  
+  </div>
+  
+
+  
+</div>
+
+    </div>
+
     </>
   );
 }
