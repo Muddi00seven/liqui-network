@@ -868,6 +868,11 @@ require(balanceOf(_from)>=_amount,"Not enough tokens to Burn");
 
         return maxsCoins;
     }
+     function  mintable()view public returns (uint){
+        u
+
+        return mintable;
+    }
 }
 
 contract liquiChef is Ownable {
