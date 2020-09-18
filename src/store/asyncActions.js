@@ -2,7 +2,7 @@ import { setupWeb3, setupContract,setupToken, addEthereumAccounts, setResult, we
 import Web3 from "web3";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS  } from '../ABI/LiquiChef';
  import { LQN_COIN_CONTRACT_ABI,LQN_COIN_CONTRACT_ADDRESS  } from "../ABI/liquiCoin";
- import {getPools,getnextHalving   } from '../API/viewTransactions';
+ import {getPools,lastBlock, currentReward,halvePeriod  } from '../API/viewTransactions';
 
 
 
@@ -51,10 +51,15 @@ export const loadChef = async(web3,liquiChefCountract,accounts,dispatch) =>{
     console.log("pools",pools);
  
     if(liquiChefCountract){
-    const block = await   getnextHalving(web3,liquiChefCountract,accounts,dispatch);
+    const block = await   lastBlock(web3,liquiChefCountract,accounts,dispatch);
     console.log("halving",block);
-  //.  dispatch(setBuyOrders(buyList));
-    
+ 
+
+  const period = await   halvePeriod(web3,liquiChefCountract,accounts,dispatch);
+    console.log("Reward",period);
+
+    const reward = await   currentReward(web3,liquiChefCountract,accounts,dispatch);
+    console.log("Reward",reward);
     } 
     }
 

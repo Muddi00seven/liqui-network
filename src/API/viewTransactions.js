@@ -1,5 +1,5 @@
 
-import { setPools,setHalfTime } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod } from "../store/actions";
 
 
 
@@ -49,17 +49,42 @@ return poolInfo;
 }
 
 
-export const  getnextHalving = async(web3,liquiChefContract,accounts,dispatch)=>{
+export const  lastBlock = async(web3,liquiChefContract,accounts,dispatch)=>{
 
   console.log("last halved block",liquiChefContract);
   const response =  await liquiChefContract.methods.lastHalveBlock().call({from: accounts[0]});
 
 console.log("last halved block",response);
-const block= await web3.eth.getBlock(response);
-let timestamp= block.timestamp;
-console.log("last halved block time",typeof(timestamp));
-let time= new Date(parseInt(timestamp));
-console.log("Time",time);
-dispatch(setHalfTime(time));
+// const block= await web3.eth.getBlock(response);
+// let timestamp= block.timestamp;
+// console.log("last halved block time",timestamp);
+// let time= new Date(parseInt(timestamp));
+// let time1= new Date(parseInt(1490045811));
+
+// console.log("Time",time,"time2",time1);
+// dispatch(setLastBlock(time));
 return response;
+}
+export const  currentReward = async(web3,liquiChefContract,accounts,dispatch)=>{
+
+  console.log("before Reweard",liquiChefContract);
+  const response =  await liquiChefContract.methods.lqnPerBlock().call({from: accounts[0]});
+
+console.log("after Reward",response);
+let reward = web3.utils.fromWei(response,'ether');
+dispatch(setReward(reward));
+
+return reward;
+}
+
+export const  halvePeriod = async(web3,liquiChefContract,accounts,dispatch)=>{
+
+  console.log("before callingalve period h",liquiChefContract);
+  const period =  await liquiChefContract.methods.halvePeriod().call({from: accounts[0]});
+
+console.log("after alve period",period);
+
+dispatch(setHalvePeriod(period));
+
+return period;
 }

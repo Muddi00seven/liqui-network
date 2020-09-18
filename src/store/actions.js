@@ -15,10 +15,22 @@ export const setPools = (pools)=> {
     };
 }
    
-export const setHalfTime = (time)=> {
+export const setLastBlock = (block)=> {
     return {
-        type: 'SET_TIME',
-        payload: time
+        type: 'SET_LAST_BLOCK',
+        payload: block
+    };
+}
+export const setReward = (reward)=> {
+    return {
+        type: 'SET_REWARD',
+        payload: reward
+    };
+}
+export const setHalvePeriod = (period)=> {
+    return {
+        type: 'SET_HALVE_PERIOD',
+        payload: period
     };
 }
 

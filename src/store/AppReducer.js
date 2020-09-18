@@ -1,13 +1,7 @@
 export default (state, action) => {
     switch(action.type) {
-      case 'DELETE_TRANSACTION':
-        return {
-          ...state,
-          transactions: state.transactions.filter(transaction => transaction.id !== action.payload)
-        }
       
-
-        case 'SET_Pools':
+              case 'SET_Pools':
           return {
             ...state,
             pools: action.payload
@@ -18,6 +12,21 @@ export default (state, action) => {
             result: action.payload
           }
 
+          case 'SET_REWARD':
+            return {
+              ...state,
+              currentReward: action.payload
+            }
+            case 'SET_LAST_BLOCK':
+            return {
+              ...state,
+              lastBlock: action.payload
+            }
+            case 'SET_HALVE_PERIOD':
+              return {
+                ...state,
+                halvePeriod: action.payload
+              }
           case 'SET_OriginAgent_LC':
             return {
               ...state,
