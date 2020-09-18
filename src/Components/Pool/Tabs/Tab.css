@@ -21,12 +21,11 @@
     border-radius: 8px;
     margin-top: 3%;
 
-
 }
 
-.column1{
+/* .column1{
 
-}
+} */
 
 .column2{
     margin-left: 42%;
@@ -96,3 +95,181 @@ color: rgb(75, 73, 73);
         text-align: justify;
         margin-top: 6%;
     }
+
+
+
+/* 
+
+UNSTAKE */
+
+.tab-value-container2{
+    display: flex;
+    border-style: solid;
+    padding: 12px;
+    border-width: 1px;
+    border-color: rgb(199, 192, 192);
+    border-radius: 8px;
+    margin-top: 3%;
+
+
+}
+
+/* .unstake-column{
+
+} */
+
+.unstake-column3{
+    margin-left: 42%;
+}
+
+.tab2-number{
+    margin-bottom: -16px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+}
+
+.tab2-text{
+    margin-bottom: -16px;
+    font-size: 15px;
+font-family: Arial, Helvetica, sans-serif, Times New Roman;
+color: rgb(75, 73, 73);
+
+}
+
+
+.tab2-number2{
+font-size: 19px;
+font-family: Arial, Helvetica, sans-serif, Times New Roman;
+font-weight: bold;
+color: rgb(75, 73, 73);
+
+}
+
+.tab2-text2{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    font-weight: bold;
+    color: rgb(75, 73, 73);
+}
+
+
+/* BUTTONS */
+
+    .unstake-button{
+        width: 40%;
+        height: 40px;
+        font-size: 15px;
+        color: #27ade6;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+        border-color: #27ade6;
+        /* margin-left: 20%; */
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .liquidity-button2{
+        width: 42%;
+        height: 40px;
+        font-size: 15px;
+        color: #27ade6;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+        border-color: #27ade6;
+        margin-left: 18%;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .tab-button-container2{
+        text-align: justify;
+        margin-top: 6%;
+    }
+
+    @media screen and (max-width: 1540px) {
+
+
+        .unstake-button{
+            width: 40%;
+            height: 40px;
+            font-size: 13px;
+            color: #27ade6;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+            border-color: #27ade6;
+            /* margin-left: 20%; */
+            background-color: white;
+            border-radius: 5px;
+        }
+    
+
+        .liquidity-button2{
+            width: 43%;
+            height: 40px;
+            font-size: 13px;
+            color: #27ade6;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+            border-color: #27ade6;
+            margin-left: 17%;
+            background-color: white;
+            border-radius: 5px;
+        }
+    
+    }
+
+    @media screen and (max-width: 1448px) {
+
+
+        .unstake-button{
+            width: 38%;
+            height: 40px;
+            font-size: 12px;
+            color: #27ade6;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+            border-color: #27ade6;
+            /* margin-left: 20%; */
+            background-color: white;
+            border-radius: 5px;
+        }
+    
+
+        .liquidity-button2{
+            width: 45%;
+            height: 40px;
+            font-size: 12px;
+            color: #27ade6;
+            font-family: Arial, Helvetica, sans-serif, Times New Roman;
+            border-color: #27ade6;
+            margin-left: 17%;
+            background-color: white;
+            border-radius: 5px;
+        }
+    
+        
+.tab-value-container{
+    display: flex;
+    border-style: solid;
+    padding: 12px;
+    border-width: 1px;
+    border-color: rgb(199, 192, 192);
+    border-radius: 8px;
+    margin-top: 0%;
+
+}
+
+.tab-value-container2{
+    display: flex;
+    border-style: solid;
+    padding: 12px;
+    border-width: 1px;
+    border-color: rgb(199, 192, 192);
+    border-radius: 8px;
+    margin-top: 0%;
+
+}
+
+    }
+
+
+
+
