@@ -42,7 +42,7 @@ export const loadBlockchain = async(dispatch) =>{
         }
     }
 }
-export const loadChef = async(web3,liquiChefCountract,accounts,dispatch) =>{
+export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts,dispatch) =>{
 
     console.log("IN LOADING liquibChef",liquiChefCountract);
     
@@ -61,24 +61,17 @@ export const loadChef = async(web3,liquiChefCountract,accounts,dispatch) =>{
     const reward = await   currentReward(web3,liquiChefCountract,accounts,dispatch);
     console.log("Reward",reward);
     } 
+    
+//-- coin
+    if(liquiCoinContract){
+        const block = await   lastBlock(web3,liquiCoinContract,accounts,dispatch);
+        console.log("max supply",block);
+    }
     }
 
-export const setNumber= async(contract, accounts,number)=>{
-    console.log("before setting Number",number);
- 
-   const receipt =  await contract.methods.setNumber(number).send({from : accounts[0]});
-   console.log("after  setting number ", receipt);
-  
 
-}
-export const viewBoth = async(contract, accounts, dispatch)=>{
-    console.log("before virewing",contract.methods, accounts, dispatch);
 
-   const receipt =  await contract.methods.getBoth().call({from : accounts[0]});
-   console.log("after  viewing  ", receipt);
-   dispatch(setResult(receipt));
 
-}
 
 
 
