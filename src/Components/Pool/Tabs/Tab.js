@@ -88,20 +88,20 @@ export default function SimpleTabs() {
       </AppBar>
       <TabPanel value={value} index={0}>
         <div>
-        <div>
-          <div>
-            <p>Input</p>
-            <p>Balance: 0.0000 UNI </p>
+        <div className="tab-value-container">
+          <div className="column1">
+            <p className="tab-number">Input</p>
+            <p className="tab-number2">0</p>
           </div>
-          <div>
-            <p>0</p>
-            <p>UNI</p>
+          <div className="column2">
+            <p className="tab-text">Balance: 0.0000 UNI </p>
+            <p className="tab-text2">UNI</p>
           </div>
         </div>
 
-        <div>
-          <button>Stake</button>
-          <button>Add Liquidity</button>
+        <div className="tab-button-container">
+          <button className="stake-button">Stake</button>
+          <button className="liquidity-button">Add Liquidity</button>
         </div>
 
         </div>

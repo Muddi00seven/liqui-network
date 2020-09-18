@@ -2,6 +2,8 @@
     background-color:white;
     color: #27ade6;
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    border-style: none;
+    box-sizing: none;
 
 }
 
@@ -9,3 +11,85 @@
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 }
+
+.tab-value-container{
+    display: flex;
+    border-style: solid;
+    padding: 15px;
+    border-width: 1px;
+    border-color: rgb(199, 192, 192);
+    border-radius: 8px;
+    margin-top: 50px;
+
+
+}
+
+.column1{
+
+}
+
+.column2{
+    margin-left: 42%;
+}
+
+.tab-number{
+    margin-bottom: -16px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+}
+
+.tab-text{
+    margin-bottom: -16px;
+    font-size: 15px;
+font-family: Arial, Helvetica, sans-serif, Times New Roman;
+color: rgb(75, 73, 73);
+
+}
+
+
+.tab-number2{
+font-size: 19px;
+font-family: Arial, Helvetica, sans-serif, Times New Roman;
+font-weight: bold;
+color: rgb(75, 73, 73);
+
+}
+
+.tab-text2{
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    font-weight: bold;
+    color: rgb(75, 73, 73);
+}
+
+
+/* BUTTONS */
+
+    .stake-button{
+        width: 40%;
+        height: 40px;
+        font-size: 15px;
+        color: white;
+        background-color: rgb(58, 192, 147);
+
+    }
+
+    .liquidity-button{
+        width: 40%;
+        height: 40px;
+        font-size: 15px;
+        color: #27ade6;
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+        border-color: #27ade6;
+        margin-left: 20%;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .tab-button-container{
+        text-align: justify;
+        margin-top: 20%;
+    }
