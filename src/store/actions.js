@@ -33,6 +33,18 @@ export const setHalvePeriod = (period)=> {
         payload: period
     };
 }
+export const setMaxSupply = (amount)=> {
+    return {
+        type: 'SET_MAX_SUPPLY',
+        payload: amount
+    };
+}
+export const setCirculatingSupply = (amount)=> {
+    return {
+        type: 'SET_CIRCULATING_SUPPLY',
+        payload: amount
+    };
+}
 
 export const setupWeb3 = (web3) => {
     return {

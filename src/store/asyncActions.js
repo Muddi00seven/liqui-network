@@ -2,7 +2,7 @@ import { setupWeb3, setupContract,setupToken, addEthereumAccounts, setResult, we
 import Web3 from "web3";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS  } from '../ABI/LiquiChef';
  import { LQN_COIN_CONTRACT_ABI,LQN_COIN_CONTRACT_ADDRESS  } from "../ABI/liquiCoin";
- import {getPools,lastBlock, currentReward,halvePeriod  } from '../API/viewTransactions';
+ import {getPools,lastBlock, currentReward,halvePeriod ,maxSupply } from '../API/viewTransactions';
 
 
 

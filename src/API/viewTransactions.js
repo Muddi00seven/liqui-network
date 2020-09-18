@@ -1,5 +1,5 @@
 
-import { setPools,setLastBlock,setReward,setHalvePeriod } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply } from "../store/actions";
 
 
 
@@ -85,6 +85,18 @@ export const  halvePeriod = async(web3,liquiChefContract,accounts,dispatch)=>{
 console.log("after alve period",period);
 
 dispatch(setHalvePeriod(period));
+
+return period;
+}
+//----- LQN coin  view functions
+export const  maxSupply = async(web3,liquiCoin,accounts,dispatch)=>{
+
+  console.log("before max suply",liquiChefContract);
+  const amount =  await liquiCoin.methods.maxSupply().call({from: accounts[0]});
+
+console.log("after max supply",amount);
+
+dispatch(setMaxSupply(amount));
 
 return period;
 }

@@ -27,16 +27,17 @@ export default (state, action) => {
                 ...state,
                 halvePeriod: action.payload
               }
-          case 'SET_OriginAgent_LC':
-            return {
-              ...state,
-              originAgentLC: action.payload
-            }
-        case 'SET_DestinationAgent_LC':
-        return {
-          ...state,
-          destinationAgentLC: action.payload
-        }
+        
+              case 'SET_MAX_SUPPLY':
+                return {
+                  ...state,
+                  maxSupply: action.payload
+                }
+                case 'SET_CIRCULATING_SUPPLY':
+                return {
+                  ...state,
+                    circulatingSupply:action.payload
+                }
       case 'SETUP_WEB3':
         return {
           ...state,
