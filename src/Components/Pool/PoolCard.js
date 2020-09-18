@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
@@ -7,6 +7,7 @@ import Swap from '../LandingPage/TokenSwap/Swap';
 import TimerPool from '../LandingPage/Timer/TimerPool'
 import ETH from '../YieldCards/ETH-USDC.png'
  import SimpleTabs from './Tabs/Tab';
+ import { GlobalContext2 } from "./GlobalContext/GlobalContext";
 
 
 
@@ -20,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function PoolCards() {
+export default function PoolCards({value, i}) {
+ 
+
   const classes = useStyles();
 
   return (
@@ -40,8 +43,8 @@ export default function PoolCards() {
       <img src="/sushi.png" className="icon-pool-image"/>
       <div className="vl"></div>
       <div className="top-icon-text">
-      <h3>Card 1</h3>
-      <p>Some text</p>
+      <h3>{value.token}</h3>
+      <p>{value.uri}</p>
       </div>
       </div>
 

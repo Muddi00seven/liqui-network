@@ -5,7 +5,7 @@ import { GlobalProvider } from './context/GlobalState';
 import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
 import Navigation from './Components/Header/Navigation';
 import Landing from './Components/LandingPage/Landing';
-import PoolCards from './Components/Pool/PoolCard';
+import PoolList from './Components/Pool/PoolList';
 // import Card from './Components/YieldCards/Card'
 // import Nav from './Components/Header/navbar';
 import Footer from './Components/Footer/Footer'
@@ -24,7 +24,7 @@ function App() {
  <Routes>
        
    <Route path='/' element={<Landing/>} />
-   <Route path='/Pool' element={<PoolCards/>} />
+   <Route path='/Pool' element={<PoolList/>} />
 
   {/*   <Route path='/Card' element={<Card/>} />
    <Route path='/About' element={<About/>} /> */}
