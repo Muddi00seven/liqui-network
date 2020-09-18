@@ -51,24 +51,6 @@ const Timer = () => {
 
     return (
         <>
-        {/* <div style={{display: 'flex'}}>
-            <h1>
-
-            </h1>
-            <h1>
-                {timerDays}
-                </h1>
-                <h1>
-                {timerHours}
-                </h1>
-                <h1>
-                    {timerMinutes}
-                </h1>
-                <h1>
-                {timerSeconds}
-
-                </h1>
-        </div> */}
              <div className='timer'>
             <div className='heading-div'>
                 <p className="heading">Next Reward Halving</p>
