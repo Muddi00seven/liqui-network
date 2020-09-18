@@ -1093,7 +1093,7 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
         safeLqnTransfer(msg.sender, pending);
         user.amount = user.amount.sub(_amount);
         user.rewardDebt = user.amount.mul(pool.accLqnPerShare).div(1e12);
-        pool.lpToken.safeTransfer(address(msg.sender), _amount);
+        pool.lpToken.safeTransfer(address(msg.sender), _amount)
         emit Withdraw(msg.sender, _pid, _amount);
     }
 

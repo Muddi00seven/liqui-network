@@ -1,4 +1,4 @@
-export const LQN_CHEF_CONTRACT_ADDRESS = "0xbb6c53ee26fe1220cbdefdf73d0dd3055c74e942";
+export const LQN_CHEF_CONTRACT_ADDRESS = "0x089d051E170ca32980c281cB98de7DD947d22c5f";
 
 export const LQN_CHEF_CONTRACT_ABI = [
 	{
