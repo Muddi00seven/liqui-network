@@ -12,15 +12,14 @@ import './list.css'
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
+import { GlobalContext2 } from "../Pool/GlobalContext/GlobalContext";
+
 
 const addToTrade = () => {
 console.log('trade button')
 }
 
-const addToStake = () => {
-  console.log('stake button')
 
-}
 
 const useStyles = makeStyles(  ({
   root: {
@@ -161,8 +160,18 @@ const useStyles = makeStyles(  ({
 
 
 
-export const CardItem = ({id, token , points, lastReward, uri , accShare, name})=>{
+export const CardItem = ({id, token , points, lastReward, uri , accShare, name,product})=>{
   const classes = useStyles();
+  const [btnText, setBtnText]  = useState();
+
+  const addToStake = () => {
+    addItem({product});
+    setBtnText('PRODUCT ADDED')
+    console.log('stake button')
+  
+  }
+  
+  const { addItem, cart ,plus} = useContext(GlobalContext2);
 
    const[ review,setReview]= useState('');
 

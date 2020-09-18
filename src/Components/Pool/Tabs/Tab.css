@@ -74,6 +74,9 @@ color: rgb(75, 73, 73);
         font-size: 15px;
         color: white;
         background-color: #1fc9a5;
+        border-style: none;
+        border-radius: 5px;
+
 
     }
 
