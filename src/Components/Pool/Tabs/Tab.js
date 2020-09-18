@@ -107,7 +107,26 @@ export default function SimpleTabs() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        UNSTAKE
+      <div>
+        <div className="tab-value-container2">
+          <div className="unstake-column2">
+            <p className="tab2-number">Input</p>
+            <p className="tab2-number2">0</p>
+          </div>
+          <div className="unstake-column3">
+            <p className="tab2-text">Staked: 0.0000 ULU </p>
+            <p className="tab2-text2">ULU</p>
+          </div>
+        </div>
+
+        <div className="tab-button-container2">
+          <button className="unstake-button">Unstake</button>
+          <button className="liquidity-button2">Claim + Unstake All</button>
+        </div>
+
+        </div>
+
+
       </TabPanel>
       {/* <TabPanel value={value} index={2}>
         Page Three
