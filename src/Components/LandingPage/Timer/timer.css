@@ -104,7 +104,10 @@
 
 
 
-      
+      .backArrow{
+          margin-left: 10%;
+          color: #27ade6;
+      }
 
 
        @media screen and (max-width: 600px) {

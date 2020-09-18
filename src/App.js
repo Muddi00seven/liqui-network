@@ -9,9 +9,12 @@ import PoolCards from './Components/Pool/PoolCard';
 // import Card from './Components/YieldCards/Card'
 // import Nav from './Components/Header/navbar';
 import Footer from './Components/Footer/Footer'
+import {GlobalProvider2 } from './Components/Pool/GlobalContext/GlobalContext'
+
 function App() {
   return (
     <GlobalProvider>
+      <GlobalProvider2>
 <>
 <div>
 <Router >
@@ -31,6 +34,7 @@ function App() {
       </Router >
 </div>
 </>
+</GlobalProvider2>
 </GlobalProvider>
   );
 }
