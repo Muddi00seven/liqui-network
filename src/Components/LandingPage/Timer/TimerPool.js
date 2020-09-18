@@ -3,6 +3,26 @@ import './timer.css';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const TimerPool = () => {
+    let unixTimestamp = 1680389715;
+    //Since JavaScript works in milliseconds, you should convert 
+    // the time into milliseconds by multiplying it by 1000.
+    let date = new Date(unixTimestamp * 1000);
+    
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDay();
+    let dates = date.getDate()
+    // let locateString = date.toLocaleDateString()
+    let hours = date.getHours();
+    let minutes = "0" + date.getMinutes();
+    let seconds = "0" + date.getSeconds();
+    
+    // Will display time in 11:10:22 format
+    let formatTime =  month + ' ' + dates + ', '  + year + ' ' + hours + ': ' + ' ' + minutes.substr(-2) + ':' + seconds.substr(-2) ;
+    // let formatTime = locateString;
+    let stringyDate = formatTime.toString()
+
+
     const[timerDays, setTimerDays] = useState('00');
     const[timerHours, setTimerHours] = useState('00');
     const[timerMinutes, setTimerMinutes] = useState('00');
@@ -12,7 +32,8 @@ const TimerPool = () => {
     let interval = useRef();
 
     const startTimer = () => {
-        const countdownDate = new Date('Sep 18, 2020 00:00:00').getTime();
+        // const countdownDate = new Date('Sep 18, 2020 00:00:00').getTime();
+        const countdownDate = new Date(stringyDate).getTime();
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -46,27 +67,6 @@ const TimerPool = () => {
 
     return (
         <>
-        {/* <div style={{display: 'flex'}}>
-            <h1>
-
-            </h1>
-            <h1>
-                {timerDays}
-                </h1>
-                <h1>
-                {timerHours}
-                </h1>
-                <h1>
-                    {timerMinutes}
-                </h1>
-                <h1>
-                {timerSeconds}
-
-                </h1>
-        </div> */}
-           {/* <div className="backArrow">
-           <ArrowBackIosIcon/>
-             </div> */}
              <div className='timer'>
 
             <div className='heading-div'>
