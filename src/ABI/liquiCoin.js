@@ -1,40 +1,61 @@
-export const LQN_COIN_CONTRACT_ADDRESS = "0xd79E4375Ab54ca922EF9E0f7865fF296fE05da6f";
+export const LQN_COIN_CONTRACT_ADDRESS = "0x808aea051eee1a695c0b40a8bea6f5281824bb9b";
 
 export const LQN_COIN_CONTRACT_ABI = [
 	{
+		"anonymous": false,
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_allocPoint",
-				"type": "uint256"
-			},
-			{
-				"internalType": "contract IERC20",
-				"name": "_lpToken",
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
 				"type": "address"
 			},
 			{
-				"internalType": "bool",
-				"name": "_withUpdate",
-				"type": "bool"
+				"indexed": true,
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
 			},
 			{
-				"internalType": "string",
-				"name": "_uri",
-				"type": "string"
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
 			}
 		],
-		"name": "add",
-		"outputs": [],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
 			},
 			{
 				"internalType": "uint256",
@@ -42,7 +63,7 @@ export const LQN_COIN_CONTRACT_ABI = [
 				"type": "uint256"
 			}
 		],
-		"name": "deposit",
+		"name": "burn",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -51,134 +72,64 @@ export const LQN_COIN_CONTRACT_ABI = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "_devaddr",
+				"name": "spender",
 				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "subtractedValue",
+				"type": "uint256"
 			}
 		],
-		"name": "dev",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
+		"name": "decreaseAllowance",
+		"outputs": [
 			{
 				"internalType": "bool",
-				"name": "_withUpdate",
+				"name": "",
 				"type": "bool"
 			}
 		],
-		"name": "doHalvingCheck",
-		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [
 			{
-				"internalType": "contract LiquiCoin",
-				"name": "_liquiCoin",
-				"type": "address"
-			},
-			{
 				"internalType": "address",
-				"name": "_devaddr",
+				"name": "spender",
 				"type": "address"
 			},
 			{
 				"internalType": "uint256",
-				"name": "_startBlock",
+				"name": "addedValue",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
+		"name": "increaseAllowance",
+		"outputs": [
 			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "user",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "pid",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
 			}
 		],
-		"name": "Deposit",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			}
-		],
-		"name": "emergencyWithdraw",
-		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"anonymous": false,
 		"inputs": [
 			{
-				"indexed": true,
 				"internalType": "address",
-				"name": "user",
+				"name": "_to",
 				"type": "address"
 			},
 			{
-				"indexed": true,
 				"internalType": "uint256",
-				"name": "pid",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
+				"name": "_amount",
 				"type": "uint256"
 			}
 		],
-		"name": "EmergencyWithdraw",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "newLqnPerBlock",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "nextHalveBlockNumber",
-				"type": "uint256"
-			}
-		],
-		"name": "Halve",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "massUpdatePools",
+		"name": "mint",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -212,23 +163,78 @@ export const LQN_COIN_CONTRACT_ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
 			},
 			{
 				"internalType": "uint256",
-				"name": "_allocPoint",
+				"name": "amount",
 				"type": "uint256"
-			},
+			}
+		],
+		"name": "transfer",
+		"outputs": [
 			{
 				"internalType": "bool",
-				"name": "_withUpdate",
+				"name": "",
 				"type": "bool"
 			}
 		],
-		"name": "set",
-		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -248,106 +254,22 @@ export const LQN_COIN_CONTRACT_ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			}
-		],
-		"name": "updatePool",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
-				"type": "uint256"
-			}
-		],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
 				"internalType": "address",
-				"name": "user",
+				"name": "owner",
 				"type": "address"
 			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "pid",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Withdraw",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "blockInADay",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "BONUS_MULTIPLIER",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "bonusEndBlock",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "devaddr",
-		"outputs": [
 			{
 				"internalType": "address",
-				"name": "",
+				"name": "spender",
 				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -356,82 +278,12 @@ export const LQN_COIN_CONTRACT_ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_from",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_to",
-				"type": "uint256"
-			}
-		],
-		"name": "getMultiplier",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "halvePeriod",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "havingDays",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "lastHalveBlock",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "liquiCoin",
-		"outputs": [
-			{
-				"internalType": "contract LiquiCoin",
-				"name": "",
+				"internalType": "address",
+				"name": "account",
 				"type": "address"
 			}
 		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "lqnPerBlock",
+		"name": "balanceOf",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -444,12 +296,38 @@ export const LQN_COIN_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "minimumLqnPerBlock",
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxSupply",
 		"outputs": [
 			{
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",
@@ -469,62 +347,12 @@ export const LQN_COIN_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_user",
-				"type": "address"
-			}
-		],
-		"name": "pendingLqns",
+		"inputs": [],
+		"name": "symbol",
 		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "poolInfo",
-		"outputs": [
-			{
-				"internalType": "contract IERC20",
-				"name": "lpToken",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "allocPoint",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "lastRewardBlock",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "accLqnPerShare",
-				"type": "uint256"
-			},
 			{
 				"internalType": "string",
-				"name": "uri",
+				"name": "",
 				"type": "string"
 			}
 		],
@@ -533,66 +361,11 @@ export const LQN_COIN_CONTRACT_ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "poolLength",
+		"name": "totalSupply",
 		"outputs": [
 			{
 				"internalType": "uint256",
 				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "startBlock",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "totalAllocPoint",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "userInfo",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rewardDebt",
 				"type": "uint256"
 			}
 		],

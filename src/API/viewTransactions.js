@@ -94,9 +94,10 @@ export const  maxSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
   console.log("before max suply",liquiCoinContract);
   const amount =  await liquiCoinContract.methods.maxSupply().call({from: accounts[0]});
 
-console.log("after max supply",amount);
+  let coin=web3.utils.fromWei(amount,'ether')
+console.log("after max supply",coin);
 
-dispatch(setMaxSupply(amount));
+dispatch(setMaxSupply(coin));
 
-return amount;
+return coin;
 }

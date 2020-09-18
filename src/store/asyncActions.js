@@ -64,7 +64,7 @@ export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts
     
 //-- coin
     if(liquiCoinContract){
-        const block = await   lastBlock(web3,liquiCoinContract,accounts,dispatch);
+        const block = await  maxSupply(web3,liquiCoinContract,accounts,dispatch);
         console.log("max supply",block);
     }
     }
