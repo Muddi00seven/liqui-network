@@ -4,6 +4,26 @@ import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
+    let unixTimestamp = 1680389715;
+    //Since JavaScript works in milliseconds, you should convert 
+    // the time into milliseconds by multiplying it by 1000.
+    let date = new Date(unixTimestamp * 1000);
+    
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDay();
+    let dates = date.getDate()
+    // let locateString = date.toLocaleDateString()
+    let hours = date.getHours();
+    let minutes = "0" + date.getMinutes();
+    let seconds = "0" + date.getSeconds();
+    
+    // Will display time in 11:10:22 format
+    let formatTime =  month + ' ' + dates + ', '  + year + ' ' + hours + ': ' + ' ' + minutes.substr(-2) + ':' + seconds.substr(-2) ;
+    // let formatTime = locateString;
+    let stringyDate = formatTime.toString()
+
+
    // const [{accounts ,contract,dappsList}, dispatch] = useStore();
     const[timerDays, setTimerDays] = useState('00');
     const[timerHours, setTimerHours] = useState('00');
@@ -17,7 +37,9 @@ const Timer = () => {
     
 
     const startTimer = () => {
-        const countdownDate = new Date('Sep 18, 2020 00:00:00').getTime();
+        // const countdownDate = new Date('Sep 20, 2020 00:00:00').getTime();
+        const countdownDate = new Date(stringyDate).getTime();
+
 
         interval = setInterval(() => {
             const now = new Date().getTime();
