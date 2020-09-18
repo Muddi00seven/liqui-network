@@ -15,6 +15,13 @@ const initialState = {
   liquiCoinContract: null,
   pools:[],
   totalPools: 0,
+   lastBlock:0,
+   currentReward:0,
+   halvePeriod:0,
+  maxSupply:0,
+  circulatingSupply:0,
+  
+
   
 
 }

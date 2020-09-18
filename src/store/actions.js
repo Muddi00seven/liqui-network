@@ -15,12 +15,37 @@ export const setPools = (pools)=> {
     };
 }
    
-        export const setDestinationAgentLC = (transaction)=> {
-            return {
-                type: 'SET_DestinationAgent_LC',
-                payload: transaction
-            };
+export const setLastBlock = (block)=> {
+    return {
+        type: 'SET_LAST_BLOCK',
+        payload: block
+    };
 }
+export const setReward = (reward)=> {
+    return {
+        type: 'SET_REWARD',
+        payload: reward
+    };
+}
+export const setHalvePeriod = (period)=> {
+    return {
+        type: 'SET_HALVE_PERIOD',
+        payload: period
+    };
+}
+export const setMaxSupply = (amount)=> {
+    return {
+        type: 'SET_MAX_SUPPLY',
+        payload: amount
+    };
+}
+export const setCirculatingSupply = (amount)=> {
+    return {
+        type: 'SET_CIRCULATING_SUPPLY',
+        payload: amount
+    };
+}
+
 export const setupWeb3 = (web3) => {
     return {
         type: 'SETUP_WEB3',

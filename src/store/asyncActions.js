@@ -2,7 +2,8 @@ import { setupWeb3, setupContract,setupToken, addEthereumAccounts, setResult, we
 import Web3 from "web3";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS  } from '../ABI/LiquiChef';
  import { LQN_COIN_CONTRACT_ABI,LQN_COIN_CONTRACT_ADDRESS  } from "../ABI/liquiCoin";
- import {getPools   } from '../API/viewTransactions';
+ import {getPools,lastBlock, currentReward,halvePeriod ,maxSupply } from '../API/viewTransactions';
+
 
 
 export const loadBlockchain = async(dispatch) =>{
@@ -41,42 +42,36 @@ export const loadBlockchain = async(dispatch) =>{
         }
     }
 }
-export const loadChef = async(liquiChefCountract,accounts,dispatch) =>{
+export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts,dispatch) =>{
 
     console.log("IN LOADING liquibChef",liquiChefCountract);
     
+   
         const pools = await   getPools(liquiChefCountract,accounts,dispatch);
     console.log("pools",pools);
-  //.  dispatch(setBuyOrders(buyList));
-   
-    
-     
-    }
-
-export const setNumber= async(contract, accounts,number)=>{
-    console.log("before setting Number",number);
  
-   const receipt =  await contract.methods.setNumber(number).send({from : accounts[0]});
-   console.log("after  setting number ", receipt);
-  
+    if(liquiChefCountract){
+    const block = await   lastBlock(web3,liquiChefCountract,accounts,dispatch);
+    console.log("halving",block);
+ 
 
-}
-export const viewBoth = async(contract, accounts, dispatch)=>{
-    console.log("before virewing",contract.methods, accounts, dispatch);
+  const period = await   halvePeriod(web3,liquiChefCountract,accounts,dispatch);
+    console.log("Reward",period);
 
-   const receipt =  await contract.methods.getBoth().call({from : accounts[0]});
-   console.log("after  viewing  ", receipt);
-   dispatch(setResult(receipt));
-
-}
-
-
-
-export const loadContract = async(lcContract,tokenContract, accounts,  dispatch)=>{
-console.log("INLoad contract",lcContract,tokenContract, accounts);
-   
-// const lcs  = await getBuyerLcs(lcContract, accounts[0],dispatch);
-// let agent ='0x145eFf1dD342643dd88B2D7b330C8aA5BA8632C2'; //accounts[0];
-// const response  = await getOriginAgentLcs(lcContract, agent,dispatch);      
-    //const buyersLC_list=  viewbuyersLcs(lcContraact, accounts,  dispatch);
+    const reward = await   currentReward(web3,liquiChefCountract,accounts,dispatch);
+    console.log("Reward",reward);
+    } 
+    
+//-- coin
+    if(liquiCoinContract){
+        const block = await   lastBlock(web3,liquiCoinContract,accounts,dispatch);
+        console.log("max supply",block);
     }
+    }
+
+
+
+
+
+
+

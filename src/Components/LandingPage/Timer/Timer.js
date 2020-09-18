@@ -1,8 +1,10 @@
 import React, {useEffect , useState , useRef} from 'react'
 import './timer.css';
+import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
+   // const [{accounts ,contract,dappsList}, dispatch] = useStore();
     const[timerDays, setTimerDays] = useState('00');
     const[timerHours, setTimerHours] = useState('00');
     const[timerMinutes, setTimerMinutes] = useState('00');
