@@ -1,5 +1,5 @@
 
-import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply } from "../store/actions";
 
 
 
@@ -98,6 +98,19 @@ export const  maxSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
 console.log("after max supply",coin);
 
 dispatch(setMaxSupply(coin));
+
+return coin;
+}
+
+export const  circulatingSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
+
+  console.log("before max suply",liquiCoinContract);
+  const amount =  await liquiCoinContract.methods.totalSupply().call({from: accounts[0]});
+
+  let coin=web3.utils.fromWei(amount,'ether')
+console.log("after max supply",coin);
+
+dispatch(setCirculatingSupply(coin));
 
 return coin;
 }
