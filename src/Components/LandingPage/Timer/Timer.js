@@ -7,7 +7,13 @@ const Timer = () => {
     const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
     console.log("Timestamp in timer",lastBlock);
 
-    let unixTimestamp = 1680389715;
+    let time= parseInt(lastBlock);
+    let dt = new Date(time*1000);
+    console.log("date",dt);
+   
+
+
+    let unixTimestamp = parseInt(1600444732000);
     //Since JavaScript works in milliseconds, you should convert 
     // the time into milliseconds by multiplying it by 1000.
     let date = new Date(unixTimestamp * 1000);
