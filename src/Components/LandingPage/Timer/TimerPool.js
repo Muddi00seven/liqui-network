@@ -1,12 +1,20 @@
-import React, {useEffect , useState , useRef} from 'react'
+import React, {useEffect , useState , useRef , useContext} from 'react'
 import './timer.css';
 import {useStore } from '../../../context/GlobalState';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {Link} from 'react-router-dom';
+import { GlobalContext2 } from "../../Pool/GlobalContext/GlobalContext";
 
 
 const TimerPool = () => {
+    const {plus,minus,remove , cart } = useContext(GlobalContext2)
 
+    const value = cart;
+    const {id} = value
+ 
+    const handleDel =()=>{
+      remove(id)
+    }
     const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
     console.log("Timestamp in timer",lastBlock);
 
@@ -128,7 +136,7 @@ const TimerPool = () => {
         </div>
         <div className="backArrow">
                    <span>
-        <Link style={{textDecoration: 'none' , color:'#27ade6'}} to="/">   <ArrowBackIosIcon fontSize="large"/></Link>
+        <Link style={{textDecoration: 'none' , color:'#27ade6'}} to="/"> <span onClick={handleDel}> <ArrowBackIosIcon fontSize="large"/> </span></Link>
            </span>
              </div>
         </>
