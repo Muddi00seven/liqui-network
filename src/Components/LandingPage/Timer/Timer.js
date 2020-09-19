@@ -79,7 +79,7 @@ const Timer = () => {
                 <p className="heading">Next Reward Halving</p>
                 <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
-                    from  <b className="b1"> {currentReward} </b> to <b className="b2"> {lqnBlock} </b> LQN 
+                    from  <b className="b1"> {lastBlock} </b> to <b className="b2"> {lqnBlock} </b> LQN 
                     in {lastBlock} Blocks
                 </p>
                 </div>
