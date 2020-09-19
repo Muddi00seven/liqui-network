@@ -4,14 +4,19 @@ import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
-    let [{lastBlock, currentReward , halvePeriod}] = useStore()
-    let lol = parseInt(lastBlock);
-    // let unixTimestamp = lastBlock +  100444732;
-    let unixTimestamp = lastBlock + 5184000  ;
 
-        //Since JavaScript works in milliseconds, you should convert 
+    const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
+    console.log("Timestamp in timer",lastBlock);
 
-    // let lol = parseInt(lastBlock);
+    let time= parseInt(lastBlock + 2592000);
+    let dt = new Date(time*1000);
+    console.log("date",dt);
+
+
+   
+
+
+    let unixTimestamp = parseInt(1600444732000);
     //Since JavaScript works in milliseconds, you should convert 
 // >>>>>>> Stashed changes
     // the time into milliseconds by multiplying it by 1000.
@@ -27,7 +32,8 @@ const Timer = () => {
     let seconds = "0" + date.getSeconds();
     
     // Will display time in 11:10:22 format
-    let formatTime =  month + ' ' + dates + ', '  + year + ' ' + hours + ': ' + ' ' + minutes.substr(-2) + ':' + seconds.substr(-2) ;
+    // let formatTime =  month + ' ' + dates + ', '  + year + ' ' + hours + ': ' + ' ' + minutes.substr(-2) + ':' + seconds.substr(-2) ;
+    let formatTime = dt;
     // let formatTime = locateString;
     let stringyDate = formatTime.toString()
 
@@ -40,6 +46,8 @@ const Timer = () => {
 
 
     let interval = useRef();
+
+   // const [{ , currentReward , halvePeriod},] = useStore()
     let lqnBlock = currentReward/2;
     
 
