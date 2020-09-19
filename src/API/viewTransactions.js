@@ -1,5 +1,5 @@
 
-import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply } from "../store/actions";
 
 
 
@@ -55,14 +55,14 @@ export const  lastBlock = async(web3,liquiChefContract,accounts,dispatch)=>{
   const response =  await liquiChefContract.methods.lastHalveBlock().call({from: accounts[0]});
 
 console.log("last halved block",response);
-// const block= await web3.eth.getBlock(response);
-// let timestamp= block.timestamp;
-// console.log("last halved block time",timestamp);
-// let time= new Date(parseInt(timestamp));
-// let time1= new Date(parseInt(1490045811));
+const block= await web3.eth.getBlock(response);
+let timestamp= block.timestamp;
+console.log("last halved block time",timestamp);
+let time= new Date(parseInt(timestamp).toString());
+let time1= new Date(1600435232);
 
-// console.log("Time",time,"time2",time1);
-// dispatch(setLastBlock(time));
+console.log("Time",time1);
+//dispatch(setLastBlock(time));
 return response;
 }
 export const  currentReward = async(web3,liquiChefContract,accounts,dispatch)=>{
@@ -98,6 +98,19 @@ export const  maxSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
 console.log("after max supply",coin);
 
 dispatch(setMaxSupply(coin));
+
+return coin;
+}
+
+export const  circulatingSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
+
+  console.log("before max suply",liquiCoinContract);
+  const amount =  await liquiCoinContract.methods.totalSupply().call({from: accounts[0]});
+
+  let coin=web3.utils.fromWei(amount,'ether')
+console.log("after max supply",coin);
+
+dispatch(setCirculatingSupply(coin));
 
 return coin;
 }
