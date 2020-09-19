@@ -52,18 +52,14 @@ return poolInfo;
 export const  lastBlock = async(web3,liquiChefContract,accounts,dispatch)=>{
 
   console.log("last halved block",liquiChefContract);
-  const response =  await liquiChefContract.methods.lastHalveBlock().call({from: accounts[0]});
+  const lastblock =  await liquiChefContract.methods.lastHalveBlock().call({from: accounts[0]});
 
-console.log("last halved block",response);
-const block= await web3.eth.getBlock(response);
+console.log("last halved block",lastblock);
+const block= await web3.eth.getBlock(lastblock);
 let timestamp= block.timestamp;
-console.log("last halved block time",timestamp);
-let time= new Date(parseInt(timestamp).toString());
-let time1= new Date(1600435232);
 
-console.log("Time",time1);
-//dispatch(setLastBlock(time));
-return response;
+dispatch(setLastBlock(timestamp));
+return lastblock;
 }
 export const  currentReward = async(web3,liquiChefContract,accounts,dispatch)=>{
 
