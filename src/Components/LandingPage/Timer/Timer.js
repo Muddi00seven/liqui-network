@@ -4,6 +4,8 @@ import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
+    const [{lastBlock , currentReward , halvePeriod}] = useStore()
+
     let unixTimestamp = 1680389715;
     //Since JavaScript works in milliseconds, you should convert 
     // the time into milliseconds by multiplying it by 1000.
@@ -32,7 +34,6 @@ const Timer = () => {
 
 
     let interval = useRef();
-    const [{lastBlock , currentReward , halvePeriod}] = useStore()
     let lqnBlock = currentReward/2;
     
 

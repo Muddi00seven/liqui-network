@@ -221,7 +221,7 @@ export const CardItem = ({id, token , points, lastReward, uri , accShare, name,p
     </div>
     {/* <img src={ETHUSD} width="100px" height="100px" /> */}
 
-    <Typography className={classes.addressHeading}>UNISWAP {uri} </Typography>  <Typography className={classes.contractAddress}>APY {points} %</Typography>
+    <Typography className={classes.addressHeading}>UNISWAP LQN-{uri} </Typography>  <Typography className={classes.contractAddress}>APY {points} %</Typography>
 
     {/* <Typography className={classes.addressHeading}>{name} </Typography>  <Typography className={classes.contractAddress}>{name}</Typography> */}
 

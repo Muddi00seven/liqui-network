@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import TextField from '@material-ui/core/TextField';
+
 import './Tab.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -91,7 +93,9 @@ export default function SimpleTabs() {
         <div className="tab-value-container">
           <div className="column1">
             <p className="tab-number">Input</p>
-            <p className="tab-number2">0</p>
+            <TextField id="standard-basic" className="tab-number2"  />
+
+            {/* <p className="tab-number2">0</p> */}
           </div>
           <div className="column2">
             <p className="tab-text">Balance: 0.0000 UNI </p>
@@ -111,7 +115,9 @@ export default function SimpleTabs() {
         <div className="tab-value-container2">
           <div className="unstake-column2">
             <p className="tab2-number">Input</p>
-            <p className="tab2-number2">0</p>
+              {/* <p ></p> */}
+            <TextField id="standard-basic" className="tab2-number2"  />
+
           </div>
           <div className="unstake-column3">
             <p className="tab2-text">Staked: 0.0000 ULU </p>

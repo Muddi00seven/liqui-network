@@ -28,18 +28,18 @@
 } */
 
 .column2{
-    margin-left: 42%;
+    margin-left: 5%;
 }
 
 .tab-number{
-    margin-bottom: -16px;
+    margin-bottom: -6px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 }
 
 .tab-text{
-    margin-bottom: -16px;
+    margin-bottom: -7px;
     font-size: 15px;
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 color: rgb(75, 73, 73);
@@ -119,30 +119,32 @@ UNSTAKE */
 } */
 
 .unstake-column3{
-    margin-left: 42%;
+    margin-left: 10%;
 }
 
 .tab2-number{
-    margin-bottom: -16px;
+    margin-bottom: -6px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 }
 
 .tab2-text{
-    margin-bottom: -16px;
+    margin-bottom: -12px;
     font-size: 15px;
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 color: rgb(75, 73, 73);
+
 
 }
 
 
 .tab2-number2{
-font-size: 19px;
+/* font-size: 19px; */
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 font-weight: bold;
 color: rgb(75, 73, 73);
+font-size: 12px;
 
 }
 
