@@ -57,7 +57,9 @@ export const  lastBlock = async(web3,liquiChefContract,accounts,dispatch)=>{
 console.log("last halved block",lastblock);
 const block= await web3.eth.getBlock(lastblock);
 let timestamp= block.timestamp;
-
+let time= parseInt(timestamp);
+let date = new Date(time*1000);
+console.log("time",date);
 dispatch(setLastBlock(timestamp));
 return lastblock;
 }
