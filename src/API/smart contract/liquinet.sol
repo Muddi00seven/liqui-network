@@ -1062,7 +1062,7 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
             .mul(lqnPerBlock)
             .mul(pool.allocPoint)
             .div(totalAllocPoint);
-       // liquiCoin.mint(devaddr, lqnReward.div(20)); // 5%
+       
         liquiCoin.mint(address(this), lqnReward);
         pool.accLqnPerShare = pool.accLqnPerShare.add(lqnReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
@@ -1085,7 +1085,7 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
 
     // Withdraw LP tokens from MasterChef.
     function withdraw(uint256 _pid, uint256 _amount) public {
-        require(msg.sender!=devaddr,"you are not allowed to withdraw from the pool");
+        require(msg.sender!=devaddr,"you are not allowed to withdraw from the pool");// restrict from withdrawal
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
