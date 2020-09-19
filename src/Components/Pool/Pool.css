@@ -44,6 +44,17 @@
         height: 80px;
         margin-left: 15px;
     }
+    .uniswap-heading{
+        font-size: 17px;
+        color: rgb(92, 91, 91);
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    }
+    .lqn-price{
+        font-size: 15px;
+        color: rgb(107, 107, 107);
+        font-family: Arial, Helvetica, sans-serif, Times New Roman;
+    }
+
     .stake-heading{
         font-size: 13px;
         color: rgb(107, 107, 107);
@@ -117,7 +128,7 @@ display: flex;
     }
 
     .top-right-container{
-    margin-left: 47%;
+    margin-left: 40%;
 }
 .top-right-container2{
     margin-left: 2%;
@@ -314,6 +325,199 @@ display: flex;
 /* BOOTM RIGHT */
 
 
+@media screen and (max-width: 1500px) {
+.line1-text2{
+    margin-left: 60%;
+
+}
+
+.line2-text2{
+    margin-left: 69%;
+
+}
+
+.line3-text2{
+    margin-left: 71%;
+
+}
+
+.line4-text2{
+    margin-left: 57%;
+
+}
+}
+
+@media screen and (max-width: 1479px) {
+
+    .cardLeft {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color:white;
+        height: 340px;
+
+      }
+      
+ 
+      .cardRight {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 340px;
+      }
+
+      .line1-text2{
+        margin-left: 42%;
+    
+    }
+    
+    .line2-text2{
+        margin-left: 48%;
+    
+    }
+    
+    .line3-text2{
+        margin-left: 51%;
+    
+    }
+    
+    .line4-text2{
+        margin-left: 57%;
+    
+    }
+      
+}
+
+@media screen and (max-width: 1481px) {
+    .top-right-container{
+        margin-left: 33%;
+    }
+    .top-right-container2{
+        margin-left: 2%;
+    }
+    .top-right-container3{
+        margin-left: 2%;
+    }
+    .top-right-container4{
+        margin-left: 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 1441px) {
+
+    .cardLeft {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color:white;
+        height: 340px;
+
+      }
+      
+ 
+      .cardRight {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 340px;
+      }
+
+      .line1-text2{
+        margin-left: 40%;
+    
+    }
+    
+    .line2-text2{
+        margin-left: 47%;
+    
+    }
+    
+    .line3-text2{
+        margin-left: 50%;
+    
+    }
+    
+    .line4-text2{
+        margin-left: 55%;
+    
+    }
+      
+    .top-right-container{
+        margin-left: 30%;
+    }
+    .top-right-container2{
+        margin-left: 2%;
+    }
+    .top-right-container3{
+        margin-left: 2%;
+    }
+    .top-right-container4{
+        margin-left: 5%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1382px) {
+
+    .cardLeft {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color:white;
+        height: 340px;
+
+      }
+      
+ 
+      .cardRight {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        /* text-align: center; */
+        background-color:white;
+        height: 340px;
+      }
+
+      .line1-text2{
+        margin-left: 39%;
+    
+    }
+    
+    .line2-text2{
+        margin-left: 46%;
+    
+    }
+    
+    .line3-text2{
+        margin-left: 49%;
+    
+    }
+    
+    .line4-text2{
+        margin-left: 54%;
+    
+    }
+      
+    .top-right-container{
+        margin-left: 28%;
+    }
+    .top-right-container2{
+        margin-left: 2%;
+    }
+    .top-right-container3{
+        margin-left: 2%;
+    }
+    .top-right-container4{
+        margin-left: 5%;
+    }
+
+}
+
 
 @media screen and (max-width: 600px) {
     .pool-section-main{
@@ -337,19 +541,19 @@ display: flex;
     }
 
     .top-right-container{
-        margin-top: 30%;
+        margin-top: 20%;
         margin-left: 0%;
     }
     .top-right-container2{
-        margin-top: 30%;
+        margin-top: 21%;
         margin-left: 2%;
     }
     .top-right-container3{
-        margin-top: 30%;
+        margin-top: 20%;
         margin-left: 2%;
     }
     .top-right-container4{
-        margin-top: 30%;
+        margin-top: 20%;
         margin-left: 5%;
     }
 
@@ -393,7 +597,7 @@ display: flex;
   }
   
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
 
     .pool-section-main{
         margin-left: 0px;
@@ -416,19 +620,19 @@ display: flex;
     }
 
     .top-right-container{
-        margin-top: 35%;
-        margin-left: -20%;
+        margin-top: 31%;
+        margin-left: -30%;
     }
     .top-right-container2{
-        margin-top: 35%;
+        margin-top: 32%;
         margin-left: 2%;
     }
     .top-right-container3{
-        margin-top: 35%;
+        margin-top: 32%;
         margin-left: 2%;
     }
     .top-right-container4{
-        margin-top: 35%;
+        margin-top: 32%;
         margin-left: 5%;
     }
 
@@ -469,3 +673,4 @@ display: flex;
         height: 420px;
       }
   }
+

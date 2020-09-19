@@ -220,6 +220,10 @@ fontWeight: '500',
   marginLeft:'-150px',
 },
 
+'@media (max-width: 375px)' : {
+  marginLeft:'-120px',
+},
+
 '@media (max-width: 366px)' : {
   marginLeft:'-120px',
 },
@@ -231,7 +235,9 @@ fontWeight: '500',
 
 
   menuButton: {
-    color: theme.palette.primary.contrastText,
+    // color: theme.palette.primary.contrastText,
+    color: '#4b4b4d'
+
   },
   rightContainer: {
     [theme.breakpoints.up("md")]: {

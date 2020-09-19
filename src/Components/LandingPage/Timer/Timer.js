@@ -4,6 +4,7 @@ import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
+
     const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
     console.log("Timestamp in timer",lastBlock);
 
@@ -17,6 +18,7 @@ const Timer = () => {
 
     let unixTimestamp = parseInt(1600444732000);
     //Since JavaScript works in milliseconds, you should convert 
+// >>>>>>> Stashed changes
     // the time into milliseconds by multiplying it by 1000.
     let date = new Date(unixTimestamp * 1000);
     
@@ -44,6 +46,7 @@ const Timer = () => {
 
 
     let interval = useRef();
+
    // const [{ , currentReward , halvePeriod},] = useStore()
     let lqnBlock = currentReward/2;
     

@@ -21,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function PoolCards() {
- 
+export default function PoolCards({value, i}) {
+  // const {plus,minus,remove , cart } = useContext(GlobalContext2)
+
 
   const classes = useStyles();
 
@@ -40,13 +41,13 @@ export default function PoolCards() {
         {/* left side */}
         <div className="all-top-container">
       <div className="left-top-container">
-      <img src="/SUSHI--BACON.png" className="icon-pool-image"/>
+      <img src={`${value.uri}.png`} className="icon-pool-image"/>
       <img src={Logo} className="icon-logo-image"/>
 
       <div className="vl"></div>
       <div className="top-icon-text">
-      {/* <h3>{value.token}</h3>
-      <p>{value.uri}</p> */}
+  <h3 className="uniswap-heading">UNISWAP LQN/{value.uri}</h3>
+      <p className="lqn-price">1 LQN = 34.43 ETH</p>
       </div>
       </div>
 

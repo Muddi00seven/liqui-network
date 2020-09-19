@@ -28,18 +28,18 @@
 } */
 
 .column2{
-    margin-left: 42%;
+    margin-left: 26%;
 }
 
 .tab-number{
-    margin-bottom: -16px;
+    margin-bottom: -6px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 }
 
 .tab-text{
-    margin-bottom: -16px;
+    margin-bottom: -7px;
     font-size: 15px;
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 color: rgb(75, 73, 73);
@@ -52,6 +52,7 @@ font-size: 19px;
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 font-weight: bold;
 color: rgb(75, 73, 73);
+width: 100px;
 
 }
 
@@ -75,10 +76,11 @@ color: rgb(75, 73, 73);
         background-color: #1fc9a5;
         border-style: none;
         border-radius: 5px;
-
-
+        transition: background-color 1s;
     }
-
+    .stake-button:hover{
+        background-color: #27ade6;
+    }
     .liquidity-button{
         width: 40%;
         height: 40px;
@@ -89,8 +91,15 @@ color: rgb(75, 73, 73);
         margin-left: 20%;
         background-color: white;
         border-radius: 5px;
+        transition: background-color 1s;
+
     }
 
+    .liquidity-button:hover{
+        background-color: #27ade6;
+        color: white
+
+    }
     .tab-button-container{
         text-align: justify;
         margin-top: 6%;
@@ -119,30 +128,33 @@ UNSTAKE */
 } */
 
 .unstake-column3{
-    margin-left: 42%;
+    margin-left: 10%;
 }
 
 .tab2-number{
-    margin-bottom: -16px;
+    margin-bottom: -6px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif, Times New Roman;
 
 }
 
 .tab2-text{
-    margin-bottom: -16px;
+    margin-bottom: -12px;
     font-size: 15px;
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 color: rgb(75, 73, 73);
+
 
 }
 
 
 .tab2-number2{
-font-size: 19px;
+/* font-size: 19px; */
 font-family: Arial, Helvetica, sans-serif, Times New Roman;
 font-weight: bold;
 color: rgb(75, 73, 73);
+font-size: 12px;
+width: 100px;
 
 }
 
@@ -168,6 +180,12 @@ color: rgb(75, 73, 73);
         /* margin-left: 20%; */
         background-color: white;
         border-radius: 5px;
+        transition: background-color 1s;
+    }
+
+    .unstake-button:hover{
+        background-color: #27ade6;
+        color: white
     }
 
     .liquidity-button2{
@@ -180,6 +198,12 @@ color: rgb(75, 73, 73);
         margin-left: 18%;
         background-color: white;
         border-radius: 5px;
+        transition: background-color 1s;
+
+    }
+    .liquidity-button2:hover{
+        background-color: #27ade6;
+        color: white
     }
 
     .tab-button-container2{
@@ -214,7 +238,10 @@ color: rgb(75, 73, 73);
             background-color: white;
             border-radius: 5px;
         }
-    
+
+     /* .tab-number2{
+         width: 100px;
+     } */
     }
 
     @media screen and (max-width: 1448px) {
@@ -271,5 +298,20 @@ color: rgb(75, 73, 73);
     }
 
 
+    @media screen and (max-width: 1400px) {
+        .column2{
+            margin-left: 11%;
+        }
 
+        .unstake-column3{
+            margin-left: 11%;
 
+        }
+    }
+
+    /* @media screen and (max-width: 600px) {
+
+        .tab-text{
+
+        }
+    } */

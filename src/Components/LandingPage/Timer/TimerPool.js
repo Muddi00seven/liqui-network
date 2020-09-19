@@ -1,8 +1,54 @@
-import React, {useEffect , useState , useRef} from 'react'
+import React, {useEffect , useState , useRef , useContext} from 'react'
 import './timer.css';
+import {useStore } from '../../../context/GlobalState';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import {Link} from 'react-router-dom';
+import { GlobalContext2 } from "../../Pool/GlobalContext/GlobalContext";
+
 
 const TimerPool = () => {
+    const {plus,minus,remove , cart } = useContext(GlobalContext2)
+
+    const value = cart;
+    const {id} = value
+ 
+    const handleDel =()=>{
+      remove(id)
+    }
+    const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
+    console.log("Timestamp in timer",lastBlock);
+
+    let time= parseInt(lastBlock + 2592000);
+    let dt = new Date(time*1000);
+    console.log("date",dt);
+
+
+   
+
+
+    let unixTimestamp = parseInt(1600444732000);
+    //Since JavaScript works in milliseconds, you should convert 
+// >>>>>>> Stashed changes
+    // the time into milliseconds by multiplying it by 1000.
+    let date = new Date(unixTimestamp * 1000);
+    
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDay();
+    let dates = date.getDate()
+    // let locateString = date.toLocaleDateString()
+    let hours = date.getHours();
+    let minutes = "0" + date.getMinutes();
+    let seconds = "0" + date.getSeconds();
+    
+    // Will display time in 11:10:22 format
+    // let formatTime =  month + ' ' + dates + ', '  + year + ' ' + hours + ': ' + ' ' + minutes.substr(-2) + ':' + seconds.substr(-2) ;
+    let formatTime = dt;
+    // let formatTime = locateString;
+    let stringyDate = formatTime.toString()
+
+
+   // const [{accounts ,contract,dappsList}, dispatch] = useStore();
     const[timerDays, setTimerDays] = useState('00');
     const[timerHours, setTimerHours] = useState('00');
     const[timerMinutes, setTimerMinutes] = useState('00');
@@ -11,8 +57,14 @@ const TimerPool = () => {
 
     let interval = useRef();
 
+   // const [{ , currentReward , halvePeriod},] = useStore()
+    let lqnBlock = currentReward/2;
+    
+
     const startTimer = () => {
-        const countdownDate = new Date('Sep 18, 2020 00:00:00').getTime();
+        // const countdownDate = new Date('Sep 20, 2020 00:00:00').getTime();
+        const countdownDate = new Date(stringyDate).getTime();
+
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -46,35 +98,13 @@ const TimerPool = () => {
 
     return (
         <>
-        {/* <div style={{display: 'flex'}}>
-            <h1>
-
-            </h1>
-            <h1>
-                {timerDays}
-                </h1>
-                <h1>
-                {timerHours}
-                </h1>
-                <h1>
-                    {timerMinutes}
-                </h1>
-                <h1>
-                {timerSeconds}
-
-                </h1>
-        </div> */}
-           {/* <div className="backArrow">
-           <ArrowBackIosIcon/>
-             </div> */}
              <div className='timer'>
-
             <div className='heading-div'>
                 <p className="heading">Next Reward Halving</p>
                 <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
-                    from  <b className="b1"> 1,000 </b> to <b className="b2"> 500 </b> LQN 
-                    in 5,456 Blocks
+                    from  <b className="b1"> {currentReward} </b> to <b className="b2"> {lqnBlock} </b> LQN 
+                    in {lastBlock} Blocks
                 </p>
                 </div>
             </div>
@@ -104,9 +134,9 @@ const TimerPool = () => {
 
             </div>
         </div>
-               <div className="backArrow">
+        <div className="backArrow">
                    <span>
-           <ArrowBackIosIcon fontSize="large"/>
+        <Link style={{textDecoration: 'none' , color:'#27ade6'}} to="/"> <span onClick={handleDel}> <ArrowBackIosIcon fontSize="large"/> </span></Link>
            </span>
              </div>
         </>
