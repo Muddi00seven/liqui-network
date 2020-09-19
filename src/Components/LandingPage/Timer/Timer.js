@@ -10,6 +10,10 @@ const Timer = () => {
     let unixTimestamp = lastBlock + 5184000  ;
 
         //Since JavaScript works in milliseconds, you should convert 
+
+    // let lol = parseInt(lastBlock);
+    //Since JavaScript works in milliseconds, you should convert 
+// >>>>>>> Stashed changes
     // the time into milliseconds by multiplying it by 1000.
     let date = new Date(unixTimestamp * 1000);
     

@@ -235,7 +235,9 @@ fontWeight: '500',
 
 
   menuButton: {
-    color: theme.palette.primary.contrastText,
+    // color: theme.palette.primary.contrastText,
+    color: '#4b4b4d'
+
   },
   rightContainer: {
     [theme.breakpoints.up("md")]: {
