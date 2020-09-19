@@ -6,8 +6,10 @@ import {useStore } from '../../../context/GlobalState';
 const Timer = () => {
     let [{lastBlock, currentReward , halvePeriod}] = useStore()
     let lol = parseInt(lastBlock);
-    let unixTimestamp = lol;
-    //Since JavaScript works in milliseconds, you should convert 
+    // let unixTimestamp = lastBlock +  100444732;
+    let unixTimestamp = lastBlock + 5184000  ;
+
+        //Since JavaScript works in milliseconds, you should convert 
     // the time into milliseconds by multiplying it by 1000.
     let date = new Date(unixTimestamp * 1000);
     
