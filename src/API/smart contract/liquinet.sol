@@ -1085,16 +1085,24 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
 
     // Withdraw LP tokens from MasterChef.
     function withdraw(uint256 _pid, uint256 _amount) public {
+        require(msg.sender!=devaddr,"you are not allowed to withdraw from the pool");
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
         updatePool(_pid);
         uint256 pending = user.amount.mul(pool.accLqnPerShare).div(1e12).sub(user.rewardDebt);
-        safeLqnTransfer(msg.sender, pending);
+       transferwithBurn(// safeLqnTransfer(msg.sender, pending);
         user.amount = user.amount.sub(_amount);
         user.rewardDebt = user.amount.mul(pool.accLqnPerShare).div(1e12);
         pool.lpToken.safeTransfer(address(msg.sender), _amount)
         emit Withdraw(msg.sender, _pid, _amount);
+    }
+    function transferwithBurn(address transferee, uint amount){
+        uint burnAmount= amount.div(50);// burn 2%
+        uint transferable=amount.sub(burnAmount);
+        safeLqnTransfer(transferee, transferable);
+
+        liquiCoin.burn(address(this),burnAmount);
     }
 
     // Withdraw without caring about rewards. EMERGENCY ONLY.
