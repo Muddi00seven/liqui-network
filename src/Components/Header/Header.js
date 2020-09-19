@@ -220,6 +220,10 @@ fontWeight: '500',
   marginLeft:'-150px',
 },
 
+'@media (max-width: 375px)' : {
+  marginLeft:'-120px',
+},
+
 '@media (max-width: 366px)' : {
   marginLeft:'-120px',
 },

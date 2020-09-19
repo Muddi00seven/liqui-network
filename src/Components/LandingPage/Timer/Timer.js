@@ -4,9 +4,9 @@ import {useStore } from '../../../context/GlobalState';
 
 
 const Timer = () => {
-    const [{lastBlock , currentReward , halvePeriod}] = useStore()
-
-    let unixTimestamp = 1680389715;
+    let [{lastBlock, currentReward , halvePeriod}] = useStore()
+    let lol = parseInt(lastBlock);
+    let unixTimestamp = lol;
     //Since JavaScript works in milliseconds, you should convert 
     // the time into milliseconds by multiplying it by 1000.
     let date = new Date(unixTimestamp * 1000);
@@ -79,7 +79,7 @@ const Timer = () => {
                 <p className="heading">Next Reward Halving</p>
                 <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
-                    from  <b className="b1"> {lastBlock} </b> to <b className="b2"> {lqnBlock} </b> LQN 
+                    from  <b className="b1"> {currentReward} </b> to <b className="b2"> {lqnBlock} </b> LQN 
                     in {lastBlock} Blocks
                 </p>
                 </div>
