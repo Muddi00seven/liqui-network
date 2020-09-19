@@ -45,8 +45,8 @@ export default function PoolCards() {
 
       <div className="vl"></div>
       <div className="top-icon-text">
-      {/* <h3>{value.token}</h3>
-      <p>{value.uri}</p> */}
+      <h3 className="uniswap-heading">UNISWAP LQN/ETH</h3>
+      <p className="lqn-price">1 LQN = 34.43 ETH</p>
       </div>
       </div>
 
