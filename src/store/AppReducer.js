@@ -38,6 +38,11 @@ export default (state, action) => {
                   ...state,
                     circulatingSupply:action.payload
                 }
+                case 'SET_BLOCK_IN_DAY':
+                return {
+                  ...state,
+                    blockinADay:action.payload
+                }
       case 'SETUP_WEB3':
         return {
           ...state,

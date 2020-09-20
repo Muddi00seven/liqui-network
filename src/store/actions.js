@@ -33,6 +33,13 @@ export const setHalvePeriod = (period)=> {
         payload: period
     };
 }
+export const setBlockinADay = (block)=> {
+    return {
+        type: 'SET_BLOCK_IN_DAY',
+        payload: block
+    };
+}
+
 export const setMaxSupply = (amount)=> {
     return {
         type: 'SET_MAX_SUPPLY',
