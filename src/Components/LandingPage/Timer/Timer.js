@@ -5,7 +5,7 @@ import {useStore } from '../../../context/GlobalState';
 
 const Timer = () => {
 
-    const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
+    const [{lastBlock,currentReward , halvePeriod, blockInADay},dispatch] = useStore();
     console.log("Timestamp in timer",lastBlock);
 
     let time= parseInt(lastBlock + 2592000);
