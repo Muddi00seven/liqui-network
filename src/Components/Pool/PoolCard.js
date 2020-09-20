@@ -1,19 +1,18 @@
-import React, {useContext } from 'react'
+import React, {useEffect , useState , useRef, useContext} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
+// import Paper from '@material-ui/core/Paper';
+// import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import Swap from '../LandingPage/TokenSwap/Swap';
 // import Timer from '../LandingPage/Timer/Timer'
 import TimerPool from '../LandingPage/Timer/TimerPool'
-import ETH from '../YieldCards/ETH-USDC.png'
  import SimpleTabs from './Tabs/Tab';
  import { GlobalContext2 } from "./GlobalContext/GlobalContext";
 import Logo from '../Header/logo.png'
 
+import {useStore } from '../../context/GlobalState';
 
 // ICONS
-import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
+
 
 
 import './Pool.css'
@@ -22,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PoolCards({value, i}) {
+
+  const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
+
   // const {plus,minus,remove , cart } = useContext(GlobalContext2)
 
 
