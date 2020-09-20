@@ -20,6 +20,7 @@ const initialState = {
    halvePeriod:0,
   maxSupply:0,
   circulatingSupply:0,
+  blockInADay:0,
   
 
   

@@ -1,5 +1,5 @@
 
-import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply,setBlockinADay } from "../store/actions";
 
 
 
@@ -85,6 +85,17 @@ console.log("after alve period",period);
 dispatch(setHalvePeriod(period));
 
 return period;
+}
+export const  blockinADay = async(web3,liquiChefContract,accounts,dispatch)=>{
+
+  console.log("before calling block in day",liquiChefContract);
+  const blocks =  await liquiChefContract.methods.blockInADay().call({from: accounts[0]});
+
+console.log("after block in a day",blocks);
+
+dispatch(setBlockinADay(blocks));
+
+return blocks;
 }
 //----- LQN coin  view functions
 export const  maxSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
