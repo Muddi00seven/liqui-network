@@ -52,7 +52,12 @@ export const setCirculatingSupply = (amount)=> {
         payload: amount
     };
 }
-
+export const setLqnBalance = (amount)=> {
+    return {
+        type: 'SET_LQN_BALANCE',
+        payload: amount
+    };
+}
 export const setupWeb3 = (web3) => {
     return {
         type: 'SETUP_WEB3',

@@ -43,6 +43,11 @@ export default (state, action) => {
                   ...state,
                     blockinADay:action.payload
                 }
+                case 'SET_LQN_BALANCE':
+                  return {
+                    ...state,
+                      liqnBalance:action.payload
+                  }
       case 'SETUP_WEB3':
         return {
           ...state,

@@ -2,7 +2,7 @@ import { setupWeb3, setupContract,setupToken, addEthereumAccounts, setResult, we
 import Web3 from "web3";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS  } from '../ABI/LiquiChef';
  import { LQN_COIN_CONTRACT_ABI,LQN_COIN_CONTRACT_ADDRESS  } from "../ABI/liquiCoin";
-    import {getPools,lastBlock, currentReward,halvePeriod ,maxSupply,circulatingSupply,blockinADay } from '../API/viewTransactions';
+    import {getPools,lastBlock, currentReward,halvePeriod ,maxSupply,circulatingSupply,blockinADay,lqnBalance } from '../API/viewTransactions';
 
 
 
@@ -72,6 +72,8 @@ export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts
 
         const supply = await  circulatingSupply(web3,liquiCoinContract,accounts,dispatch);
         console.log("circulating supply",supply);
+        const balance = await  lqnBalance(web3,liquiCoinContract,accounts,dispatch);
+        console.log("LQN Balance",balance);
     }
     }
 

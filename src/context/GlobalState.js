@@ -18,9 +18,10 @@ const initialState = {
    lastBlock:0,
    currentReward:0,
    halvePeriod:0,
+    blockInADay:0,
   maxSupply:0,
   circulatingSupply:0,
-  blockInADay:0,
+  lqnBalance:0,
   
 
   
