@@ -8,6 +8,7 @@ import TimerPool from '../LandingPage/Timer/TimerPool'
  import SimpleTabs from './Tabs/Tab';
  import { GlobalContext2 } from "./GlobalContext/GlobalContext";
 import Logo from '../Header/logo.png'
+import TabList from './Tabs/TabList'
 
 import {useStore } from '../../context/GlobalState';
 
@@ -107,7 +108,7 @@ export default function PoolCards({value, i}) {
     <div class="rowLeft">
   <div class="columnLeft">
     <div class="cardLeft">
-      <SimpleTabs/>
+      <TabList/>
       {/* <h3>Card 1</h3>
       <p>Some text</p>
       <p>Some text</p> */}

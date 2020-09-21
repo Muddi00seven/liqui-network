@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext } from 'react'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
+import { GlobalContext2 } from "../GlobalContext/GlobalContext";
 
 import './Tab.css'
 function TabPanel(props) {
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleTabs() {
+export default function SimpleTabs({value1,i}) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -71,6 +72,16 @@ export default function SimpleTabs() {
   const handleApprove = async() => {
     console.log("in Approve");
   };
+
+
+  const {cart } = useContext(GlobalContext2)
+
+      // this is value of pool object
+  const Addstake =  () => {
+    console.log('this is' + value1.uri )
+  }
+  
+
   return (
     <div className={classes.root}>
       <AppBar position="static" >
@@ -94,7 +105,7 @@ export default function SimpleTabs() {
         <div>
         <div className="tab-value-container">
           <div className="column1">
-            <p className="tab-number">Input</p>
+            <p className="tab-number">{value1.uri}</p>
             <TextField id="standard-basic" className="tab-number2"  />
 
             {/* <p className="tab-number2">0</p> */}
@@ -106,7 +117,7 @@ export default function SimpleTabs() {
         </div>
 
         <div className="tab-button-container">
-          <button className="stake-button">Stake</button>
+          <button  onClick={Addstake} className="stake-button">Stake</button>
           <button className="liquidity-button"onClick={handleApprove}>Approve</button>
         </div>
 
