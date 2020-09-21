@@ -1,11 +1,8 @@
-import React, {Component } from 'react'
+import React from 'react'
 import './css/landingPage.css';
 import Timer from './Timer/Timer'
         // LIBRARIES
-// import Typical from 'react-typical';
-// import Apps from './Timer/TimerClock'
 import Swap from './TokenSwap/Swap'
-// import Card from '../YieldCards/Card'
 import { makeStyles } from '@material-ui/core/styles';
 import {CardList} from '../YieldCards/CardList';
 import './Landing.css'
@@ -35,33 +32,17 @@ const useStyles = makeStyles({
 
 const Landing = () => {
     const classes = useStyles();
-    // const scrollToBottom = () =>
-    // window.scrollTo({
-    //     top: document.documentElement.scrollHeight,
-    //     behavior: "smooth"
-    // });
+
     return (
         <>
         <div>
-            {/* <button onClick={scrollToBottom}>
-                dsads
-            </button> */}
-                {/* <div className={classes.Swap}>
-        <Swap/>
-        </div> */}
-
-        <div className="Swap ">
- 
+       <div className="Swap ">
         <Swap/>
         </div>
-        
             <Timer/>
          <div className="cardList "> 
-                <CardList />
+           <CardList />
         </div>
-
-
-
         </div>
      
         </>

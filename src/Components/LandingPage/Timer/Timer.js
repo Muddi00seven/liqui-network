@@ -5,12 +5,12 @@ import {useStore } from '../../../context/GlobalState';
 
 const Timer = () => {
 
-    const [{lastBlock,currentReward , halvePeriod},dispatch] = useStore();
+    const [{lastBlock,currentReward , halvePeriod, blockInADay},dispatch] = useStore();
     console.log("Timestamp in timer",lastBlock);
 
     let time= parseInt(lastBlock + 2592000);
     let dt = new Date(time*1000);
-    console.log("date",dt);
+    // console.log("date",dt);
 
 
    
@@ -94,7 +94,7 @@ const Timer = () => {
                 <div className="text-container">
                 <p className="timertext-top" style={{marginTop: '-1px'}}>
                     from  <b className="b1"> {currentReward} </b> to <b className="b2"> {lqnBlock} </b> LQN 
-                    in {lastBlock} Blocks
+                    in {halvePeriod} Blocks
                 </p>
                 </div>
             </div>

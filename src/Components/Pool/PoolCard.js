@@ -1,19 +1,18 @@
-import React, {useContext } from 'react'
+import React, {useEffect , useState , useRef, useContext} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
+// import Paper from '@material-ui/core/Paper';
+// import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import Swap from '../LandingPage/TokenSwap/Swap';
 // import Timer from '../LandingPage/Timer/Timer'
 import TimerPool from '../LandingPage/Timer/TimerPool'
-import ETH from '../YieldCards/ETH-USDC.png'
  import SimpleTabs from './Tabs/Tab';
  import { GlobalContext2 } from "./GlobalContext/GlobalContext";
 import Logo from '../Header/logo.png'
 
+import {useStore } from '../../context/GlobalState';
 
 // ICONS
-import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
+
 
 
 import './Pool.css'
@@ -22,6 +21,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PoolCards({value, i}) {
+
+  const [{lastBlock,currentReward , blockInADay},dispatch] = useStore();
+
+  let hoursReward = currentReward * blockInADay;
+
+  let fullCycle = hoursReward * 30
+
+  let halfCycle = fullCycle / 2
+
   // const {plus,minus,remove , cart } = useContext(GlobalContext2)
 
 
@@ -114,19 +122,19 @@ export default function PoolCards({value, i}) {
       <h3 className="uni-heading">Uniswap Pool</h3>
       <div className="line1">
       <p className="line1-text1">Your Estimated 24h Rewards</p>
-      <p className="line1-text2">0.05434 LQN ($5,374)</p>
+      <p className="line1-text2">{hoursReward} LQN ($5,374)</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
       <p className="line2-text1">Current Cycle Rewards</p>
-      <p className="line2-text2">4,000 LQN ($435,374)</p>
+      <p className="line2-text2">{fullCycle} LQN ($435,374)</p>
       </div>
       <hr className="hr"/>
 
       <div className="line1">
       <p className="line3-text1">Next Cycle Rewards</p>
-      <p className="line3-text2">2,000 LQN ($125,374)</p>
+      <p className="line3-text2">{halfCycle} LQN ($125,374)</p>
       </div>
       <hr className="hr"/>
 

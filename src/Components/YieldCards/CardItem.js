@@ -4,13 +4,11 @@ import Logo from '../Header/logo.png'
 
 // import { requestRevote } from '../../store/asyncActions';
 import { makeStyles } from "@material-ui/core/styles";
-import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 // import ETHUSD from './ETH-USDC.png';
 import './list.css'
 // ICONS
-import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 
 import { GlobalContext2 } from "../Pool/GlobalContext/GlobalContext";
 
@@ -18,7 +16,6 @@ import { GlobalContext2 } from "../Pool/GlobalContext/GlobalContext";
 const addToTrade = () => {
 console.log('trade button')
 }
-
 
 
 const useStyles = makeStyles(  ({
