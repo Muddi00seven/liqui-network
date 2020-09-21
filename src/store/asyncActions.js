@@ -77,11 +77,11 @@ export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts
     }
     }
 
-    export const approve = async(web3,poolContract,spender, amountaccounts,dispatch) =>{
+    export const approve = async(web3,poolContract,spender, amount,accounts,dispatch) =>{
 
-        console.log("before approval",block);
+        console.log("before approval",poolContract);
        try{
-                  const response = await   poolContract(spender,amount).send({from: accounts[0]});
+                  const response = await   poolContract.methods.poolContract(spender,amount).send({from: accounts[0]});
             console.log("after approval",response);
 
        }catch(error){
