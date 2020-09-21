@@ -68,7 +68,9 @@ export default function SimpleTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const handleApprove = async() => {
+    console.log("in Approve");
+  };
   return (
     <div className={classes.root}>
       <AppBar position="static" >
@@ -105,7 +107,7 @@ export default function SimpleTabs() {
 
         <div className="tab-button-container">
           <button className="stake-button">Stake</button>
-          <button className="liquidity-button">Add Liquidity</button>
+          <button className="liquidity-button"onClick={handleApprove}>Approve</button>
         </div>
 
         </div>
