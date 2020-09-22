@@ -4,14 +4,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import {useStore } from '../../../context/GlobalState';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import { GlobalContext2 } from "../GlobalContext/GlobalContext";
+import { LP_TOKEN_CONTRACT_ABI } from "../../../ABI/lpToken";
+import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS } from "../../../ABI/LiquiChef";
+import { approve} from "../../../store/asyncActions";
 
 import './Tab.css'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+ 
 
   return (
     <div
@@ -64,14 +69,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs({value1,i}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(false);
+  const [approval, setApproval] = React.useState({});
+  const [lpContract, setlpContract] = React.useState({});
+  const [{web3,accounts},dispatch] = useStore();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const handleApprove = async() => {
     console.log("in Approve");
-  };
+    console.log("this is", value1.lpToken);
+    let address= value1.lpToken.lpToken
+    if(web3){
+    const token = new web3.eth.Contract(LP_TOKEN_CONTRACT_ABI, address);
+    console.log("this is",token);
+   // setlpContract(token);
+    try{
+      
+     const approval= await  approve(token,LQN_CHEF_CONTRACT_ADDRESS,value,accounts,dispatch);
+    }catch(error){
+      console.log(error);
+    }
+  }
+  }
 
 
   const {cart } = useContext(GlobalContext2)
