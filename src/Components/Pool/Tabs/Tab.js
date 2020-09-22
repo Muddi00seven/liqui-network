@@ -80,17 +80,21 @@ export default function SimpleTabs({value1,i}) {
   const handleApprove = async() => {
     console.log("in Approve");
     console.log("this is", value1.lpToken);
-    let address= value1.lpToken.lpToken
+    let address= value1.lpToken;
     if(web3){
     const token = new web3.eth.Contract(LP_TOKEN_CONTRACT_ABI, address);
     console.log("this is",token);
    // setlpContract(token);
     try{
-      
-     const approval= await  approve(token,LQN_CHEF_CONTRACT_ADDRESS,value,accounts,dispatch);
+      console.log("Before approval",);
+     const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,value,accounts,dispatch);
+     console.log("afterapproval",approval);
     }catch(error){
-      console.log(error);
+      console.log("Error",error);
     }
+  }
+  else{
+    alert("No Web3");
   }
   }
 
