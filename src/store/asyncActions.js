@@ -90,3 +90,17 @@ return
 
 
     }
+
+    export const stake = async(web3,liquiChefContract,poolId, amount,accounts,dispatch) =>{
+
+        console.log("before deposit",liquiChefContract,poolId,amount);
+       try{
+                  const response = await   liquiChefContract.methods.deposit(poolId,amount).send({from: accounts[0]});
+            console.log("after deposit",response);
+return
+       }catch(error){
+        console.log("error in approval",error);
+       }
+
+
+    }

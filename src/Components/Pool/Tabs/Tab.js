@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import { GlobalContext2 } from "../GlobalContext/GlobalContext";
 import { LP_TOKEN_CONTRACT_ABI } from "../../../ABI/lpToken";
 import { LQN_CHEF_CONTRACT_ABI, LQN_CHEF_CONTRACT_ADDRESS } from "../../../ABI/LiquiChef";
-import { approve} from "../../../store/asyncActions";
+import { approve,stake} from "../../../store/asyncActions";
 
 import './Tab.css'
 function TabPanel(props) {
@@ -72,7 +72,7 @@ export default function SimpleTabs({value1,i}) {
   const [value, setValue] = React.useState(false);
   const [approval, setApproval] = React.useState({});
   const [lpContract, setlpContract] = React.useState({});
-  const [{web3,accounts},dispatch] = useStore();
+  const [{web3,accounts,liquiChefContract},dispatch] = useStore();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -102,8 +102,18 @@ export default function SimpleTabs({value1,i}) {
   const {cart } = useContext(GlobalContext2)
 
       // this is value of pool object
-  const Addstake =  () => {
-    console.log('this is' + value1.uri )
+  const Addstake =  async() => {
+ 
+    let pId= value1.poolId;
+    console.log('this is' + value1.uri,pId);
+
+    try{
+      console.log("Before Stake",);
+     const response= await  stake(web3,liquiChefContract,pId,value,accounts,dispatch);
+     console.log("after Stake",response);
+    }catch(error){
+      console.log("Error",error);
+    }
   }
   
 
