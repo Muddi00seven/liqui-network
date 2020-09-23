@@ -1,5 +1,5 @@
 
-import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply,setBlockinADay,setLqnBalance } from "../store/actions";
+import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply,setBlockinADay,setLqnBalance, setPendingReward } from "../store/actions";
 
 
 
@@ -33,7 +33,7 @@ return totalPools;
 
 export const  viewPoolsbyId = async(liquiChefContract,accounts,_pid)=>{
 
-
+const pending = await getPendingLqns(liquiChefContract,_pid,accounts);
     const response =  await liquiChefContract.methods.poolInfo(_pid).call({from: accounts[0]});
 console.log("POOL Details",response);
 let poolInfo={
@@ -96,6 +96,18 @@ console.log("after block in a day",blocks);
 dispatch(setBlockinADay(blocks));
 
 return blocks;
+}
+
+export const  getPendingLqns = async(liquiChefContract,pId,accounts)=>{
+
+  console.log("before calling pending Lqns",liquiChefContract);
+  const rewards =  await liquiChefContract.methods.pendingLqns(pId,accounts[0]).call({from: accounts[0]});
+
+console.log("after calling Pending reward",rewards);
+
+//dispatch(setPendingReward(rewards));
+
+return rewards;
 }
 //----- LQN coin  view functions
 export const  maxSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{

@@ -17,6 +17,11 @@ export default (state, action) => {
               ...state,
               currentReward: action.payload
             }
+            case 'SET_PENDING_REWARD':
+            return {
+              ...state,
+              pendingLqns: action.payload
+            }
             case 'SET_LAST_BLOCK':
             return {
               ...state,

@@ -27,6 +27,12 @@ export const setReward = (reward)=> {
         payload: reward
     };
 }
+export const setPendingReward = (reward)=> {
+    return {
+        type: 'SET_PENDING_REWARD',
+        payload: reward
+    };
+}
 export const setHalvePeriod = (period)=> {
     return {
         type: 'SET_HALVE_PERIOD',
