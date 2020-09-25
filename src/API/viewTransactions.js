@@ -42,7 +42,8 @@ let poolInfo={
     allocPoint :response[1], 
     lastRewardBlock:response[2], 
     accBaconPerShare:response[3],
-    uri: response[4]
+    uri: response[4],
+    pendinReward: pending,
 
 }
 return poolInfo;
