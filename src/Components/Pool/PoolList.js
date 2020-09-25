@@ -12,7 +12,7 @@ const PoolList = () => {
                     {cart.map((value, i)=>(
                 <PoolCards id={value.poolId} token={value.lpToken} points={value.allocPoint}
                  lastReward={value.lastRewardBlock} accShare={value.accBaconPerShare} 
-                 uri={value.uri} value={value} />
+                 uri={value.uri} value={value} pendingRewards={value.pendinReward} />
             ))}
         </div>
     )

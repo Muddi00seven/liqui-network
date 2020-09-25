@@ -80,7 +80,7 @@ export default function PoolCards({value, i}) {
       <div className="top-right-container3">
       <div className="top-right-text3">
       <p className="stake-heading1">Your Rewards</p>
-      <p className="stake-value1">0.98324 LQN</p>
+      <p className="stake-value1">{value.pendingRewards} LQN</p>
       <p className="stake-value">$44,000.98</p>
       </div>
       </div>

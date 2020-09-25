@@ -91,7 +91,7 @@ export const CardList = () => {
               {list.map((list)=>(
                 <CardItem id={list.poolId} token={list.lpToken} points={list.allocPoint}
                  lastReward={list.lastRewardBlock} accShare={list.accBaconPerShare} 
-                 uri={list.uri} product={list} />
+                 uri={list.uri} product={list} pendingRewards={list.pendinReward}/>
             ))}
             <br/>
         </Grid> 
