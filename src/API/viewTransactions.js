@@ -103,7 +103,7 @@ export const  getPendingLqns = async(liquiChefContract,pId,accounts)=>{
   console.log("before calling pending Lqns",liquiChefContract);
   const rewards =  await liquiChefContract.methods.pendingLqns(pId,accounts[0]).call({from: accounts[0]});
 
-console.log("after calling Pending reward",rewards);
+console.log("after calling Pending reward",pId,rewards);
 
 //dispatch(setPendingReward(rewards));
 
