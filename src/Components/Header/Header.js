@@ -64,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
     },
     '@media (max-width: 834px)' : {
       marginLeft:'0px',
+      fontSize: '15px',
+
     },
     
     
@@ -105,11 +107,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft:'16px',
     },
     '@media (max-width: 1026px)' : {
-      marginLeft:'0px',
+      marginLeft:'5px',
     },
 
     '@media (max-width: 834px)' : {
       marginLeft:'10px',
+    },
+    '@media (max-width: 768px)' : {
+      marginLeft:'0px',
+      fontSize: '15px',
+
     },
     
     
@@ -213,6 +220,9 @@ fontWeight: '500',
 
 '@media (max-width: 834px)' : {
   marginLeft:'-50px',
+},
+'@media (max-width: 768px)' : {
+  marginLeft:'-30px',
 },
 
 
