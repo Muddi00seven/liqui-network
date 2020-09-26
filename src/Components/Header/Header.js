@@ -126,11 +126,16 @@ const useStyles = makeStyles((theme) => ({
   linkContainer:{
     textAlign: 'center',
     marginLeft: '300px',
+
+
+    '@media (max-width: 1024px)' : {
+      marginLeft:'220px',
+    },
+
+
     '@media (max-width: 834px)' : {
       marginLeft:'10px',
     },
-    
- 
   },
 logo: {
 marginLeft: '170px',
