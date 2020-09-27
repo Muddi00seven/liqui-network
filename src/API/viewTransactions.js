@@ -79,7 +79,7 @@ return reward;
 export const  halvePeriod = async(web3,liquiChefContract,accounts,dispatch)=>{
 
   console.log("before callingalve period h",liquiChefContract);
-  const period =  await liquiChefContract.methods.halvePeriod().call({from: accounts[0]});
+  const period =  await liquiChefContract.methods.blockInACycle().call({from: accounts[0]});
 
 console.log("after alve period",period);
 
@@ -90,7 +90,7 @@ return period;
 export const  blockinADay = async(web3,liquiChefContract,accounts,dispatch)=>{
 
   console.log("before calling block in day",liquiChefContract);
-  const blocks =  await liquiChefContract.methods.blockInADay().call({from: accounts[0]});
+  const blocks =  await liquiChefContract.methods.blockInACycle().call({from: accounts[0]});
 
 console.log("after block in a day",blocks);
 
