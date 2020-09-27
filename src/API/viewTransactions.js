@@ -67,7 +67,7 @@ return lastblock;
 export const  currentReward = async(web3,liquiChefContract,accounts,dispatch)=>{
 
   console.log("before Reweard",liquiChefContract);
-  const response =  await liquiChefContract.methods.lqnPerBlock().call({from: accounts[0]});
+  const response =  await liquiChefContract.methods.lqnPerCycle().call({from: accounts[0]});
 
 console.log("after Reward",response);
 let reward = web3.utils.fromWei(response,'ether');
@@ -126,11 +126,11 @@ return coin;
 
 export const  circulatingSupply = async(web3,liquiCoinContract,accounts,dispatch)=>{
 
-  console.log("before max suply",liquiCoinContract);
+  console.log("before circulating suply",liquiCoinContract);
   const amount =  await liquiCoinContract.methods.totalSupply().call({from: accounts[0]});
 
   let coin=web3.utils.fromWei(amount,'ether')
-console.log("after max supply",coin);
+console.log("after circulating supply",coin);
 
 dispatch(setCirculatingSupply(coin));
 

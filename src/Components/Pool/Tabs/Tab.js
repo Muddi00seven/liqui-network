@@ -74,8 +74,8 @@ export default function SimpleTabs({value1,i}) {
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (newvalue) => {
+    setValue(newvalue);
   };
   const handleApprove = async() => {
     console.log("in Approve");
@@ -108,7 +108,7 @@ export default function SimpleTabs({value1,i}) {
     console.log('this is' + value1.uri,pId);
 
     try{
-      console.log("Before Stake",);
+      console.log("Before Stake",value);
      const response= await  stake(web3,liquiChefContract,pId,value,accounts,dispatch);
      console.log("after Stake",response);
     }catch(error){
