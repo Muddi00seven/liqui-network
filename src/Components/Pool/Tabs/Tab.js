@@ -74,8 +74,8 @@ export default function SimpleTabs({value1,i}) {
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
 
-  const handleChange = (newvalue) => {
-    setValue(newvalue);
+  const handleChange = (event,newValue) => {
+    setValue(newValue);
   };
   const handleApprove = async() => {
     console.log("in Approve");
