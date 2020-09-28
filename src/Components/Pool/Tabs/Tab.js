@@ -1,4 +1,4 @@
-import React, {useContext } from 'react'
+import React, {useContext,useState } from 'react'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -73,6 +73,15 @@ export default function SimpleTabs({value1,i}) {
   const [approval, setApproval] = React.useState({});
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
+  // THIS IS STAKE FIELD STATE
+    const [stakeField , setStakeField] = useState()
+
+
+//  STATE TEXT FIELD 
+  const fieldChange = (e) => {
+    setStakeField(e.target.value)
+  }
+
 
   const handleChange = (event,newValue) => {
     setValue(newValue);
@@ -106,7 +115,8 @@ export default function SimpleTabs({value1,i}) {
  
     let pId= value1.poolId;
     console.log('this is' + value1.uri,pId);
-
+    // THIS IS STAKE FIELD CONSOLE
+    console.log(stakeField)
     try{
       console.log("Before Stake",value);
      const response= await  stake(web3,liquiChefContract,pId,value,accounts,dispatch);
@@ -115,6 +125,7 @@ export default function SimpleTabs({value1,i}) {
       console.log("Error",error);
     }
   }
+
   
 
   return (
@@ -141,13 +152,14 @@ export default function SimpleTabs({value1,i}) {
         <div className="tab-value-container">
           <div className="column1">
             <p className="tab-number">{value1.uri}</p>
-            <TextField id="standard-basic" className="tab-number2"  />
+            <TextField id="standard-basic"
+             className="tab-number2" value={stakeField} onChange={fieldChange}  />
 
             {/* <p className="tab-number2">0</p> */}
           </div>
           <div className="column2">
             <p className="tab-text">Balance: 0.0000 UNI </p>
-            <p className="tab-text2">UNI</p>
+  <p className="tab-text2">Uni</p>
           </div>
         </div>
 
