@@ -1,4 +1,4 @@
-import React, {useContext } from 'react'
+import React, {useState,useContext } from 'react'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs({value1,i}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(false);
+  const [value, setValue] = React.useState(0);
   const [approval, setApproval] = React.useState({});
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
@@ -86,7 +86,7 @@ export default function SimpleTabs({value1,i}) {
     console.log("this is",token);
    // setlpContract(token);
     try{
-      console.log("Before approval",);
+      console.log("Before approval",value);
      const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,value,accounts,dispatch);
      console.log("afterapproval",approval);
     }catch(error){
