@@ -11,6 +11,7 @@ import Logo from '../Header/logo.png'
 import TabList from './Tabs/TabList'
 
 import {useStore } from '../../context/GlobalState';
+import { claim} from "../../store/asyncActions";
 
 // ICONS
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PoolCards({value, i}) {
 
-  const [{lastBlock,currentReward , blockInADay},dispatch] = useStore();
+  const [{web3,lastBlock,currentReward ,accounts, blockInADay,liquiChefContract},dispatch] = useStore();
 
   let hoursReward = currentReward * blockInADay;
 
@@ -35,6 +36,27 @@ export default function PoolCards({value, i}) {
 
 
   const classes = useStyles();
+
+  const handleClaim = async() => {
+    console.log("in Claim",value);
+    console.log("this is", value.poolId);
+   let id=value.poolId;
+   let amount = value.pendingRewards;
+    if(web3){
+    
+    try{
+     // console.log("Before claim");
+     const approval= await  claim(web3,liquiChefContract,id,amount,accounts,dispatch);
+     console.log("afterapproval",approval);
+    }catch(error){
+      console.log("Error",error);
+    }
+  }
+  else{
+    alert("No Web3");
+  }
+  }
+
 
   return (
       <>
@@ -87,7 +109,7 @@ export default function PoolCards({value, i}) {
 
       <div className="top-right-container4">
       <div className="top-right-text4">
-      <button className="claimButton">Claim</button>
+      <button className="claimButton" onClick={handleClaim}>Claim</button>
       </div>
       </div>
 

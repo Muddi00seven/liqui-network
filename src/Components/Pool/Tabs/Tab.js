@@ -1,4 +1,4 @@
-import React, {useContext } from 'react'
+import React, {useContext,useState } from 'react'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -69,13 +69,23 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs({value1,i}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(false);
+  const [value, setValue] = React.useState(0);
   const [approval, setApproval] = React.useState({});
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
+  // THIS IS STAKE FIELD STATE
+    const [stakeField , setStakeField] = useState(0)
 
-  const handleChange = (newvalue) => {
-    setValue(newvalue);
+
+//  STATE TEXT FIELD 
+  const fieldChange = (e) => {
+    const weiValue = web3.utils.toWei(e.target.value, 'ether');
+    setStakeField(e.target.value);
+  }
+
+
+  const handleChange = (event,newValue) => {
+    setValue(newValue);
   };
   const handleApprove = async() => {
     console.log("in Approve");
@@ -86,8 +96,9 @@ export default function SimpleTabs({value1,i}) {
     console.log("this is",token);
    // setlpContract(token);
     try{
-      console.log("Before approval",);
-     const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,value,accounts,dispatch);
+      console.log("Before approval",stakeField);
+      const weiValue = web3.utils.toWei(stakeField, 'ether');
+     const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,weiValue,accounts,dispatch);
      console.log("afterapproval",approval);
     }catch(error){
       console.log("Error",error);
@@ -106,15 +117,18 @@ export default function SimpleTabs({value1,i}) {
  
     let pId= value1.poolId;
     console.log('this is' + value1.uri,pId);
-
+    const weiValue = web3.utils.toWei(stakeField, 'ether');
+    // THIS IS STAKE FIELD CONSOLE
+    console.log(stakeField)
     try{
-      console.log("Before Stake",value);
-     const response= await  stake(web3,liquiChefContract,pId,value,accounts,dispatch);
+      console.log("Before Stake",stakeField);
+     const response= await  stake(web3,liquiChefContract,pId,weiValue,accounts,dispatch);
      console.log("after Stake",response);
     }catch(error){
       console.log("Error",error);
     }
   }
+
   
 
   return (
@@ -141,13 +155,14 @@ export default function SimpleTabs({value1,i}) {
         <div className="tab-value-container">
           <div className="column1">
             <p className="tab-number">{value1.uri}</p>
-            <TextField id="standard-basic" className="tab-number2"  />
+            <TextField id="standard-basic"
+             className="tab-number2" value={stakeField} onChange={fieldChange}  />
 
             {/* <p className="tab-number2">0</p> */}
           </div>
           <div className="column2">
             <p className="tab-text">Balance: 0.0000 UNI </p>
-            <p className="tab-text2">UNI</p>
+  <p className="tab-text2">Uni</p>
           </div>
         </div>
 

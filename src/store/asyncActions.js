@@ -79,7 +79,7 @@ export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts
 
     export const approve = async(web3,poolContract,spender, amount,accounts,dispatch) =>{
 
-        console.log("before approval",poolContract);
+        console.log("before approval",poolContract,amount);
        try{
                   const response = await   poolContract.methods.approve(spender,amount).send({from: accounts[0]});
             console.log("after approval",response);
@@ -96,6 +96,19 @@ return
         console.log("before deposit",liquiChefContract,poolId,amount);
        try{
                   const response = await   liquiChefContract.methods.deposit(poolId,amount).send({from: accounts[0]});
+            console.log("after deposit",response);
+return
+       }catch(error){
+        console.log("error in approval",error);
+       }
+
+
+    }
+    export const claim = async(web3,liquiChefContract,poolId,amount,accounts,dispatch) =>{
+
+        console.log("before claim",liquiChefContract,poolId,amount);
+       try{
+                  const response = await   liquiChefContract.methods.claimLqn(poolId,0).send({from: accounts[0]});
             console.log("after deposit",response);
 return
        }catch(error){

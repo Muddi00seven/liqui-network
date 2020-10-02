@@ -946,7 +946,7 @@ uint public havingDays=30;
         liquiCoin = _liquiCoin;
         devaddr = _devaddr;
         lqnPerCycle = 16000 ether;
-        blockInACycle =2;//180656;
+        blockInACycle =180656;
         startBlock = _startBlock;
         lastHalveBlock = _startBlock;
        // halvePeriod = blockInADay*havingDays;
@@ -1097,6 +1097,12 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
         user.rewardDebt = user.amount.mul(pool.accLqnPerShare).div(1e12);
         pool.lpToken.safeTransfer(address(msg.sender), _amount);
         emit Withdraw(msg.sender, _pid, _amount);
+    }
+    function claimLqn(uint _pId, uint _amount)public{
+        
+    
+   transferwithBurn(msg.sender, _amount);
+    
     }
     function transferwithBurn(address transferee, uint amount)internal{
         uint burnAmount= amount.div(50);// burn 2%

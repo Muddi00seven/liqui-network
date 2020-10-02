@@ -1,4 +1,4 @@
-export const LQN_CHEF_CONTRACT_ADDRESS ="0xB9c36Bf9a5189fAfE7f70f5995d989E2ce3625DA";// "0x8cA7Dd8EdBaadeb6A52c7F4b922b07bB353A0e0a";
+export const LQN_CHEF_CONTRACT_ADDRESS ="0x302CC60FEdDe2f0F59D829398d05189Ae891A883";// "0x8cA7Dd8EdBaadeb6A52c7F4b922b07bB353A0e0a";
 export const LQN_CHEF_CONTRACT_ABI = [
 	{
 		"inputs": [
@@ -32,6 +32,24 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "_pId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "claimLqn",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "_pid",
 				"type": "uint256"
 			},
@@ -55,19 +73,6 @@ export const LQN_CHEF_CONTRACT_ABI = [
 			}
 		],
 		"name": "dev",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_withUpdate",
-				"type": "bool"
-			}
-		],
-		"name": "doHalvingCheck",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -117,6 +122,19 @@ export const LQN_CHEF_CONTRACT_ABI = [
 		],
 		"name": "Deposit",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_withUpdate",
+				"type": "bool"
+			}
+		],
+		"name": "doHalvingCheck",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	},
 	{
 		"inputs": [
