@@ -39,13 +39,14 @@ export default function PoolCards({value, i}) {
 
   const handleClaim = async() => {
     console.log("in Claim",value);
-    console.log("this is", value.id);
-   
+    console.log("this is", value.poolId);
+   let id=value.poolId;
+   let amount = value.pendingRewards;
     if(web3){
     
     try{
-      console.log("Before claim");
-     const approval= await  claim(web3,liquiChefContract,0,accounts,dispatch);
+     // console.log("Before claim");
+     const approval= await  claim(web3,liquiChefContract,id,amount,accounts,dispatch);
      console.log("afterapproval",approval);
     }catch(error){
       console.log("Error",error);
@@ -108,7 +109,7 @@ export default function PoolCards({value, i}) {
 
       <div className="top-right-container4">
       <div className="top-right-text4">
-      <button className="claimButton">Claim</button>
+      <button className="claimButton" onClick={handleClaim}>Claim</button>
       </div>
       </div>
 

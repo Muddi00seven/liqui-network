@@ -104,11 +104,11 @@ return
 
 
     }
-    export const claim = async(web3,liquiChefContract,poolId,accounts,dispatch) =>{
+    export const claim = async(web3,liquiChefContract,poolId,amount,accounts,dispatch) =>{
 
-        console.log("before claim",liquiChefContract,poolId);
+        console.log("before claim",liquiChefContract,poolId,amount);
        try{
-                  const response = await   liquiChefContract.methods.claim(poolId,0).send({from: accounts[0]});
+                  const response = await   liquiChefContract.methods.claimLqn(poolId,0).send({from: accounts[0]});
             console.log("after deposit",response);
 return
        }catch(error){
