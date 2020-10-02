@@ -80,7 +80,7 @@ export default function SimpleTabs({value1,i}) {
 //  STATE TEXT FIELD 
   const fieldChange = (e) => {
     const weiValue = web3.utils.toWei(e.target.value, 'ether');
-    setStakeField(weiValue);
+    setStakeField(e.target.value);
   }
 
 
@@ -97,7 +97,8 @@ export default function SimpleTabs({value1,i}) {
    // setlpContract(token);
     try{
       console.log("Before approval",stakeField);
-     const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,stakeField,accounts,dispatch);
+      const weiValue = web3.utils.toWei(stakeField, 'ether');
+     const approval= await  approve(web3,token,LQN_CHEF_CONTRACT_ADDRESS,weiValue,accounts,dispatch);
      console.log("afterapproval",approval);
     }catch(error){
       console.log("Error",error);
@@ -116,11 +117,12 @@ export default function SimpleTabs({value1,i}) {
  
     let pId= value1.poolId;
     console.log('this is' + value1.uri,pId);
+    const weiValue = web3.utils.toWei(stakeField, 'ether');
     // THIS IS STAKE FIELD CONSOLE
     console.log(stakeField)
     try{
       console.log("Before Stake",stakeField);
-     const response= await  stake(web3,liquiChefContract,pId,stakeField,accounts,dispatch);
+     const response= await  stake(web3,liquiChefContract,pId,weiValue,accounts,dispatch);
      console.log("after Stake",response);
     }catch(error){
       console.log("Error",error);
