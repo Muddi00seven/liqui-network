@@ -74,12 +74,13 @@ export default function SimpleTabs({value1,i}) {
   const [lpContract, setlpContract] = React.useState({});
   const [{web3,accounts,liquiChefContract},dispatch] = useStore();
   // THIS IS STAKE FIELD STATE
-    const [stakeField , setStakeField] = useState()
+    const [stakeField , setStakeField] = useState(0)
 
 
 //  STATE TEXT FIELD 
   const fieldChange = (e) => {
-    setStakeField(e.target.value)
+    const weiValue = web3.utils.toWei(e.target.value, 'ether');
+    setStakeField(weiValue);
   }
 
 

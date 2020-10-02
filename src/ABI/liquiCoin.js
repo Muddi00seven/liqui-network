@@ -1,4 +1,4 @@
-export const LQN_COIN_CONTRACT_ADDRESS ="0xf03808dca15c41c51fcbf10bb8b9df133c57cb2c" //"0x808aea051eee1a695c0b40a8bea6f5281824bb9b";
+export const LQN_COIN_CONTRACT_ADDRESS ="0x5771e495239a3558fea22828ce3f1cd23f5e33b8" //"0x808aea051eee1a695c0b40a8bea6f5281824bb9b";
 
 export const LQN_COIN_CONTRACT_ABI = [
 	{
