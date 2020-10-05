@@ -1086,9 +1086,9 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
 
     // Withdraw LP tokens from MasterChef.
     function withdraw(uint256 _pid, uint256 _amount) public {
-        require(msg.sender!=devaddr,"you are not allowed to withdraw from the pool");// restrict from withdrawal
-        PoolInfo storage pool = poolInfo[_pid];
-        UserInfo storage user = userInfo[_pid][msg.sender];
+         PoolInfo storage pool = poolInfo[_pid];
+        UserInfo storage user = userInfo[_pid][msg.sender]; 
+        //erInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
         updatePool(_pid);
         uint256 pending = user.amount.mul(pool.accLqnPerShare).div(1e12).sub(user.rewardDebt);
@@ -1100,8 +1100,14 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
     }
     function claimLqn(uint _pId, uint _amount)public{
         
-    
-   transferwithBurn(msg.sender, _amount);
+         PoolInfo storage pool = poolInfo[_pId];
+        UserInfo storage user = userInfo[_pId][msg.sender];
+        
+   
+   
+        uint256 pending = user.amount.mul(pool.accLqnPerShare).div(1e12).sub(user.rewardDebt);
+         updatePool(_pId);
+   transferwithBurn(msg.sender, pending);
     
     }
     function transferwithBurn(address transferee, uint amount)internal{
