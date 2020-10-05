@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext,useState } from 'react'
 import './Header.css'
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -268,6 +268,13 @@ const Header = ({ onMenuClickHandler }) => {
         behavior: "smooth"
     });
   const classes = useStyles();
+  // Connect button  State
+  const [connect , setConnect] = useState()
+    // connect button function
+  const OnConnect = () => {
+    setConnect(connect)
+    console.log('this is connect button')
+  }
 
   return (
     <div>
@@ -290,7 +297,7 @@ const Header = ({ onMenuClickHandler }) => {
             <Button className={classes.navButton} > Trade </Button>
             <Button className={classes.navButton} > Learn </Button>
             <Button className={classes.navButton} > Contract </Button>
-            <Button  className={classes.navButton1} > Connect </Button>
+            <Button onClick={OnConnect}  className={classes.navButton1} > Connect </Button>
 
 
               {/* <div className="app-button">
