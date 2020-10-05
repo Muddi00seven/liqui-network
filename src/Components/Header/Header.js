@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext,useState } from 'react'
 import './Header.css'
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -64,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
     },
     '@media (max-width: 834px)' : {
       marginLeft:'0px',
+      fontSize: '15px',
+
     },
     
     
@@ -105,11 +107,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft:'16px',
     },
     '@media (max-width: 1026px)' : {
-      marginLeft:'0px',
+      marginLeft:'5px',
     },
 
     '@media (max-width: 834px)' : {
       marginLeft:'10px',
+    },
+    '@media (max-width: 768px)' : {
+      marginLeft:'0px',
+      fontSize: '15px',
+
     },
     
     
@@ -126,11 +133,16 @@ const useStyles = makeStyles((theme) => ({
   linkContainer:{
     textAlign: 'center',
     marginLeft: '300px',
+
+
+    '@media (max-width: 1024px)' : {
+      marginLeft:'220px',
+    },
+
+
     '@media (max-width: 834px)' : {
       marginLeft:'10px',
     },
-    
- 
   },
 logo: {
 marginLeft: '170px',
@@ -209,6 +221,9 @@ fontWeight: '500',
 '@media (max-width: 834px)' : {
   marginLeft:'-50px',
 },
+'@media (max-width: 768px)' : {
+  marginLeft:'-30px',
+},
 
 
 
@@ -253,6 +268,13 @@ const Header = ({ onMenuClickHandler }) => {
         behavior: "smooth"
     });
   const classes = useStyles();
+  // Connect button  State
+  const [connect , setConnect] = useState()
+    // connect button function
+  const OnConnect = () => {
+    setConnect(connect)
+    console.log('this is connect button')
+  }
 
   return (
     <div>
@@ -275,7 +297,7 @@ const Header = ({ onMenuClickHandler }) => {
             <Button className={classes.navButton} > Trade </Button>
             <Button className={classes.navButton} > Learn </Button>
             <Button className={classes.navButton} > Contract </Button>
-            <Button  className={classes.navButton1} > Connect </Button>
+            <Button onClick={OnConnect}  className={classes.navButton1} > Connect </Button>
 
 
               {/* <div className="app-button">
