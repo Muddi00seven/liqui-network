@@ -1,4 +1,4 @@
-export const LQN_CHEF_CONTRACT_ADDRESS ="0xf9f57fbcc3e3bc1b05ed62a0dffc765d6dc0b4f7";// "0x8cA7Dd8EdBaadeb6A52c7F4b922b07bB353A0e0a";
+export const LQN_CHEF_CONTRACT_ADDRESS ="0xb71016407f31b0a038a82d7aa78d3f4140d85075";// "0x8cA7Dd8EdBaadeb6A52c7F4b922b07bB353A0e0a";
 export const LQN_CHEF_CONTRACT_ABI = [
 	{
 		"inputs": [

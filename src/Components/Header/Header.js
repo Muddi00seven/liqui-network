@@ -10,6 +10,8 @@ import { Button } from "@material-ui/core";
 // import CoinList from './Price/CoinList'
 import Logo from './logo.png'
 import {Link} from 'react-router-dom';
+import { loadBlockchain} from "../../store/asyncActions";
+import {useStore } from '../../context/GlobalState';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -262,6 +264,8 @@ fontWeight: '500',
 }
 ));
 const Header = ({ onMenuClickHandler }) => {
+  const [{dispatch}] = useStore();
+
   const scrollToBottom = () =>
     window.scrollTo({
         top: document.documentElement.scrollHeight,
@@ -271,9 +275,10 @@ const Header = ({ onMenuClickHandler }) => {
   // Connect button  State
   const [connect , setConnect] = useState()
     // connect button function
-  const OnConnect = () => {
+  const OnConnect = async() => {
     setConnect(connect)
-    console.log('this is connect button')
+    console.log('this is connect button',dispatch);
+   await loadBlockchain(dispatch);
   }
 
   return (
