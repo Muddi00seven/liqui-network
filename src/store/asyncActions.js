@@ -47,7 +47,7 @@ export const loadChef = async(web3,liquiCoinContract,liquiChefCountract,accounts
     console.log("IN LOADING liquibChef",liquiChefCountract);
     
    
-        const pools = await   getPools(liquiChefCountract,accounts,dispatch);
+        const pools = await   getPools(web3,liquiChefCountract,accounts,dispatch);
     console.log("pools",pools);
  
     if(liquiChefCountract){

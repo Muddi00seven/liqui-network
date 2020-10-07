@@ -1,4 +1,4 @@
-export const LQN_COIN_CONTRACT_ADDRESS = "0x808aea051eee1a695c0b40a8bea6f5281824bb9b";
+//export const LQN_COIN_CONTRACT_ADDRESS = "0x808aea051eee1a695c0b40a8bea6f5281824bb9b";
 
 export const LP_TOKEN_CONTRACT_ABI = [
 	{

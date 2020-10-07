@@ -858,7 +858,7 @@ contract LiquiCoin is ERC20("LQN", "LQN"), Ownable {
     }
     /// @notice  burns the specified _amount of tokens _from the provided address
     function burn(address _from,uint _amount)public onlyOwner {
-require(balanceOf(_from)>=_amount,"Not enough tokens to Burn");
+//require(balanceOf(_from)>=_amount,"Not enough tokens to Burn");
 
         _burn(_from,  _amount);
 
@@ -1047,16 +1047,16 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
     //    liquiCoin.mint(devaddr, amount);
     //}
     // Update reward variables of the given pool to be up-to-date.
-    function updatePool(uint256 _pid) public {
+    function updatePool(uint256 _pid) public returns(uint){
         doHalvingCheck(false);
         PoolInfo storage pool = poolInfo[_pid];
         if (block.number <= pool.lastRewardBlock) {
-            return;
+            return 0;
         }
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (lpSupply == 0) {
             pool.lastRewardBlock = block.number;
-            return;
+            return 0;
         }
         uint256 blockPassed = block.number.sub(pool.lastRewardBlock);
         uint256 lqnReward = blockPassed
@@ -1067,6 +1067,7 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
         liquiCoin.mint(address(this), lqnReward);
         pool.accLqnPerShare = pool.accLqnPerShare.add(lqnReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
+        return lqnReward;
     }
 
     // Deposit LP tokens to MasterChef for LQN allocation.
@@ -1107,7 +1108,9 @@ function  viewPoolbyId(uint _pId) view public returns(address lpToken,uint alloc
    
         uint256 pending = user.amount.mul(pool.accLqnPerShare).div(1e12).sub(user.rewardDebt);
          updatePool(_pId);
-   transferwithBurn(msg.sender, pending);
+         
+     safeLqnTransfer(msg.sender, pending);
+   //transferwithBurn(msg.sender, pending);
     
     }
     function transferwithBurn(address transferee, uint amount)internal{
