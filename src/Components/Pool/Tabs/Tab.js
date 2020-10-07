@@ -146,7 +146,7 @@ export default function SimpleTabs({value1,i}) {
 
         >
           <LinkTab className="tabs" label="STAKE" href="/drafts" {...a11yProps(0)} />
-          <LinkTab className="tabs" label="UNSTAKE" href="/trash" {...a11yProps(1)} />
+          {/* <LinkTab className="tabs" label="UNSTAKE" href="/trash" {...a11yProps(1)} /> */}
           {/* <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
@@ -161,7 +161,7 @@ export default function SimpleTabs({value1,i}) {
             {/* <p className="tab-number2">0</p> */}
           </div>
           <div className="column2">
-            <p className="tab-text">Balance: 0.0000 UNI </p>
+            <p className="tab-text">Balance: {value1.balance} UNI </p>
   <p className="tab-text2">Uni</p>
           </div>
         </div>
