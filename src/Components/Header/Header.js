@@ -278,7 +278,8 @@ const Header = ({ onMenuClickHandler }) => {
   const OnConnect = async() => {
     setConnect(connect)
     console.log('this is connect button',dispatch);
-   await loadBlockchain(dispatch);
+  loadBlockchain(dispatch);
+ 
   }
 
   return (
