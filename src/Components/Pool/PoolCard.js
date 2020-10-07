@@ -26,7 +26,7 @@ export default function PoolCards({value, i}) {
 
   const [{web3,lastBlock,currentReward ,accounts, blockInADay,liquiChefContract},dispatch] = useStore();
 
-  let hoursReward = currentReward * 1;
+  let hoursReward = currentReward * blockInADay;
 
   let fullCycle = hoursReward * 30
 
