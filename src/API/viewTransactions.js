@@ -1,9 +1,9 @@
 
 import { setPools,setLastBlock,setReward,setHalvePeriod,setMaxSupply,setCirculatingSupply,setBlockinADay,setLqnBalance, setPendingReward } from "../store/actions";
+import { LP_TOKEN_CONTRACT_ABI  } from "../ABI/lpToken";
 
 
-
-export const  getPools = async(liquiChefContract, account,dispatch)=>{
+export const  getPools = async(web3,liquiChefContract, account,dispatch)=>{
 
   console.log("before fetching total pools",liquiChefContract,account);
 
@@ -12,7 +12,7 @@ const totalPools =  await totalpools(liquiChefContract, account,dispatch);
 let pools=[];
 for (var i=0; i<totalPools;i++){
 
-let poolInfo= await viewPoolsbyId(liquiChefContract, account,i);
+let poolInfo= await viewPoolsbyId(web3,liquiChefContract, account,i);
 console.log("Pools by Id",liquiChefContract,i);
 let orpools=[];
 pools.push(poolInfo);
@@ -31,11 +31,14 @@ console.log("After total pools",totalPools);
 return totalPools;
 }
 
-export const  viewPoolsbyId = async(liquiChefContract,accounts,_pid)=>{
+export const  viewPoolsbyId = async(web3,liquiChefContract,accounts,_pid)=>{
 
 const pending = await getPendingLqns(liquiChefContract,_pid,accounts);
     const response =  await liquiChefContract.methods.poolInfo(_pid).call({from: accounts[0]});
 console.log("POOL Details",response);
+const lpContract = new web3.eth.Contract(LP_TOKEN_CONTRACT_ABI, response[0]);
+console.log("LPToken",lpContract);
+let balance= await lpContract.methods.balanceOf(accounts[0]).call({from: accounts[0]});
 let poolInfo={
   poolId:_pid,
     lpToken:response[0],
@@ -43,6 +46,7 @@ let poolInfo={
     lastRewardBlock:response[2], 
     accBaconPerShare:response[3],
     uri: response[4],
+    balance:balance,
     pendinReward: pending,
 
 }
