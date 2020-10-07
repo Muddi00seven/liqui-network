@@ -39,14 +39,16 @@ console.log("POOL Details",response);
 const lpContract = new web3.eth.Contract(LP_TOKEN_CONTRACT_ABI, response[0]);
 console.log("LPToken",lpContract);
 let balance= await lpContract.methods.balanceOf(accounts[0]).call({from: accounts[0]});
+let lp = web3.utils.fromWei(balance,'ether');
 let poolInfo={
+
   poolId:_pid,
     lpToken:response[0],
     allocPoint :response[1], 
     lastRewardBlock:response[2], 
     accBaconPerShare:response[3],
     uri: response[4],
-    balance:balance,
+    balance:lp,
     pendinReward: pending,
 
 }
