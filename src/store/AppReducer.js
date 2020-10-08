@@ -46,7 +46,7 @@ export default (state, action) => {
                 case 'SET_BLOCK_IN_DAY':
                 return {
                   ...state,
-                    blockinADay:action.payload
+                  blockInADay:action.payload
                 }
                 case 'SET_LQN_BALANCE':
                   return {
