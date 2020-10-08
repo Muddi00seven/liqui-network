@@ -161,8 +161,8 @@ export default function SimpleTabs({value1,i}) {
             {/* <p className="tab-number2">0</p> */}
           </div>
           <div className="column2">
-            <p className="tab-text">Balance: {value1.balance} UNI </p>
-  <p className="tab-text2">Uni</p>
+            <p className="tab-text">Balance: {value1.balance} </p>
+  <p className="tab-text2"></p>
           </div>
         </div>
 
